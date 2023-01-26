@@ -1,0 +1,99 @@
+
+<c:set var="cpath" value="${pageContext.request.contextPath}"/>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <link rel="stylesheet" href="C:\Users\user\git\TEAM267\Final_Project\src\main\webapp\resources\css\style.css">
+
+      <style>
+        .flex_main_box{
+            display: flex;
+            gap: 10%;
+        }
+        .flex_main_box2{
+            display: flex;
+            flex-direction: column;
+            gap : 15px 0px;
+        }  
+        .flex_main_box3{
+            display: flex;
+            gap : 5px;
+            text-align: center;
+           
+        } 
+        .flex_text{
+            display: flex;
+            flex-direction: row;
+            margin-top:10% ;
+            gap : 15px;
+        }
+        .footer{
+            margin-top: 5%;
+            margin-bottom: 5%;
+            text-align: center;
+        }
+      </style>
+</head>
+<body>
+    <header>
+        <div id="TOP" class="flex">
+            <div><a href=""><img src="https://via.placeholder.com/129x121" alt=""></a></div>
+            <div class="flex header_main">
+                <div><a href=""><h1 id="header_font">COORDI FOR SHOES</h1></a></div>
+                <div><a href="">서비스소개</a><a href="">공지사항</a></div>
+            </div>
+            <div class="flex header_left">
+                <div><a href="">로그인</a></div>
+                <div><a href="">회원가입</a></div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="flex_main_box">
+            <div style=" width:300px; height:300px; background-color: aquamarine;"></div>
+            <div class="flex_main_box2" style="margin-top: 10%;">
+                <div>브랜드</div>
+                <div style="font-weight: 600;font-size: larger;">제품명</div>
+                <div>가격</div>
+                <div class="flex_main_box3">
+                    <div style="width:80px; height:30px;background-color: antiquewhite;border-radius: 10px;">운동화</div>
+                    <div style="width:80px; height:30px;background-color: rgb(250, 228, 215);border-radius: 10px;">스니커즈</div>
+                    <div style="width:80px; height:30px;background-color: rgb(218, 215, 250);border-radius: 10px;">블랙</div>
+                    <div style="width:80px; height:30px;background-color: rgb(250, 215, 220);border-radius: 10px;">아디다스</div>
+
+                </div>
+            </div>
+        </div>
+        <!-- coordi코디 글자색 차이 -->
+        <div class="flex_text">
+        <div >Coordi</div>
+        <div style="color:rgb(210, 208, 208)">코디</div>
+        </div>
+        <div class="flex_text" style="margin-top: 20px;">
+            <div style=" width:200px; height:280px;background-color: rgb(212, 237, 218); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(216, 212, 237); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(228, 237, 212); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(237, 212, 212); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(218, 237, 212); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(237, 212, 212); "></div>
+            <div style=" width:200px; height:280px;background-color: rgb(221, 212, 237); "></div>
+
+        </div>
+    </main>
+    <footer>
+        <hr style="margin-top:5%">
+        <div class="footer">
+            
+            <div>지역 : 순천시</div>
+            <div>tel : 010-1234-5678</div>
+            <div>Made by Team267</div>
+
+        </div>
+
+    </footer>
+</body>
+</html>

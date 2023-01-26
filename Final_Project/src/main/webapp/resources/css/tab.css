@@ -1,0 +1,84 @@
+/* body{background:#f4f4f4} */
+/* 탭메뉴 */
+.btn{
+    padding:0;
+    background:transparent;
+    border:0;
+    outline:0
+}
+.btn_area{
+    display: flex;
+}
+.clearfix::after{
+    display:block;
+    content:'';
+    clear:both
+}
+
+.tab_wrap{
+    width:238px;
+    /* margin:50px auto */
+}
+.tab_wrap .btn_tab{
+    float:left;
+    width:120px;
+    height:30px;
+    background:#fff;
+    border-radius:10px 10px 0 0;
+    text-align:center;
+    line-height:30px
+}
+.tab_wrap .btn_tab.act{
+    background:#9adce2;
+    font-weight:bold
+}
+.tab_wrap .content_area{
+    display:none;
+    width:100%;
+    min-height:200px;
+    padding:10px;
+    background:#fff;
+    border-radius:0 0 10px 10px;
+    box-sizing:border-box
+}
+.tab_wrap .content_area.act{
+    display:block
+}
+.tab_wrap *[data-depth="1"]{
+    background:#f4f4f4
+}
+/* 탭메뉴 */
+/* 아코디언 */
+.collapsible {
+    background-color: #777;
+    color: white;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+}
+.active,
+.collapsible:hover {
+    background-color: #555;
+}
+.content {
+    padding: 0 18px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.2s ease-out;
+    background-color: #f1f1f1;
+}
+.collapsible:after {
+    content: '\002B';
+    color: white;
+    font-weight: bold;
+    float: right;
+    margin-left: 5px;
+}
+.active:after {
+    content: "\2212";
+}
+/* 아코디던 */
