@@ -1,3 +1,4 @@
+<!-- <c:set var="cpath" value="${pageContext.request.contextPath}"/> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,46 +23,103 @@
         </div>
     </header>
     <main>
-        <div class="tab_wrap tab_area">
-            <div class="btn_area clearfix">
-              <button class="btn btn_tab act" data-depth="0" data-idx="0">내정보</button>
+      <h2>내정보</h2>
+        <div class="tab_wrap tab_area" id="my_tab_wrap">
+            <div class="btn_area clearfix" id="my_btn_tab">
+              <button class="btn btn_tab act" data-depth="0" data-idx="0" >회원정보</button>
               <button class="btn btn_tab" data-depth="0" data-idx="1">커뮤니티</button>
             </div>
-            
-            <div class="content_area act" data-depth="0" data-idx="0">First tab content</div>
-            <div class="content_area" data-depth="0" data-idx="1">
-              <p>Second tab content</p>
-              <div class="tab_area">
-                <div class="btn_area clearfix">
-                  <button class="btn btn_tab act" data-depth="1" data-idx="0">First</button>
-                  <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
-                  <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
-                  <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
-                </div>
-          
-                <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
-                <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
-                <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
-                <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+            <!-- 내정보 페이지 -->
+            <div class="content_area act" data-depth="0" data-idx="0">
+              <div id="sign" class="center"> 
+                <form action="" class="my_sign">
+                <input type="text" placeholder="아이디" class="sign_input" id="ID">
+                <input type="password" placeholder="비밀번호" class="sign_input" id="PW">
+                <input type="text" placeholder="닉네임" class="sign_input">
+                <input type="email" placeholder="이메일" class="sign_input" id="email">
+                
+                <input type="submit" value="저장" class="login_button">
+                </form>
               </div>
             </div>
-            <!-- <div class="content_area" data-depth="0" data-idx="2">
-              <p>Third tab content</p>
+            <!-- 커뮤니티 페이지 -->
+            <div class="content_area" data-depth="0" data-idx="1">
               <div class="tab_area">
-                  <div class="btn_area clearfix">
-                    <button class="btn btn_tab act" data-depth="1" data-idx="0">First</button>
-                    <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
-                    <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
-                    <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
-                  </div>
+                <div class="btn_area clearfix" id="my_bltn">
+                  <button class="btn btn_tab act" data-depth="1" data-idx="0">댓글</button>
+                  <button class="btn btn_tab" data-depth="1" data-idx="1">게시물</button>
+                </div>
           
-                  <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
-                  <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
-                  <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
-                  <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+                <div class="content_area act" data-depth="1" data-idx="0" id="my_board">
+                    <table class="board">
+                        <tr>
+                            <td>원글</td>
+                            <td>댓글 내용</td>
+                            <td>작성일</td>
+                            <td>수정</td>
+                            <td>삭제</td>
+                        </tr>
+                        <tr>
+                            <td>아디다스바지</td>
+                            <td><a>좋아요</a></td>
+                            <td>2022-11-25</td>
+                            <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                            <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                        </tr>
+                        <tr>
+                          <td>아디다스바지</td>
+                          <td><a>좋아요</a></td>
+                          <td>2022-11-25</td>
+                          <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                          <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                        </tr>
+                        <tr>
+                          <td>아디다스바지</td>
+                          <td><a>좋아요</a></td>
+                          <td>2022-11-25</td>
+                          <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                          <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="content_area" data-depth="1" data-idx="1" id="my_board">
+                  <table class="board">
+                    <tr>
+                        <td>작성자</td>
+                        <td>제목</td>
+                        <td>작성일</td>
+                        <td>좋아요</td>
+                        <td>수정</td>
+                        <td>삭제</td>
+                    </tr>
+                    <tr>
+                        <td>홍길동</td>
+                        <td><a>그리워하면</a></td>
+                        <td>2022-11-25</td>
+                        <td>30</td>
+                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>홍길동</td>
+                        <td><a>그리워하면</a></td>
+                        <td>2022-11-25</td>
+                        <td>30</td>
+                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                    </tr>
+                    <tr>
+                        <td>홍길동</td>
+                        <td><a>그리워하면</a></td>
+                        <td>2022-11-25</td>
+                        <td>30</td>
+                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
+                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
+                    </tr>
+                  </table>
                 </div>
               </div>
-            <div class="content_area" data-depth="0" data-idx="3">Fourth tab content</div> -->
+            </div>
           </div>
     </main>
     <footer>

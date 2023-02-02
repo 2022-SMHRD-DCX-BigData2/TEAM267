@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- <link rel="stylesheet" href="${cpath}/resources/css/style.css"> -->
     <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
 </head>
 
@@ -29,10 +30,10 @@
         <div id="sign" class="center"> 
             <form action="">
             <h1>회원가입</h1>
-            <input type="text" placeholder="아이디" class="sign_input">
-            <input type="password" placeholder="비밀번호" class="sign_input">
-            <input type="text" placeholder="미정" class="sign_input">
-            <input type="password" placeholder="미정" class="sign_input">
+            <input type="text" placeholder="아이디" class="sign_input" id="ID">
+            <input type="password" placeholder="비밀번호" class="sign_input" id="PW">
+            <input type="text" placeholder="닉네임" class="sign_input">
+            
             <div class="flex gender_box">
                 <div class="box_half flex center gender">
                     <P>성별</P>
@@ -41,7 +42,7 @@
                     <input type="radio" value="woman" name="gender" class="sign_input_radio" id="gender_woman">
                     <label for="gender_woman">여</label>
                 </div>
-                <input type="text" placeholder="나이" class="box_half flex" id="age" >
+                <input type="email" placeholder="이메일" class="box_half flex" id="email" >
             </div>
             
             <input type="submit" value="회원가입" class="login_button">
