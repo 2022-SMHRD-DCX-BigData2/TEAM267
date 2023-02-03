@@ -25,38 +25,50 @@
       </div>
     </div>
   </header>
+  <!-- 헤더 끝 -->
+
   <main style="display: flex;">
+
     <div class="tab_wrap tab_area">
       <div class="btn_area clearfix">
         <button class="btn btn_tab act" data-depth="0" data-idx="0">내옷장</button>
         <button class="btn btn_tab" data-depth="0" data-idx="1">추천옷장</button>
       </div>
-      <!-- 첫번째 항목 -->
+
+      <!-- 내 옷장 TAB-->
       <div class="content_area act" data-depth="0" data-idx="0">
         <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
         <div class="content">
-          <div style="margin-top : 1em; margin-bottom: 1em;
-                      display: flex; 
-                      justify-content: space-around;
-                      flex-direction: column;
-                      align-items: center;"> <!-- 호주띠 css 끝나면 작업 -->
-            <a onclick="abcd()" style="cursor: pointer;">전체</a>
-            <a href="#">니트/스웨터</a>
-            <a href="#">후드티셔츠</a>
-            <a href="#">피케/카라 티셔츠</a>
-
+          <div class="sublist">
+            <a onclick="sublist_top()" style="cursor: pointer;">전체</a>
+            <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+            <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+            <a onclick="sublist_top()">피케/카라 티셔츠</a>
           </div>
         </div>
-        <button type="button" class="collapsible" onclick="collapse(this);">제목 2</button>
+        <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
         <div class="content">
-          <p>내용 2 입니다.</p>
+
+          <div class="sublist">
+            <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
+            <a onclick="sublist_bottom()">청바지</a>
+            <a onclick="sublist_bottom()">반바지</a>
+            <a onclick="sublist_bottom()">슬렉스</a>
+          </div>
+
         </div>
-        <button type="button" class="collapsible" onclick="collapse(this);">제목 3</button>
+        <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
         <div class="content">
-          <p>내용 3 입니다.</p>
+          <div class="sublist">
+            <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
+            <a onclick="sublist_outer()">패딩</a>
+            <a onclick="sublist_outer()">자켓</a>
+            <a onclick="sublist_outer()">가디건</a>
+          </div>
         </div>
       </div>
-      <!-- 두번째 항목 -->
+
+      <!-- 추천 옷장 -->
       <div class="content_area" data-depth="0" data-idx="1">
         <p>Second tab content</p>
         <div class="tab_area">
@@ -92,39 +104,73 @@
       <div class="content_area" data-depth="0" data-idx="3">Fourth tab content</div>
     </div>
 
-    <div id="viewCLOSET" style="display: none; flex-direction: column; background-color: whitesmoke;">
-      <h1>전체</h1>
-      <a onclick="select()" style="cursor: pointer;"><img id="selectimg1" src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px"></a>
-      <a onclick="select()" style="cursor: pointer;"><img id="selectimg2" src="/src/main/webapp/resources/img/img2.jpg" width="100px" height="100px"></a>
-      <a onclick="select()" style="cursor: pointer;"><img id="selectimg3" src="/src/main/webapp/resources/img/img3.jpg" width="100px" height="100px"></a>
+    <!-- 옷 선택 하는곳 -->
+    <div class="viewCLOSET_area">
+      <div class="viewCLOSET" id="viewCLOSET">
+        <h1>전체</h1>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px"></a>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img2.jpg" width="100px" height="100px"></a>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img3.jpg" width="100px" height="100px"></a>
+      </div> 
     </div>
 
-    <div id="viewCLOSET" style="margin-left:1em">
-      <h3>상의</h3>
+    <div class="viewCLOSET_under">
       <div>
-        <a onclick="fit()" style="cursor: pointer;">
-          <img id="choose" style="display : none;" src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px">
+        <h3 style="text-align: center;">상의</h3>
+        <a onclick="fit_top()" style="cursor: pointer;">
+          <div id="choose_TOP" style="display: none;
+                    flex-direction: column;
+                    align-items: center;">
+            <img id="choose_img" src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px">
+          </div>
         </a>
       </div>
+    
+      <div>
+        <h3 style="text-align: center;">하의</h3>
+        <a onclikc="" style="cursor: pointer;">
+          <div id="#" style="display: flex;
+                    flex-direction: column;
+                    align-items: center;">
+            <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
+          </div>
+        </a>
+      </div>
+    
+      <div>
+        <h3 style="text-align: center;">신발</h3>
+        <a onclikc="" style="cursor: pointer;">
+          <div id="#" style="display: flex;
+                    flex-direction: column;
+                    align-items: center;">
+            <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
+          </div>
+        </a>
+      </div>
+    
     </div>
 
-    <div style="margin-left: 3em; background-color: bisque; width: 500px; height: 500px; position: relative"> <!-- 옷 입히는 div -->
+    <!-- 옷 입히는 div -->
+    <div class="fitting_area"> 
       <span style="cursor: hand;">
-        <img id="fitting" style="display : none; position:absolute; left:10px; top:10px; cursor:pointer; border:0" 
+        <img class="fitting" id="fitting_top"
               src="/src/main/webapp/resources/img/img1.jpg"  width="100px" height="100px" onmousedown="startDrag(event, this)">
       </span>
     </div>
   </main>
   <footer>
-    <h1>푸터 푸터 들어갈 자리</h1>
+    <!-- 푸터 들어갈 자리 -->
   </footer>
 
 
-  <script src="/src/main/webapp/resources/JS/tabmenu.js">
-  </script>
+  <script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
 
 <script type="text/javascript">
-        function abcd() {
+
+        const IMG = new Image(); 
+        var img = IMG.src = "/src/main/webapp/resources/img/empty.png";
+
+        function sublist_top() {
 			if ($("#viewCLOSET").css("display") == "none") {
 				$("#viewCLOSET").css("display", "flex")
 			} else {
@@ -132,21 +178,33 @@
 			}
 		}
 
-    function select() {
-			if ($("#choose").css("display") == "none") {
-				$("#choose").css("display", "flex")
+    function select_TOP() {
+			if ($("#choose_TOP").css("display") == "none") {
+				$("#choose_TOP").css("display", "flex")
 			} else {
-				$("#choose").css("display", "none")
+				$("#choose_TOP").css("display", "none")
 			}
-		}
+    }
 
-    function fit() {
-			if ($("#fitting").css("display") == "none") {
-				$("#fitting").css("display", "flex")
-			} else {
-				$("#fitting").css("display", "none")
-			}
-		}
+    if($("#choose_TOP").css("display") == "none"){
+      $("#choose_img") == img
+    }
+    // https://solbel.tistory.com/1070 참고해보기
+
+    //   if ($("#choose_TOP_IMG").css("display") == "none") {
+		// 		$("#choose_TOP_IMG").css("display", "flex")
+		// 	} else {
+		// 		$("#choose_TOP_IMG").css("display", "none")
+		// 	}
+		// }
+
+    // function fit_top() {
+		// 	if ($("#fitting_top").css("display") == "none") {
+		// 		$("#fitting_top").css("display", "flex")
+		// 	} else {
+		// 		$("#fitting_top").css("display", "none")
+		// 	}
+		// }
 
     // 처음 이미지가 만들어지는 곳 지정
     var img_L = 50;
@@ -179,7 +237,7 @@
     var e_obj = window.event? window.event : e;
     img_L = getLeft(obj) - e_obj.clientX;
     img_T = getTop(obj) - e_obj.clientY;
-
+    
     document.onmousemove = moveDrag;
     document.onmouseup = stopDrag;
     if(e_obj.preventDefault)e_obj.preventDefault();
@@ -187,9 +245,11 @@
 
     // 드래그를 정지하는 함수 입니다.
     function stopDrag(){
-    document.onmousemove = null;
-    document.onmouseup = null;
-    }
+      document.onmousemove = null;
+      document.onmouseup = null;
+      }
+    
+
 
 </script>
 
