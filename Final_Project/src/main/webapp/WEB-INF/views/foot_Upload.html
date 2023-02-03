@@ -1,0 +1,78 @@
+<!-- <c:set var="cpath" value="${pageContext.request.contextPath}"/> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="${cpath}/resources/css/style.css"> -->
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
+</head>
+
+<body>
+    <header>
+        <div id="TOP" class="flex">
+            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div class="flex header_main">
+                <div><a href="">
+                        <h1 id="header_font">COORDI FOR SHOES</h1>
+                    </a></div>
+                <div><a href="">서비스소개</a><a href="">공지사항</a></div>
+            </div>
+            <div class="flex header_left">
+                <div><a href="">로그인</a><a href="">회원가입</a></div>
+            </div>
+        </div>
+    </header>
+    <main>  
+        <div class="flex center">
+            <div class="flex center foot_box">
+                <span><img src="https://via.placeholder.com/52" alt=""></span>
+                <p>왼발</p>
+            </div>
+            <div class="flex center foot_box">
+                <span><img src="https://via.placeholder.com/52" alt=""></span>
+                <p>오른발</p>
+            </div>
+        </div>
+        <div class="flex center">
+            <div id="root">
+                <div class="contents">
+                  <div class="upload-box">
+                    <div id="drop-file" class="drag-file">
+                      <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
+                      <p class="message">파일 업로드 하기</p>
+                      <img src="" alt="미리보기 이미지" class="preview">
+                    </div>
+                    <label class="file-label" for="chooseFile">Choose File</label>
+                    <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                  </div>
+                </div>
+              </div>
+
+              <img src="https://via.placeholder.com/215x135" alt="">
+
+              <div id="root">
+                <div class="contents">
+                  <div class="upload-box">
+                    <div id="drop-file" class="drag-file">
+                      <img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘" class="image" >
+                      <p class="message">파일 업로드 하기</p>
+                      <img src="" alt="미리보기 이미지" class="preview">
+                    </div>
+                    <label class="file-label" for="chooseFile">Choose File</label>
+                    <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)" accept="image/png, image/jpeg, image/gif">
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div></div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="/src/main/webapp/resources/JS/upload.js"></script>
+</body>
+</html>
