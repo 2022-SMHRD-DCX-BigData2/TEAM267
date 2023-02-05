@@ -40,7 +40,7 @@
         <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
         <div class="content">
           <div class="sublist">
-            <a onclick="sublist_top()" style="cursor: pointer;">전체</a>
+            <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
             <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
             <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
             <a onclick="sublist_top()">피케/카라 티셔츠</a>
@@ -121,7 +121,7 @@
           <div id="choose_TOP" style="display: none;
                     flex-direction: column;
                     align-items: center;">
-            <img id="choose_img" src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px">
+            <img id="choose_img" src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
           </div>
         </a>
       </div>
@@ -186,8 +186,8 @@
 			}
     }
 
-    if($("#choose_TOP").css("display") == "none"){
-      $("#choose_img") == img
+    if($("#choose_TOP").css("display") == "flex"){
+      $("#id_img").attr("src", " /src/main/webapp/resources/img/img1.jpg");
     }
     // https://solbel.tistory.com/1070 참고해보기
 
