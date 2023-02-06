@@ -7,8 +7,17 @@
     font-weight: normal;
     font-style: normal;
 }
+/* 에스코어드림 폰트!! */
+@font-face {
+    font-family: 'S-CoreDream-3Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-3Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
 *{
-    font-family:normal;
+    font-family: 'S-CoreDream-3Light';
     text-decoration-line: none;
     font-weight:bold;
 }
