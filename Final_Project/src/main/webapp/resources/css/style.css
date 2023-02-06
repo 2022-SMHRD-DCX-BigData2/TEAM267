@@ -335,7 +335,7 @@ main{
 .section .slidelist > li > a img {
     width: 500px;
     height: 450px;
-    opacity: 0.8;
+    opacity: 1;
     float: right;
 }
 
@@ -375,6 +375,8 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
+    line-height: 300%;
+    flex-direction: column;
 }
 
 
