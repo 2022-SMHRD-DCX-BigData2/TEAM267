@@ -107,10 +107,10 @@
     <!-- 옷 선택 하는곳 -->
     <div class="viewCLOSET_area">
       <div class="viewCLOSET" id="viewCLOSET">
-        <h1>전체</h1>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px"></a>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img2.jpg" width="100px" height="100px"></a>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img3.jpg" width="100px" height="100px"></a>
+        <h3>전체</h3>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img1.jpg" width="150px" height="150px"></a>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img2.jpg" width="150px" height="150px"></a>
+        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img3.jpg" width="150px" height="150px"></a>
       </div> 
     </div>
 
@@ -118,7 +118,7 @@
       <div>
         <h3 style="text-align: center;">상의</h3>
         <a onclick="fit_top()" style="cursor: pointer;">
-          <div id="choose_TOP" style="display: none;
+          <div id="choose_TOP" style="display: flex;
                     flex-direction: column;
                     align-items: center;">
             <img id="choose_img" src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
@@ -179,10 +179,10 @@
 		}
 
     function select_TOP() {
-			if ($("#choose_TOP").css("display") == "none") {
-				$("#choose_TOP").css("display", "flex")
+			if ($("#choose_TOP").css("display") == "flex") {
+				$("#choose_TOP").css("display", "grid")
 			} else {
-				$("#choose_TOP").css("display", "none")
+				$("#choose_TOP").css("display", "grid")
 			}
     }
 
