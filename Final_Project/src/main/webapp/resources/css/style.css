@@ -37,6 +37,12 @@ body{
     margin: 0 auto;
 }
 /* 부분설정 */
+.grid{
+    display: grid;
+}
+.bold{
+    font-weight:bold;
+}
 .flex {
     display: flex;
 }
