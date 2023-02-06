@@ -234,14 +234,15 @@ main{
 }
 
 .content {
-    background-color: white;
+    background-color: #f1f1f1;
 }
 
 .viewCLOSET_area {
     display: flex;
     background-color: #f4f4f4;
     padding: 1em;
-    width: 10em;
+    width: 16%;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .viewCLOSET {
@@ -255,17 +256,22 @@ main{
     display: flex;
     flex-direction: column;
     padding: 1em;
-    width: 9em;
-    background-color: aqua;
+    width: 10%;
+    background-color: white;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .fitting_area {
-    background-color: aquamarine;
-    width: 500px;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: flex-end;
+    background-color: #f8c291;
+    width: 60%;
     height: 500px;
     position: relative;
     overflow: hidden;
     padding: 1em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .fitting {
@@ -422,5 +428,16 @@ main{
 .home-btn:hover:after {
     width: 100%;
     transition: 800ms ease all;
+}
+
+.myCLOST-btn{
+    width: 5em;
+    height: 2.5em;
+    background: #f4f4f4;
+    border: 1px solid #B8B8B8;
+    color: black;
+    font-size: medium;
+    box-shadow: rgb(60 64 67 / 30%) 0px 1px 2px 0px, rgb(60 64 67 / 15%) 0px 1px 3px 1px;
+    margin-top: 0.3em;
 }
 

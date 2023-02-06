@@ -26,138 +26,147 @@
     </div>
   </header>
   <!-- 헤더 끝 -->
+  <div>
+    <main style="display: flex;
+                  flex-direction: row;
+                  align-items: stretch;
+                  justify-content: space-between;">
 
-  <main style="display: flex;">
+      <div class="tab_wrap tab_area" style="width: 17%;">
+        <div class="btn_area clearfix">
+          <button class="btn btn_tab act" data-depth="0" data-idx="0">내옷장</button>
+          <button class="btn btn_tab" data-depth="0" data-idx="1">추천옷장</button>
+        </div>
 
-    <div class="tab_wrap tab_area">
-      <div class="btn_area clearfix">
-        <button class="btn btn_tab act" data-depth="0" data-idx="0">내옷장</button>
-        <button class="btn btn_tab" data-depth="0" data-idx="1">추천옷장</button>
+        <!-- 내 옷장 TAB-->
+        <div class="content_area act" data-depth="0" data-idx="0">
+          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
+          <div class="content">
+            <div class="sublist">
+              <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+              <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+              <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+              <a onclick="sublist_top()">피케/카라 티셔츠</a>
+            </div>
+          </div>
+          <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
+          <div class="content">
+
+            <div class="sublist">
+              <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
+              <a onclick="sublist_bottom()">청바지</a>
+              <a onclick="sublist_bottom()">반바지</a>
+              <a onclick="sublist_bottom()">슬렉스</a>
+            </div>
+
+          </div>
+          <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
+          <div class="content">
+            <div class="sublist">
+              <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
+              <a onclick="sublist_outer()">패딩</a>
+              <a onclick="sublist_outer()">자켓</a>
+              <a onclick="sublist_outer()">가디건</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- 추천 옷장 -->
+        <div class="content_area" data-depth="0" data-idx="1">
+          <p>Second tab content</p>
+          <div class="tab_area">
+            <div class="btn_area clearfix">
+              <button class="btn btn_tab act" data-depth="1" data-idx="0">1-1</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
+            </div>
+
+            <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
+            <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
+            <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
+            <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+          </div>
+        </div>
+        <div class="content_area" data-depth="0" data-idx="2">
+          <p>Third tab content</p>
+          <div class="tab_area">
+            <div class="btn_area clearfix">
+              <button class="btn btn_tab act" data-depth="1" data-idx="0">First</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
+              <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
+            </div>
+
+            <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
+            <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
+            <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
+            <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
+          </div>
+        </div>
+        <div class="content_area" data-depth="0" data-idx="3">Fourth tab content</div>
       </div>
 
-      <!-- 내 옷장 TAB-->
-      <div class="content_area act" data-depth="0" data-idx="0">
-        <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-        <div class="content">
-          <div class="sublist">
-            <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-            <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-            <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-            <a onclick="sublist_top()">피케/카라 티셔츠</a>
-          </div>
-        </div>
-        <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
-        <div class="content">
-
-          <div class="sublist">
-            <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
-            <a onclick="sublist_bottom()">청바지</a>
-            <a onclick="sublist_bottom()">반바지</a>
-            <a onclick="sublist_bottom()">슬렉스</a>
-          </div>
-
-        </div>
-        <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
-        <div class="content">
-          <div class="sublist">
-            <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
-            <a onclick="sublist_outer()">패딩</a>
-            <a onclick="sublist_outer()">자켓</a>
-            <a onclick="sublist_outer()">가디건</a>
-          </div>
+      <!-- 옷 선택 하는곳 -->
+      <div class="viewCLOSET_area">
+        <div class="viewCLOSET" id="viewCLOSET">
+          <h3>전체</h3>
+          <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img1.jpg"
+              width="150px" height="150px"></a>
+          <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img2.jpg"
+              width="150px" height="150px"></a>
+          <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img3.jpg"
+              width="150px" height="150px"></a>
         </div>
       </div>
 
-      <!-- 추천 옷장 -->
-      <div class="content_area" data-depth="0" data-idx="1">
-        <p>Second tab content</p>
-        <div class="tab_area">
-          <div class="btn_area clearfix">
-            <button class="btn btn_tab act" data-depth="1" data-idx="0">1-1</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
-          </div>
-
-          <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
-          <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
-          <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
-          <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
-        </div>
-      </div>
-      <div class="content_area" data-depth="0" data-idx="2">
-        <p>Third tab content</p>
-        <div class="tab_area">
-          <div class="btn_area clearfix">
-            <button class="btn btn_tab act" data-depth="1" data-idx="0">First</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="1">Second</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="2">Third</button>
-            <button class="btn btn_tab" data-depth="1" data-idx="3">Fourth</button>
-          </div>
-
-          <div class="content_area act" data-depth="1" data-idx="0">2Depth First tab content</div>
-          <div class="content_area" data-depth="1" data-idx="1">2Depth Second tab content</div>
-          <div class="content_area" data-depth="1" data-idx="2">2Depth Third tab content</div>
-          <div class="content_area" data-depth="1" data-idx="3">2Depth Fourth tab content</div>
-        </div>
-      </div>
-      <div class="content_area" data-depth="0" data-idx="3">Fourth tab content</div>
-    </div>
-
-    <!-- 옷 선택 하는곳 -->
-    <div class="viewCLOSET_area">
-      <div class="viewCLOSET" id="viewCLOSET">
-        <h3>전체</h3>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img1.jpg" width="150px" height="150px"></a>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img2.jpg" width="150px" height="150px"></a>
-        <a onclick="select_TOP()" style="cursor: pointer;"><img src="/src/main/webapp/resources/img/img3.jpg" width="150px" height="150px"></a>
-      </div> 
-    </div>
-
-    <div class="viewCLOSET_under">
-      <div>
-        <h3 style="text-align: center;">상의</h3>
-        <a onclick="fit_top()" style="cursor: pointer;">
-          <div id="choose_TOP" style="display: flex;
+      <div class="viewCLOSET_under">
+        <div>
+          <h3 style="text-align: center;">상의</h3>
+          <a onclick="fit_top()" style="cursor: pointer;">
+            <div id="choose_TOP" style="display: flex;
                     flex-direction: column;
                     align-items: center;">
-            <img id="choose_img" src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
-          </div>
-        </a>
-      </div>
-    
-      <div>
-        <h3 style="text-align: center;">하의</h3>
-        <a onclikc="" style="cursor: pointer;">
-          <div id="#" style="display: flex;
-                    flex-direction: column;
-                    align-items: center;">
-            <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
-          </div>
-        </a>
-      </div>
-    
-      <div>
-        <h3 style="text-align: center;">신발</h3>
-        <a onclikc="" style="cursor: pointer;">
-          <div id="#" style="display: flex;
-                    flex-direction: column;
-                    align-items: center;">
-            <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
-          </div>
-        </a>
-      </div>
-    
-    </div>
+              <img id="choose_img" src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
+            </div>
+          </a>
+        </div>
 
-    <!-- 옷 입히는 div -->
-    <div class="fitting_area"> 
-      <span style="cursor: hand;">
-        <img class="fitting" id="fitting_top"
-              src="/src/main/webapp/resources/img/img1.jpg"  width="100px" height="100px" onmousedown="startDrag(event, this)">
-      </span>
-    </div>
-  </main>
+        <div>
+          <h3 style="text-align: center;">하의</h3>
+          <a onclikc="" style="cursor: pointer;">
+            <div id="#" style="display: flex;
+                    flex-direction: column;
+                    align-items: center;">
+              <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
+            </div>
+          </a>
+        </div>
+
+        <div>
+          <h3 style="text-align: center;">신발</h3>
+          <a onclikc="" style="cursor: pointer;">
+            <div id="#" style="display: flex;
+                    flex-direction: column;
+                    align-items: center;">
+              <img src="/src/main/webapp/resources/img/empty.png" width="100px" height="100px">
+            </div>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- 피팅 AREA -->
+      <div class="fitting_area">
+        <span style="cursor: hand;">
+          <img class="fitting" id="fitting_top" src="/src/main/webapp/resources/img/img1.jpg" width="100px"
+            height="100px" onmousedown="startDrag(event, this)">
+        </span>
+        <div class="home-btn" style="width: 5em; justify-content: center;">코디 공유</div>
+      </div>
+    </main>
+  </div>
+</body>
   <footer>
     <!-- 푸터 들어갈 자리 -->
   </footer>
@@ -166,7 +175,7 @@
   <script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
 
 <script type="text/javascript">
-  
+
         function sublist_top() {
 			if ($("#viewCLOSET").css("display") == "none") {
 				$("#viewCLOSET").css("display", "flex")
@@ -250,6 +259,6 @@
 
 </script>
 
-</body>
+
 
 </html>
