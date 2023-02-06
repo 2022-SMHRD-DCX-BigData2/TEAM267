@@ -379,4 +379,48 @@ main{
     flex-direction: column;
 }
 
+.home-btn {
+    display: flex;
+    background: #555;
+    color: #fff;
+    border: none;
+    position: relative;
+    height: 60px;
+    font-size: 0.9em;
+    padding: 0 1em;
+    cursor: pointer;
+    transition: 800ms ease all;
+    outline: none;
+    align-items: center;
+}
+
+.home-btn:hover {
+    background: #fff;
+    color: #555;
+}
+
+.home-btn:before,
+button:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 2px;
+    width: 0;
+    background: #555;
+    transition: 400ms ease all;
+}
+
+.home-btn:after {
+    right: inherit;
+    top: inherit;
+    left: 0;
+    bottom: 0;
+}
+
+.home-btn:hover:before,
+button:hover:after {
+    width: 100%;
+    transition: 800ms ease all;
+}
 
