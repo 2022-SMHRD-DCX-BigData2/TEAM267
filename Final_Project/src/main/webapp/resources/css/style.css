@@ -400,7 +400,7 @@ main{
 }
 
 .home-btn:before,
-button:after {
+.home-btn:after {
     content: '';
     position: absolute;
     top: 0;
@@ -419,7 +419,7 @@ button:after {
 }
 
 .home-btn:hover:before,
-button:hover:after {
+.home-btn:hover:after {
     width: 100%;
     transition: 800ms ease all;
 }
