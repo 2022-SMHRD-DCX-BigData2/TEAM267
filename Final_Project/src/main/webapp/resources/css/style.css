@@ -443,3 +443,145 @@ main{
     margin-top: 0.3em;
 }
 
+/* POST */ 
+.POST {
+    display: flex;
+    flex-direction: row;
+}
+
+.POST_img {
+    display: flex;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    margin-top: 1em;
+}
+
+.POST_content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 10em;
+    padding-left: 10em;
+}
+
+.POST_content > h1 {
+    padding-top: 1em;
+}
+
+.POST_content > span {
+    line-height: 2em;
+}
+
+.POST_content_icon {
+    display: flex;
+}
+.POST_content_icon > p {
+    margin-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: pink;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 5px;
+}
+
+.POST_content_icon > p:hover {
+    margin-left: 0px;
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border: 2px solid translate;
+}
+
+.POST_content_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.POST_content_info > p {
+    padding-right: 1em;
+}
+
+
+.POST_product {
+    display: flex;
+    flex-direction: column;
+}
+
+.POST_product_list {
+    display: flex;
+}
+
+.POST_product_list > div {
+    margin-right: 2em;
+    padding-top: 2em;
+    padding-bottom: 1em;
+    padding-right: 2em;
+    padding-left: 2em;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border-radius: 4px;
+}
+
+.POST_product_list>div:hover {
+    margin-top: -2px;
+    margin-left: 0px;
+    transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -webkit-transform: scale(1.1, 1.1);
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    border: 2px solid translate;
+}
+
+.POST_product_list > div > p {
+    text-align: center;
+}
+
+.POST_comment_input {
+    display: flex;
+    height: 6em;
+    width: 100%;
+}
+
+.POST_comment_input > input:nth-child(1) {
+    width: 90%;
+    margin-bottom: 2em;
+}
+
+.POST_comment_input > input:nth-child(2) {
+    width: 10%;
+    margin-bottom: 2em;
+}
+
+.POST_comment_list {
+    display: flex;
+    flex-direction: column;
+}
+
+.POST_commnet_list1 {
+    border-top: 1px solid darkgray;
+    border-bottom: 1px solid darkgray;
+}
+
+.POST_comment_list > div > ul:nth-child(1) {
+    list-style: none;
+    display: flex;
+    padding-left: 1em;
+}
+
+.POST_comment_list > div > ul:nth-child(2) {
+    list-style: none;
+    display: flex;
+    padding-left: 1em;
+    margin-top: 0.2em;
+    margin-bottom: 0.2em;
+}
+
+.POST_comment_list > div > ul:nth-child(3) {
+    list-style: none;
+    display: flex;
+    padding-left: 1em;
+    margin-top: 0.1em;
+}
