@@ -1,0 +1,57 @@
+@import "foot_page.css";
+.shoes{
+    margin-top: 60px;
+    align-items: center;
+    margin-bottom: 60px;
+}
+.shoes img{
+    height: 412px;
+    width: 412px;
+    border-radius: 10px;    
+}
+#shoes_content1{
+    grid-template-columns:repeat(4, 99px);
+    row-gap: 12px;
+    column-gap: 15px;
+    justify-items: center;
+    justify-content: center;
+}
+#shoes_content2{
+    grid-template-columns:repeat(5, 210px);
+    row-gap: 12px;
+    column-gap: 15px;
+    justify-items: center;
+
+}
+#shoes_content2 a{
+    text-align: left;
+}
+#shoes_content2 p{
+    margin: 0;
+}
+#shoes_content2 span{
+    margin-top: 5px;
+    display: inline-block;
+}
+#shoes_content2 span:last-child{
+    border-left: 1px black solid;
+    padding-left: 0.5em;
+}
+.content_box{
+    margin-left: 74px;
+}
+.content_box dd{
+    margin: 10px 0px;
+    font-size: 24px;
+    font-weight:400;
+}
+.content_box dd:last-child{
+    margin-top: 30px;
+}
+#name{
+    font-size: 32px;
+    font-weight:bold;
+}
+.p_name{
+    font-size: 20px;
+}
