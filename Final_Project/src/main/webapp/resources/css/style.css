@@ -447,6 +447,8 @@ main{
 .POST {
     display: flex;
     flex-direction: row;
+    margin: auto;
+    width: 90%;
 }
 
 .POST_img {
@@ -460,8 +462,7 @@ main{
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
-    padding-right: 10em;
-    padding-left: 10em;
+    padding-left: 3em;
 }
 
 .POST_content > h1 {
@@ -510,6 +511,9 @@ main{
 .POST_product {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    width: 90%;
+    overflow: auto;
 }
 
 .POST_product_list {
@@ -518,6 +522,7 @@ main{
 }
 
 .POST_product_list > div {
+    margin-left: 0.8em;
     margin-right: 2em;
     padding-top: 2em;
     padding-bottom: 1em;
@@ -529,7 +534,7 @@ main{
 
 .POST_product_list>div:hover {
     margin-top: -2px;
-    margin-left: 0px;
+    /* margin-left: 0px; */
     transform: scale(1.1, 1.1);
     -ms-transform: scale(1.1, 1.1);
     -webkit-transform: scale(1.1, 1.1);
@@ -541,9 +546,14 @@ main{
     text-align: center;
 }
 
+.POST_comment {
+    margin: auto;
+    width: 90%;
+}
+
 .POST_comment_input {
     display: flex;
-    height: 6em;
+    height: 8em;
     width: 100%;
 }
 
@@ -590,6 +600,11 @@ main{
 
 /* WRITE */
 
+.WRITE_form_all {
+    margin: auto;
+    width: 85%;
+}
+
 .WRITE_form {
     display: flex;
     flex-direction: row;
@@ -618,7 +633,7 @@ main{
 }
 
 .WRITE_content > div > input:nth-child(1) {
-    font-size: x-large;
+    font-size: large;
     width: 85%;
     height: 2em;
     border: 0px;
@@ -631,7 +646,7 @@ main{
 
 .WRITE_content > textarea {
     height: 100%;
-    font-size: x-large;
+    font-size: large;
     line-height: 35px;
     margin-top: 0.5em;
     border: 0px;
@@ -643,7 +658,7 @@ main{
     align-self: center;
     margin-top: -1.5em;
     width: 10%;
-    font-size: x-large;
+    font-size: large;
     border: 0px;
     background: black;
     border-radius: 3px;
@@ -657,6 +672,13 @@ main{
     -webkit-transform: scale(1.1, 1.1);
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
     border: 2px solid translate;
+}
+
+.WRITE_product {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    overflow: auto;
 }
 
 
