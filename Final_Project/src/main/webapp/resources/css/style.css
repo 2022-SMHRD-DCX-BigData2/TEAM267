@@ -449,6 +449,7 @@ main{
     flex-direction: row;
     margin: auto;
     width: 90%;
+    height: 400px;
 }
 
 .POST_img {
@@ -461,8 +462,9 @@ main{
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
     padding-left: 3em;
+    padding-right: 3em;
+    justify-content: flex-start;
 }
 
 .POST_content > h1 {
@@ -544,6 +546,7 @@ main{
 
 .POST_product_list > div > p {
     text-align: center;
+    margin: auto;
 }
 
 .POST_comment {
@@ -610,6 +613,7 @@ main{
     flex-direction: row;
     width: 100%;
     justify-content: space-between;
+    height: 400px;
 }
 .WRITE_img {
     display: flex;
