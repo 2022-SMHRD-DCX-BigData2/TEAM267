@@ -460,11 +460,9 @@ main{
 
 .POST_content {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
     padding-left: 3em;
     padding-right: 3em;
-    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .POST_content > h1 {
@@ -502,10 +500,11 @@ main{
 .POST_content_info {
     display: flex;
     width: 100%;
+    flex-direction: row;
     justify-content: space-between;
 }
 
-.POST_content_info > p {
+.POST_content_info > div > p {
     padding-right: 1em;
 }
 
@@ -625,7 +624,7 @@ main{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    width: 55%;
+    width: 60%;
     margin-left: 1em;
 }
 
@@ -659,9 +658,8 @@ main{
 }
 
 .WRITE_submit {
-    align-self: center;
-    margin-top: -1.5em;
-    width: 10%;
+    margin-top: 1em;
+    width: 47%;
     font-size: large;
     border: 0px;
     background: black;
@@ -681,7 +679,6 @@ main{
 .WRITE_product {
     display: flex;
     flex-direction: column;
-    width: 90%;
     overflow: auto;
 }
 
