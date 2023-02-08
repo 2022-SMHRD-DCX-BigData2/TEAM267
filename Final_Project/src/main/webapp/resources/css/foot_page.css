@@ -112,7 +112,7 @@ main{
 
 
  .shoes_top_box{
-    height: 400px;
+    height: 300px;
 }
 .pos_a{
     position: absolute;
@@ -121,6 +121,6 @@ main{
     position: relative;
     float: left;
     width: 260px;
-    height: 370px;
+    height: 280px;
     margin: 10px;
 }

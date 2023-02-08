@@ -19,7 +19,7 @@
     margin-top: 20px;
 }
 #shoes_content2{
-    grid-template-columns:repeat(5, 136px);
+    grid-template-columns:repeat(5,minmax(auto,160px));
 
 
 }
@@ -35,4 +35,8 @@
 #shoes_content2 img{
     width: 136px;
     height: 201px;
+}
+#shoes_content2 span:last-child {
+    border-left: 0;
+    padding-left: 0;
 }
