@@ -103,6 +103,14 @@ main{
 .evenly{
     justify-content: space-evenly;
 }
+.flex-start{
+    justify-content: flex-start;
+}
+.items-center{
+    align-items: center;
+}
+
+
  .shoes_top_box{
     height: 400px;
 }
