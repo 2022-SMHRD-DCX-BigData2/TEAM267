@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>신발 전체 보기</title>
+    <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div id="TOP" class="flex">
+            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div class="flex header_main">
+                <div><a href="">
+                        <h1 id="header_font">COORDI FOR SHOES</h1>
+                    </a></div>
+                <div><a href="">서비스소개</a><a href="">공지사항</a></div>
+            </div>
+            <div class="flex header_left">
+                <div><a href="">로그인</a><a href="">회원가입</a></div>
+            </div>
+        </div>
+    </header>
+    <!-- 헤더 끝 -->
+
+    <!-- 신발 탭 -->
+    
+    <div style="display: flex;">
+        <div class="tab_wrap tab_area" style="width: 17%;">
+            <div class="content_area act" data-depth="0" data-idx="0" style="margin-top: 1em;">
+                <button type="button" class="collapsible" onclick="collapse(this);">운동화</button>
+                <div class="content">
+                    <div class="sublist">
+                        <a style="cursor: pointer; align-items: center;">전체</a>
+                    </div>
+                </div>
+                <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
+                <div class="content">
+
+                    <div class="sublist">
+                        <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
+                    </div>
+
+                </div>
+
+                <button type="button" class="collapsible" onclick="collapse(this);">스포츠</button>
+                <div class="content">
+                    <div class="sublist">
+                        <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
+                    </div>
+                </div>
+
+                <button type="button" class="collapsible" onclick="collapse(this);">부츠</button>
+                <div class="content">
+                    <div class="sublist">
+                        <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 신발 목록 -->
+        <div class="SHOES_list_div">
+            <div class="SHOES_list">
+                <img src="/src/main/webapp/resources/img/shoes02.jpg" width="100px" height="100px">
+                <span>발렌시아가</span>
+                <span>트리플 S</span>
+                <span>1,375,000원</span>
+                <div class="size_check">
+                        <span>240</span>
+                        <span>245</span>
+                        <span>250</span>
+                        <span>255</span>
+                        <span>260</span>
+                        <span>265</span>
+                        <span>270</span>
+                    </div>
+            </div>
+    
+            <div class="SHOES_list">
+                <img src="/src/main/webapp/resources/img/shoes01.jpg" width="100px" height="100px">
+                <span>닥터마틴</span>
+                <span>1641</span>
+                <span>219,000원</span>
+                <div class="size_check">
+                        <span>240</span>
+                        <span>250</span>
+                        <span>260</span>
+                        <span>270</span>
+                        <span>280</span>
+                        <span>290</span>
+                    </div>
+            </div>
+    
+            <div class="SHOES_list">
+                신발들
+            </div>
+
+            <div class="SHOES_list">
+                신발들
+            </div>
+        </div>
+    </div>
+
+</body>
+
+<script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
+<script type="text/javascript">
+
+</script>
+
+</html>
