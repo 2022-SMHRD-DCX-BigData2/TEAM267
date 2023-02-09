@@ -49,6 +49,8 @@ main{
 .shoes_img{
     border-radius: 3px;
     margin-top: 28px;
+    width: 118px;
+    height: 118px;
 }
 .shoes_content_box{
     width: 99px;
