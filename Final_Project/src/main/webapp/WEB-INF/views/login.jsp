@@ -27,11 +27,11 @@
     </header>
     <main>
         <div class="flex center"id="login">
-            <form action="">
-                <div class="flex login" >
+            <form action="${cpath}/Login.do" method="post">
+                <div class="flex login">
                     <h1>로그인</h1>
-                    <input type="text" placeholder="아이디" class="login_input">
-                    <input type="password" placeholder="비밀번호" class="login_input">
+                    <input type="text" placeholder="아이디" class="login_input" id="memId" name="memId">
+                    <input type="password" placeholder="비밀번호" class="login_input" id="memPw" name="memPw">
                     <input type="submit" value="로그인" class="login_button">
                 </div>
             </form>
