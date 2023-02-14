@@ -17,7 +17,7 @@ public class BoardController {
 	private BoardMapper mapper;
 	
 	@GetMapping("/main.do")
-	public String boardAjaxMain() {
+	public String main() {
 		// 알아서 ViewResolver에 의해 
 		// WEB-INF/views에 있는 basic.jsp로 이동
 		return "HOME";
@@ -25,8 +25,16 @@ public class BoardController {
 	
 
 	
-	
+//	로그인 페이지 이동
 	@RequestMapping("/login.do")
 	public void login() {}
-
+//	회원가입 페이지 이동
+	@RequestMapping("/sign.do")
+	public void sign() {}
+//	내옷장 페이지 이동
+	@RequestMapping("/MYCLOSET.do")
+	public void MYCLOSET() {}
+//	신발전체 페이지 이동
+	@RequestMapping("/footlist.do")
+	public void footlist() {}
 }
