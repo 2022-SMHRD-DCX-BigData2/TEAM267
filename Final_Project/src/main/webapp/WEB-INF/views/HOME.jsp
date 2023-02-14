@@ -11,6 +11,7 @@
     <title>Coordi For SHOES 홈 화면</title>
     <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
         @keyframes move {
@@ -51,6 +52,11 @@
             }
         }
     </style>
+    <script type="text/javascript">
+		function gologin() {
+				location.href="${cpath}/login.do";
+		}
+	</script>
 </head>
 
 <body>
@@ -76,7 +82,7 @@
         	<c:when test="${empty loginMember}">
 	            <div class="flex header_left">
 	                <div>
-		                <a href="">로그인</a>
+		                <a href="" onclick="gologin()">로그인</a>
 		                <a href="">회원가입</a>
 	                </div>
 	            </div>

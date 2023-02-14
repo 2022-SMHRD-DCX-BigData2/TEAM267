@@ -30,8 +30,8 @@
             <form action="${cpath}/Login.do" method="post">
                 <div class="flex login">
                     <h1>로그인</h1>
-                    <input type="text" placeholder="아이디" class="login_input" id="memId" name="memId">
-                    <input type="password" placeholder="비밀번호" class="login_input" id="memPw" name="memPw">
+                    <input type="text" placeholder="아이디" class="login_input" id="mem_Id" name="mem_Id">
+                    <input type="password" placeholder="비밀번호" class="login_input" id="mem_pw" name="mem_pw">
                     <input type="submit" value="로그인" class="login_button">
                 </div>
             </form>
