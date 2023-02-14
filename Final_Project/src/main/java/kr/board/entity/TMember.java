@@ -4,34 +4,29 @@ import java.sql.Timestamp;
 
 //회원 정보 
 public class TMember {
-
+	
+	
  // 회원 아이디 
  private String memId;
-
  // 회원 비밀번호 
  private String memPw;
-
  // 회원 닉네임 
  private String memNick;
-
  // 회원 이메일 
  private String memEmail;
-
  // 회원 성별 
  private String memGender;
-
  // 회원 취향 
  private String memTst;
-
  // 회원 발사이즈 
  private Integer memFootsize;
-
  // 회원 가입일자 
  private Timestamp memJoindate;
-
  // 회원 유형 일반회원:'M', 관리자:'A'
  private String memType;
 
+ 
+ 
  public String getMemId() {
      return memId;
  }
@@ -117,4 +112,9 @@ public class TMember {
      this.memJoindate = param.getMemJoindate();
      this.memType = param.getMemType();
  }
+ 
+ 	@Override
+	public String toString() {
+		return "TMember [memId=" + memId + ", memPw=" + memPw + "]";
+	}
 }

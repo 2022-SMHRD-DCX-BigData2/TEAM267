@@ -1,19 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>옷 선택</title>
+    <title>내 옷장</title>
     <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
+    <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
 
 <body>
     <header>
         <div id="TOP" class="flex">
-            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
             <div class="flex header_main">
                 <div><a href="">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
@@ -44,7 +48,7 @@
                             <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
                             <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
                             <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                            <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            <a onclick="sublist_top()" style="cursor: pointer;">피케/카라 티셔츠</a>
                         </div>
                     </div>
                     <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
@@ -75,11 +79,11 @@
                 <div class="viewCLOSET" id="viewCLOSET">
                     <h3>전체</h3>
                     <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="/src/main/webapp/resources/img/img1.jpg" width="150px" height="150px"></a>
+                            src="${cpath}/resources/img/img1.jpg" width="150px" height="150px"></a>
                     <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="/src/main/webapp/resources/img/img2.jpg" width="150px" height="150px"></a>
+                            src="${cpath}/resources/img/img2.jpg" width="150px" height="150px"></a>
                     <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="/src/main/webapp/resources/img/img3.jpg" width="150px" height="150px"></a>
+                            src="${cpath}/resources/img/img3.jpg" width="150px" height="150px"></a>
                 </div>
             </div>
 
@@ -98,7 +102,7 @@
 <footer>
     <!-- 푸터 들어갈 자리 -->
 </footer>
-<script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
+<script src="${cpath}/resources/JS/tabmenu.js"></script>
 <script type="text/javascript">
     // function sublist_top() {
     //     if ($("#viewCLOSET").css("display") == "none") {

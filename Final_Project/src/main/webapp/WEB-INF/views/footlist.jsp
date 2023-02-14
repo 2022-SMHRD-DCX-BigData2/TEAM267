@@ -1,20 +1,23 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>신발 전체 보기</title>
-    <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
-    <link rel="stylesheet" href="/src/main/webapp/resources/css/foot_page.css">
+    <title>신발리스트</title>
+    <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+    <link rel="stylesheet" href="${cpath}/resources/css/foot_page.css">
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
-
 <body>
     <header>
         <div id="TOP" class="flex">
-            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
             <div class="flex header_main">
                 <div><a href="">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
@@ -67,10 +70,14 @@
         <div>
             <div class="shoes_top_box">
                 <div class=" evenly ">
+                <c:forEach begin="1" end="5" step="1">
+
+					야호<br>
+				</c:forEach>
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                                <img src="/src/main/webapp/resources/img/shoes01.jpg" alt="" class="shoes_img">
+                                <img src="${cpath}/resources/img/shoes01.jpg" alt="" class="shoes_img">
                                 <div class="margin_0">
                                     <h4>닥터마틴</h4>
                                     <p>1461</p>
@@ -210,7 +217,7 @@
 
 </body>
 
-<script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
+<script src="${cpath}/resources/JS/tabmenu.js"></script>
 <script type="text/javascript">
 
 </script>

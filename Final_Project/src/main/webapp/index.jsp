@@ -4,6 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,13 +12,29 @@
 <title>Insert title here</title>
 </head>
 <body>
+	<script type="text/javascript">
+	function gocloset(){
+		location.href="${cpath}/MYCLOSET.do";
+	}
+	function gomain(){
+		location.href="${cpath}/main.do";
+	}
+	function gofootlist(){
+		location.href="${cpath}/footlist.do";
+	}
+	
+	
+	</script>
 <%
 	// response.sendRedirect("boardList.do");
 	// jstl 몰랐을때 사용했던 방법
 
 %>
+<a  href="#" onclick="gocloset()">내옷장</a>
+<a  href="#" onclick="gomain()">메인화면</a>
+<a  href="#" onclick="gofootlist()">신발리스트</a>
 
-<c:redirect url="main.do" />
+<%-- <c:redirect url="main.do" /> --%>
 
 
 
