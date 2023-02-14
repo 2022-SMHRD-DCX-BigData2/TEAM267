@@ -400,14 +400,14 @@ main{
 .section .slidelist .left {
     left: 50px;
    /*  background: url('/src/main/webapp/resources/img/left.png') center center / 100% no-repeat; */
-    background: url('../img/left.png') center center / 100% no-repeat;
+    background: url('/src/main/webapp/resources/img/left.png') center center / 100% no-repeat;
     opacity: 0.2;
 }
 
 .section .slidelist .right {
     right: 50px;
 /*     background: url('/Final_Project/src/main/webapp/resources/img/right.png') center center / 100% no-repeat; */
-    background: url('../img/right.png') center center / 100% no-repeat;
+    background: url('/src/main/webapp/resources/img/right.png') center center / 100% no-repeat;
     opacity: 0.2;
 }
 
