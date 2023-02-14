@@ -400,14 +400,14 @@ main{
 .section .slidelist .left {
     left: 50px;
    /*  background: url('/src/main/webapp/resources/img/left.png') center center / 100% no-repeat; */
-    background: url('http://127.0.0.1:5500/src/main/webapp/resources/img/left.png') center center / 100% no-repeat;
+    background: url('http://localhost:8084/smhrd/resources/img/left.png') center center / 100% no-repeat;
     opacity: 0.5;
 }
 
 .section .slidelist .right {
     right: 50px;
 /*     background: url('/src/main/webapp/resources/img/right.png') center center / 100% no-repeat; */
-    background: url('http://127.0.0.1:5500/src/main/webapp/resources/img/right.png') center center / 100% no-repeat;
+    background: url('http://localhost:8084/smhrd/resources/img/right.png') center center / 100% no-repeat;
     opacity: 0.5;
 }
 
