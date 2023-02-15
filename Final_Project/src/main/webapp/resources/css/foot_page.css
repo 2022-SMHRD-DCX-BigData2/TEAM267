@@ -2,7 +2,9 @@ main{
     width: 84%;
     margin-left: 8%;
 }
-
+#footlist{
+    grid-template-columns: repeat(4, 1fr);
+}
 #choice_size{
     background: #E8CCCC;
     border-radius: 13px;
@@ -20,7 +22,10 @@ main{
     justify-content: center;
     margin-top: 25px;
 }
+.content_area{
+    min-width: 236px;
 
+}
 .margin_0>p{
     margin-bottom: 2px;
     margin-top: 2px;

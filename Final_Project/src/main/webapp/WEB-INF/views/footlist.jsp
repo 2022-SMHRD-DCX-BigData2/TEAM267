@@ -13,7 +13,80 @@
     <link rel="stylesheet" href="${cpath}/resources/css/foot_page.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function(){
+            
+            footcategory();
+        })
+
+       /*  function footcategory() {
+            $.ajax({
+                url : "${cpath}/TCategory",
+                type : "get",
+                dataType : "json",
+                success : footcategorylist,
+                error : function(){
+                    alert("error");
+                }
+            })
+        } */
+        
+        /* function footcategorylist(data) {
+            console.log(data);
+            var fcategoryList = "";
+            	$.each(data,(indxe,obj)=>{
+            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this);">'+obj.카테고리+'</button>';
+            		fcategoryList += '<div class="content">';
+            		fcategoryList += '<div class="sublist">';
+            		fcategoryList += '<a style="cursor: pointer; align-items: center;">전체</a>';
+            		fcategoryList += '</div>'
+            		fcategoryList += '</div>'
+            	}
+            $("#footcategory").html(fcategoryList);
+        } */
+        
+        
+        function footcategory() {
+            $.ajax({
+                url : "${cpath}/TFdata",
+                type : "get",
+                dataType : "json",
+                success : footlist,
+                error : function(){
+                    alert("error");
+                }
+            })
+        }
+        function footlist(data) {
+            console.log(data);
+           	var fList = "";
+            	 $.each(data,(indxe,obj)=>{
+            		fList +='<div class="pos_r">';
+            		fList +='	<div class="shoes_box t_center pos_a">';
+            		fList +='    <a href="">';
+            		fList +='        <img src="'+obj.f_img+'" alt="" class="shoes_img">';
+            		fList +='        <div class="margin_0">';
+            		fList +='            <h4>'+obj.f_brand+'</h4>';
+            		fList +='            <p>'+obj.f_name+'</p>';
+            		fList +='            <P>'+obj.f_price+'</P>';
+            		fList +='        </div>';
+            		fList +='<div class="shoes_size_box">';
+            		fList +='     <hr>';
+            		fList +='   <div id="shoes_size" class="grid">';
+            		//$.each(obj.f_size,(indxe,oob)=>{
+            		//fList += ' <div>'+oob+'</div>';
+            		//		})
+            		fList += '            </div>';
+            		fList += '        </div>';
+            		fList += '    </a>';
+            		fList += '	</div>';
+            		fList += '</div>';
+            	})
+            $("#footlist").html(fList);
+        }
+    </script>
+</head>
 <body>
     <header>
         <div id="TOP" class="flex">
@@ -34,14 +107,16 @@
     <!-- 신발 탭 -->
 
     <div style="display: flex;">
-        <div class="tab_wrap tab_area" style="width: 17%;">
-            <div class="content_area act" data-depth="0" data-idx="0" style="margin-top: 1em;">
-                <button type="button" class="collapsible" onclick="collapse(this);">운동화</button>
+        <div class="tab_wrap tab_area">
+            <div class="content_area act" data-depth="0" data-idx="0" style="margin-top: 1em;" id="footcategory">
+                        
+				<button type="button" class="collapsible" onclick="collapse(this);">111</button>
                 <div class="content">
                     <div class="sublist">
                         <a style="cursor: pointer; align-items: center;">전체</a>
                     </div>
                 </div>
+
                 <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
                 <div class="content">
 
@@ -69,150 +144,14 @@
 
         <div>
             <div class="shoes_top_box">
-                <div class=" evenly ">
-                <c:forEach begin="1" end="5" step="1">
-
-					야호<br>
-				</c:forEach>
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                                <img src="${cpath}/resources/img/shoes01.jpg" alt="" class="shoes_img">
-                                <div class="margin_0">
-                                    <h4>닥터마틴</h4>
-                                    <p>1461</p>
-                                    <P>219,000원</P>
-                                </div>
-
-                                <div class="shoes_size_box">
-                                    <hr>
-                                    <div id="shoes_size" class="grid">
-                                        <div>250</div>
-                                        <div>255</div>
-                                        <div>260</div>
-                                        <div>265</div>
-                                        <div>270</div>
-                                        <div>270</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                                <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                                <div class="margin_0">
-                                    <h4>브랜드</h4>
-                                    <p>제품명</p>
-                                    <P>제품가격</P>
-                                </div>
-                                <div class="shoes_size_box">
-                                    <hr>
-                                    <div id="shoes_size" class="grid">
-                                        <div>250</div>
-                                        <div>255</div>
-                                        <div>260</div>
-                                        <div>265</div>
-                                        <div>270</div>
-                                        <div>270</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                                <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                                <div class="margin_0">
-                                    <h4>브랜드</h4>
-                                    <p>제품명</p>
-                                    <P>제품가격</P>
-                                </div>
-                                <div class="shoes_size_box">
-                                    <hr>
-                                    <div id="shoes_size" class="grid">
-                                        <div>250</div>
-                                        <div>255</div>
-                                        <div>260</div>
-                                        <div>265</div>
-                                        <div>270</div>
-                                        <div>270</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                                <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                                <div class="margin_0">
-                                    <h4>브랜드</h4>
-                                    <p>제품명</p>
-                                    <P>제품가격</P>
-                                </div>
-                                <div class="shoes_size_box">
-                                    <hr>
-                                    <div id="shoes_size" class="grid">
-                                        <div>250</div>
-                                        <div>255</div>
-                                        <div>260</div>
-                                        <div>265</div>
-                                        <div>270</div>
-                                        <div>270</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                <div class=" evenly grid" id="footlist">
+                
+                    
 
                 </div>
             </div>
         </div>
-        <!-- 신발 목록 -->
-        <!-- <div class="SHOES_list_div">
-            <div class="SHOES_list">
-                <img src="/src/main/webapp/resources/img/shoes02.jpg" width="100px" height="100px">
-                <span>발렌시아가</span>
-                <span>트리플 S</span>
-                <span>1,375,000원</span>
-                <div class="size_check">
-                        <span>240</span>
-                        <span>245</span>
-                        <span>250</span>
-                        <span>255</span>
-                        <span>260</span>
-                        <span>265</span>
-                        <span>270</span>
-                    </div>
-            </div>
-    
-            <div class="SHOES_list">
-                <img src="/src/main/webapp/resources/img/shoes01.jpg" width="100px" height="100px">
-                <span>닥터마틴</span>
-                <span>1641</span>
-                <span>219,000원</span>
-                <div class="size_check">
-                        <span>240</span>
-                        <span>250</span>
-                        <span>260</span>
-                        <span>270</span>
-                        <span>280</span>
-                        <span>290</span>
-                    </div>
-            </div>
-    
-            <div class="SHOES_list">
-                신발들
-            </div>
-
-            <div class="SHOES_list">
-                신발들
-            </div>
-        </div> -->
+        
     </div>
 
 </body>
