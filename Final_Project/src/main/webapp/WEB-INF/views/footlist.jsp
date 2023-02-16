@@ -13,52 +13,57 @@
     <link rel="stylesheet" href="${cpath}/resources/css/foot_page.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     
-    <!-- <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script> -->
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script type="text/javascript">
         $(document).ready(function(){
             
-            footcategory();
+        	footcategorylist();
+            /* footcategory(); */
         })
 
-       /*  function footcategory() {
+        function footcategorylist() {
             $.ajax({
                 url : "${cpath}/TCategory",
                 type : "get",
                 dataType : "json",
-                success : footcategorylist,
+                success : footcalist,
                 error : function(){
-                    alert("error");
+                    alert("신발카테고리불러오기 실패");
                 }
             })
-        } */
+        }
         
-        /* function footcategorylist(data) {
+        function footcalist(data) {
             console.log(data);
             var fcategoryList = "";
-            	$.each(data,(indxe,obj)=>{
-            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this);">'+obj.카테고리+'</button>';
+            $.each(data,(indxe,obj)=>{
+            		var cat = ["전체","구두","부츠","샌들","스포츠","운동화","캐주얼"]
+            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this);">'+cat[obj.f_cate]+'</button>';
             		fcategoryList += '<div class="content">';
             		fcategoryList += '<div class="sublist">';
-            		fcategoryList += '<a style="cursor: pointer; align-items: center;">전체</a>';
+            		fcategoryList += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')">전체</a>';
             		fcategoryList += '</div>'
             		fcategoryList += '</div>'
-            	}
+            	})
             $("#footcategory").html(fcategoryList);
-        } */
+            /* footcategory(); */
+        }
         
-        
-        function footcategory() {
+          function footcategory(f_cate) {
+        	  console.log(f_cate)
             $.ajax({
-                url : "${cpath}/TFdata",
+                url : "${cpath}/TFdata/"+f_cate,
                 type : "get",
                 dataType : "json",
                 success : footlist,
                 error : function(){
-                    alert("error");
+                    alert("신발목록불러오기실패");
                 }
             })
+            
         }
-        function footlist(data) {
+        
+         function footlist(data) {
             console.log(data);
            	var fList = "";
             	 $.each(data,(indxe,obj)=>{
@@ -74,17 +79,23 @@
             		fList +='<div class="shoes_size_box">';
             		fList +='     <hr>';
             		fList +='   <div id="shoes_size" class="grid">';
-            		//$.each(obj.f_size,(indxe,oob)=>{
-            		//fList += ' <div>'+oob+'</div>';
-            		//		})
+                    f_sizelist=obj.f_size.split("\n")
+            		$.each(f_sizelist,(indxe,oob)=>{
+                        
+            		fList += ' <div>'+oob+'</div>';
+            				})
             		fList += '            </div>';
             		fList += '        </div>';
             		fList += '    </a>';
             		fList += '	</div>';
             		fList += '</div>';
+            		
+            		if(indxe > 100) return false;
             	})
             $("#footlist").html(fList);
         }
+        
+        
     </script>
 </head>
 <body>
@@ -117,28 +128,7 @@
                     </div>
                 </div>
 
-                <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
-                <div class="content">
 
-                    <div class="sublist">
-                        <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
-                    </div>
-
-                </div>
-
-                <button type="button" class="collapsible" onclick="collapse(this);">스포츠</button>
-                <div class="content">
-                    <div class="sublist">
-                        <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
-                    </div>
-                </div>
-
-                <button type="button" class="collapsible" onclick="collapse(this);">부츠</button>
-                <div class="content">
-                    <div class="sublist">
-                        <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
-                    </div>
-                </div>
             </div>
         </div>
 
