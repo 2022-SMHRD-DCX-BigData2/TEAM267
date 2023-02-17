@@ -54,10 +54,11 @@
             $.ajax({
                 url : "${cpath}/TFdata/"+f_cate,
                 type : "get",
+                data : {"f_cate" : f_cate},
                 dataType : "json",
                 success : footlist,
-                error : function(){
-                    alert("신발목록불러오기실패");
+                error : function(f_cate){
+                    alert("신발목록불러오기실패"+f_cate);
                 }
             })
             

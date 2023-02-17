@@ -18,22 +18,23 @@ public class BoardRestController {
 	
 	@GetMapping("/TCategory")
 	public java.util.List<TFdata> footcategorylist() {
-		java.util.List<TFdata> footcategorylist=mapper.footcalist();		
+		java.util.List<TFdata> footcategorylist=mapper.footcategorylist();		
 		return footcategorylist;
 	}
 	
-	@GetMapping("/TFdata")
-	public java.util.List<TFdata> footlist() {
-		java.util.List<TFdata> footlist=mapper.footcategory();		
-		return footlist;
-	}
+//	@GetMapping("/TFdata")
+//	public java.util.List<TFdata> footlist() {
+//		java.util.List<TFdata> footlist=mapper.footcategory();		
+//		return footlist;
+//	}
 	
 	@GetMapping("/TFdata/{f_cate}")
-	public List<TFdata> footcategory(@PathVariable int f_cate) {
+	public List<TFdata> footcategory(int f_cate) {
 		System.out.println("{"+f_cate+"---f_cate데이터확인}");
 		
-		java.util.List<TFdata> footlist=mapper.boardContent(f_cate);		
-		return footlist;
+		java.util.List<TFdata> footlistca=mapper.footcategory(f_cate);
+		System.out.print(footlistca);
+		return footlistca;
 	}
 
 }
