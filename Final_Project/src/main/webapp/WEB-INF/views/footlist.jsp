@@ -34,7 +34,7 @@
         }
         
         function footcalist(data) {
-            console.log(data);
+            
             var fcategoryList = "";
             $.each(data,(indxe,obj)=>{
             		var cat = ["전체","구두","부츠","샌들","스포츠","운동화","캐주얼"]
@@ -50,7 +50,7 @@
         }
         
           function footcategory(f_cate) {
-        	  console.log(f_cate)
+        	  
             $.ajax({
                 url : "${cpath}/TFdata/"+f_cate,
                 type : "get",

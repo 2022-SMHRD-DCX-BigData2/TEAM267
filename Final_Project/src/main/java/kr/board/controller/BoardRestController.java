@@ -30,10 +30,10 @@ public class BoardRestController {
 	
 	@GetMapping("/TFdata/{f_cate}")
 	public List<TFdata> footcategory(int f_cate) {
-		System.out.println("{"+f_cate+"---f_cate데이터확인}");
+		
 		
 		java.util.List<TFdata> footlistca=mapper.footcategory(f_cate);
-		System.out.print(footlistca);
+		
 		return footlistca;
 	}
 
