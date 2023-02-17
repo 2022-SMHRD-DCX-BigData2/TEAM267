@@ -20,7 +20,7 @@
         	footcategorylist();
             /* footcategory(); */
         })
-
+		// 신발 대카테고리 데이터
         function footcategorylist() {
             $.ajax({
                 url : "${cpath}/TCategory",
@@ -32,16 +32,78 @@
                 }
             })
         }
+     
+        // 신발 목록 불러오기 데이터
+          function footcategory(f_cate) {
+        	
+            $.ajax({
+                url : "${cpath}/TFdata/"+f_cate,
+                type : "get",
+                data : {"f_cate" : f_cate},
+                dataType : "json",
+                success : footlist,
+                error : function(){
+                    alert("신발목록불러오기실패"+f_cate);
+                }
+            })
+            
+        }  
         
+     // 신발 브랜드에따른  불러오기 데이터
+        /* function footcategory(f_cate) {
+      	  	var newBrand = $("#footcategory"+f_cate).val();
+        	console.log(newBrand);
+      	  	
+      	  	
+            $.ajax({
+                url : "${cpath}/TFdata/"+f_cate,
+                type : "put",
+                data : JSON.stringify({"f_cate" : f_cate, "f_brand" : newBrand}),	
+                dataType : "json",
+                success : footlist,
+                error : function(){
+                    alert("브랜드 기준 신발 불러오기 실패");
+                }
+            }) */
+        
+        // 신발 브랜드 불러오기 데이터
+        function shoesbrand(f_cate){
+        	$.ajax({
+                url : "${cpath}/TBrand/"+f_cate,
+                type : "get",
+                data : {"f_cate" : f_cate},
+                dataType : "json",
+                success : function(shoesbrand){
+                	// console.log("브랜드 불러오기 성공");
+                	// console.log(shoesbrand);
+                	var brand ="";
+                	$.each(shoesbrand,(indxe,obj)=>{
+                		brand += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')" id="footcategory'+obj.f_cate+'">'+obj.f_brand+'</a>';
+                		
+                		if(indxe >= 4) return false;
+            		}) 
+            		$(".sublist").html(brand);
+                },
+                error : function(){
+                    alert("신발브랜드불러오기 실패");
+                }
+            })
+        }
+        
+        
+        
+        
+        
+     // 신발 대카테고리 불러오기
         function footcalist(data) {
             
             var fcategoryList = "";
             $.each(data,(indxe,obj)=>{
             		var cat = ["전체","구두","부츠","샌들","스포츠","운동화","캐주얼"]
-            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this);">'+cat[obj.f_cate]+'</button>';
+            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this); shoesbrand('+obj.f_cate+')">'+cat[obj.f_cate]+'</button>';
             		fcategoryList += '<div class="content">';
-            		fcategoryList += '<div class="sublist">';
-            		fcategoryList += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')">전체</a>';
+            		fcategoryList += '<div class="sublist" >';
+            		/* fcategoryList += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')" id="footcategory'+obj.f_cate+'">전체</a>'; */
             		fcategoryList += '</div>'
             		fcategoryList += '</div>'
             	})
@@ -49,23 +111,10 @@
             /* footcategory(); */
         }
         
-          function footcategory(f_cate) {
-        	  
-            $.ajax({
-                url : "${cpath}/TFdata/"+f_cate,
-                type : "get",
-                data : {"f_cate" : f_cate},
-                dataType : "json",
-                success : footlist,
-                error : function(f_cate){
-                    alert("신발목록불러오기실패"+f_cate);
-                }
-            })
-            
-        }
-        
+       
+          
          function footlist(data) {
-            console.log(data);
+
            	var fList = "";
             	 $.each(data,(indxe,obj)=>{
             		fList +='<div class="pos_r">';
