@@ -5,7 +5,25 @@
   <!-- 여러 mapper.xml이 있는 경우에 id 겹치면 혼란이 되는것을 방지 -->
 <mapper namespace="kr.board.mapper.BoardMapper">
     <!-- 태그의 id는 mapper인터페이스의 메소드 이름으로 한다 -->
-  
-  
-  
+    	<!-- <select id="footcategory"  resultType="kr.board.entity.TFdata">
+    		SELECT * FROM t_fdata where f_cate = 1
+  		</select> -->
+   		<select id="footcategorylist"  resultType="kr.board.entity.TFdata">
+   	    	SELECT distinct f_cate from t_fdata
+  		</select>
+  		
+   		<select id="footcategory" parameterType="int" resultType="kr.board.entity.TFdata">
+     		select * from t_fdata where f_cate=#{f_cate} 
+  		</select>
+  		
+   		<select id="shoesbrand" parameterType="int" resultType="kr.board.entity.TFdata">
+     		SELECT f_brand, COUNT(f_brand),f_cate FROM t_fdata
+			where f_cate=#{f_cate}
+			GROUP BY f_brand
+			HAVING COUNT(f_brand) > 40
+  		</select>
+  		
+   		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
+     		select * from t_fdata where f_cate=#{f_cate} and f_brand=#{'f_brand'}
+  		</select>
 </mapper>

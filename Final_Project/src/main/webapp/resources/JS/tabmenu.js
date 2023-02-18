@@ -36,6 +36,8 @@ function findParent(el, className){
 // 탭메뉴끝
 
 function collapse(element) {
+    
+    
     var before = document.getElementsByClassName("active")[0]               // 기존에 활성화된 버튼
     if (before && document.getElementsByClassName("active")[0] != element) {  // 자신 이외에 이미 활성화된 버튼이 있으면
         before.nextElementSibling.style.maxHeight = null;   // 기존에 펼쳐진 내용 접고
@@ -49,4 +51,7 @@ function collapse(element) {
     } else {
         content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
     }
+    var text = $(element).text()
+		
+        alert(text);
 }

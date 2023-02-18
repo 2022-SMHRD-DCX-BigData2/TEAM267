@@ -56,6 +56,10 @@
 		function gologin() {
 				location.href="${cpath}/login.do";
 		}
+		
+		function gosign() {
+			location.href="${cpath}/sign.do";
+	}
 	</script>
 </head>
 
@@ -82,8 +86,8 @@
         	<c:when test="${empty loginMember}">
 	            <div class="flex header_left">
 	                <div>
-		                <a href="" onclick="gologin()">로그인</a>
-		                <a href="">회원가입</a>
+		                <a href="#" onclick="gologin()">로그인</a>
+		                <a href="#" onclick="gosign()">회원가입</a>
 	                </div>
 	            </div>
             </c:when>
@@ -91,8 +95,8 @@
 				<div class="flex header_left">
 	                <div>
 	                	<span>${loginMember.memName}</span>
-		                <a href="">내정보</a>
-		                <a class="" href="${cpath}/Logout.do">로그아웃</a>
+		                <a href="#" onclick="gomypage">내정보</a>
+		                <a href="#" onclick="gologout">로그아웃</a>
 	                </div>
 	            </div>
 			</c:otherwise>
