@@ -51,7 +51,4 @@ function collapse(element) {
     } else {
         content.style.maxHeight = content.scrollHeight + "px";  // 접혀있는 경우 펼치기
     }
-    var text = $(element).text()
-		
-        alert(text);
 }
