@@ -399,16 +399,16 @@ main{
 
 .section .slidelist .left {
     left: 50px;
-   /*  background: url('/src/main/webapp/resources/img/left.png') center center / 100% no-repeat; */
-    background: url('http://localhost:8084/smhrd/resources/img/left.png') center center / 100% no-repeat;
-    opacity: 0.5;
+    background:url('../img/slide-left.png');
+    background-size: cover;
+    opacity: 0.1;
 }
 
 .section .slidelist .right {
     right: 50px;
-/*     background: url('/src/main/webapp/resources/img/right.png') center center / 100% no-repeat; */
-    background: url('http://localhost:8084/smhrd/resources/img/right.png') center center / 100% no-repeat;
-    opacity: 0.5;
+    background:url('../img/slide-right.png');
+    background-size: cover;
+    opacity: 0.1;
 }
 
 .section [id="slide01"]:checked ~ .slidewrap .slidelist > li {transform: translateX(0%);}
