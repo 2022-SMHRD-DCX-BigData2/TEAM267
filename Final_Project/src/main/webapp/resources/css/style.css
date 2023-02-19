@@ -802,3 +802,38 @@ main{
     font-size: 0.9em;
     text-align: center;
 }
+
+/* 서비스 소개 */
+.info {
+    margin: auto; 
+    overflow: auto;
+    width: 90%;
+}
+
+.info span {
+    font-style: italic; 
+    margin-right: 6px; 
+    text-decoration: underline;
+}
+
+.info p {
+    text-align: center; 
+    font-size: x-large;
+}
+
+.info h2 {
+    text-align: center;
+}
+
+.info_list {
+    display: flex; 
+    flex-direction: column;
+}
+
+.info_list > div:nth-child(2n){
+    background-color: white;
+}
+
+.info_list > div:nth-child(2n-1){
+    background-color: antiquewhite;
+}
