@@ -42,7 +42,8 @@
     box-sizing:border-box
 }
 .tab_wrap .content_area.act{
-    display:block
+    display:block;
+    margin-top: 35px;
 }
 .tab_wrap *[data-depth="1"]{
     background:#f4f4f4

@@ -22,12 +22,11 @@
             </div>
         </div>
     </header>
-    <main>
       <div class="my_page">
       <h2>내정보</h2>
         <div class="tab_wrap tab_area" id="my_tab_wrap">
             <div class="btn_area clearfix" id="my_btn_tab">
-              <button class="btn btn_tab act" data-depth="0" data-idx="0" >회원정보</button>
+              <button class="btn btn_tab act" data-depth="0" data-idx="0" style="margin-right: 10px;">회원정보 수정</button>
               <button class="btn btn_tab" data-depth="0" data-idx="1">커뮤니티</button>
             </div>
             <!-- 내정보 페이지 -->
@@ -49,6 +48,8 @@
                 <div class="btn_area clearfix" id="my_bltn">
                   <button class="btn btn_tab act" data-depth="1" data-idx="0">댓글</button>
                   <button class="btn btn_tab" data-depth="1" data-idx="1">게시물</button>
+                  <button class="btn btn_tab" data-depth="1" data-idx="2">좋아요</button>
+
                 </div>
           
                 <div class="content_area act" data-depth="1" data-idx="0" id="my_board">
@@ -83,13 +84,13 @@
                         </tr>
                     </table>
                 </div>
+
                 <div class="content_area" data-depth="1" data-idx="1" id="my_board">
                   <table class="board">
                     <tr>
                         <td>작성자</td>
                         <td>제목</td>
                         <td>작성일</td>
-                        <td>좋아요</td>
                         <td>수정</td>
                         <td>삭제</td>
                     </tr>
@@ -97,7 +98,6 @@
                         <td>홍길동</td>
                         <td><a>그리워하면</a></td>
                         <td>2022-11-25</td>
-                        <td>30</td>
                         <td><button type="button" class="btn btn-outline-dark">수정</button></td>
                         <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                     </tr>
@@ -105,7 +105,6 @@
                         <td>홍길동</td>
                         <td><a>그리워하면</a></td>
                         <td>2022-11-25</td>
-                        <td>30</td>
                         <td><button type="button" class="btn btn-outline-dark">수정</button></td>
                         <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                     </tr>
@@ -113,7 +112,6 @@
                         <td>홍길동</td>
                         <td><a>그리워하면</a></td>
                         <td>2022-11-25</td>
-                        <td>30</td>
                         <td><button type="button" class="btn btn-outline-dark">수정</button></td>
                         <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
                     </tr>
@@ -123,10 +121,6 @@
             </div>
           </div>
       </div>
-    </main>
-    <footer>
-
-    </footer>
     <script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
 </body>
 </html>

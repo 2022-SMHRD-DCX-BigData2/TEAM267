@@ -303,6 +303,11 @@ main{
 }
 
 /* 마이페이지 */
+.my_page{
+    width: 90%;
+    margin: auto;
+}
+
 .my_page .tab_wrap{
     width: 100%;
     
@@ -312,7 +317,6 @@ main{
     
     
 }.my_page .content_area #my_board{
-    margin-left: 100px;
     background-color: rgba(0, 0, 0, 0);
     
 }
@@ -321,13 +325,15 @@ main{
     background-color: white;
     color: #000000;
     border-bottom: #000000 solid 5px;
+    font-size: large;
     
 }
 .my_page #my_btn_tab .btn_tab{
     height: 50px;   
+    font-size: large;
 }
 .my_page .tab_wrap .content_area table{
-    width: 1105px;
+    width: 100%;
     text-align: center;
     border-collapse : collapse;
     border-spacing : 0;
