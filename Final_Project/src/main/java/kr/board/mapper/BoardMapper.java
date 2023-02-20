@@ -28,5 +28,9 @@ public interface BoardMapper {
 	public List<TFdata> brandcat(TFdata vo);// 신발 종류와 브랜드에 따른 신발리스트 불러오기
 
 	public List<TCloset> myCloset(int f_cate);
+
+	/* public List<TCloset> rcmndClst(String memId); */
+	
+	public List<TCloset> rcmndClst();
 	
 }

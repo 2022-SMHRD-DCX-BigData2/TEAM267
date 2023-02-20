@@ -4,67 +4,67 @@ package kr.board.entity;
 public class TCloset {
 
  // 옷 순번 
- private long closetSeq;
+ private long closet_seq;
 
  // 회원 아이디 
- private String memId;
+ private String mem_id;
 
  // 의류 명칭 
- private String closetName;
+ private String closet_name;
 
  // 의류 이미지 
- private String closetImg;
+ private String closet_img;
 
  // 카테고리 순번 
- private long cateSeq;
+ private long cate_seq;
 
- public long getClosetSeq() {
-     return closetSeq;
+ public long getcloset_seq() {
+     return closet_seq;
  }
 
- public void setClosetSeq(long closetSeq) {
-     this.closetSeq = closetSeq;
+ public void setcloset_seq(long closet_seq) {
+     this.closet_seq = closet_seq;
  }
 
- public String getMemId() {
-     return memId;
+ public String getmem_id() {
+     return mem_id;
  }
 
- public void setMemId(String memId) {
-     this.memId = memId;
+ public void setmem_id(String mem_id) {
+     this.mem_id = mem_id;
  }
 
- public String getClosetName() {
-     return closetName;
+ public String getcloset_name() {
+     return closet_name;
  }
 
- public void setClosetName(String closetName) {
-     this.closetName = closetName;
+ public void setcloset_name(String closet_name) {
+     this.closet_name = closet_name;
  }
 
- public String getClosetImg() {
-     return closetImg;
+ public String getcloset_img() {
+     return closet_img;
  }
 
- public void setClosetImg(String closetImg) {
-     this.closetImg = closetImg;
+ public void setcloset_img(String closet_img) {
+     this.closet_img = closet_img;
  }
 
- public long getCateSeq() {
-     return cateSeq;
+ public long getcate_seq() {
+     return cate_seq;
  }
 
- public void setCateSeq(long cateSeq) {
-     this.cateSeq = cateSeq;
+ public void setcate_seq(long cate_seq) {
+     this.cate_seq = cate_seq;
  }
 
  // TCloset 모델 복사
  public void CopyData(TCloset param)
  {
-     this.closetSeq = param.getClosetSeq();
-     this.memId = param.getMemId();
-     this.closetName = param.getClosetName();
-     this.closetImg = param.getClosetImg();
-     this.cateSeq = param.getCateSeq();
+     this.closet_seq = param.getcloset_seq();
+     this.mem_id = param.getmem_id();
+     this.closet_name = param.getcloset_name();
+     this.closet_img = param.getcloset_img();
+     this.cate_seq = param.getcate_seq();
  }
 }

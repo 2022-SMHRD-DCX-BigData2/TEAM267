@@ -24,4 +24,18 @@ public class sublistController {
 		
 		return myCloset;
 	}
+	
+	/*// 아이디 받아와서하기
+	 * @GetMapping("/rcmndClst_1") public List<TCloset> rcmndClst(String memId) {
+	 * 
+	 * java.util.List<TCloset> rcmndClst = mapper.rcmndClst(memId); return
+	 * rcmndClst; }
+	 */
+	
+	@GetMapping("/rcmndClst_1")
+	public List<TCloset> rcmndClst() {
+	  
+	  java.util.List<TCloset> rcmndClst = mapper.rcmndClst();
+	  return rcmndClst;
+	}
 }

@@ -2,9 +2,9 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  <!-- 여러 mapper.xml이 있는 경우에 id 겹치면 혼란이 되는것을 방지 -->
+
 <mapper namespace="kr.board.mapper.BoardMapper">
-    <!-- 태그의 id는 mapper인터페이스의 메소드 이름으로 한다 -->
+ 
     	<!-- <select id="footcategory"  resultType="kr.board.entity.TFdata">
     		SELECT * FROM t_fdata where f_cate = 1
   		</select> -->
@@ -23,11 +23,16 @@
 			HAVING COUNT(f_brand) > 40
   		</select>
   		
+   		<!--브랜드 확인  -->
    		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
      		select * from t_fdata where f_cate=#{f_cate} and f_brand=#{'f_brand'}
   		</select>
-  		
+  		<!-- 내옷장 의류불러오기 -->
    		<select id="myCloset"  parameterType="kr.board.entity.TCloset">
      		SELECT closet_name, closet_img FROM t_closet WHERE mem_id = #{'memId'}
+  		</select>
+  		<!--코디공유 추천 목록 불러오기  -->
+   		<select id="rcmndClst" parameterType="String" resultType="kr.board.entity.TCloset">
+     		SELECT closet_name, closet_img FROM t_closet WHERE mem_id = 'admin'
   		</select>
 </mapper>

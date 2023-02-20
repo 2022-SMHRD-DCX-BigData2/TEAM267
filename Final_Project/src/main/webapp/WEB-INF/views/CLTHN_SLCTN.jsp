@@ -9,13 +9,41 @@
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title>내 옷장</title>
-            <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
             <link rel="stylesheet" href="${cpath}/resources/css/style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-            <script src="${cpath}/resources/JS/rcmndClst.js"></script>
+<%--             <script src="${cpath}/resources/JS/rcmndClst.js"></script> --%>
+            <script type="text/javascript">
             
+            function rcmndClst() {
+            	  var memId = "${loginMember.memId}";
+            	  $.ajax({
+            	    url: "${cpath}/rcmndClst_1",
+            	    type: "get",
+            	    dataType: "json",
+            	/*     data: {"memId": memId}, */
+            	    success: rcmndClstlist,
+            	    error: function() {
+            	      alert("의류 카테고리 불러오기 실패");
+            	    }
+            	  })
+            	}
 
+            	function rcmndClstlist(data) {
+            	  console.log(data);
+            	  var rcmndClst_1_1 = "";
+
+            	  rcmndClst_1_1 += '<div class="" id="viewCLOSET">';
+            	  rcmndClst_1_1 += '<h3>전체</h3>';
+            	  $.each(data,(indxe,item)=>{
+            	  rcmndClst_1_1 += '<a onclick="select_TOP()"><img src="' + item.closet_img + '" width="150px" height="150px"></a>';
+            	  });
+            	  rcmndClst_1_1 += '</div>';
+
+            	  $(".viewCLOSET_area").html(rcmndClst_1_1);
+            	}
+            </script>
+		</head>
         <body>
             <header>
                 <div id="TOP" class="flex">

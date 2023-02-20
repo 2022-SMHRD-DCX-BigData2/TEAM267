@@ -18,7 +18,6 @@
         $(document).ready(function(){
             
         	footcategorylist();
-            /* footcategory(); */
         })
 		// 신발 대카테고리 데이터
         function footcategorylist() {
