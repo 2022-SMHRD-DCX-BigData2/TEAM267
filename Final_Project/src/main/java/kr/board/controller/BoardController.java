@@ -23,7 +23,7 @@ public class BoardController {
 		return "HOME";
 	}
 	
-
+	
 	
 //	로그인 페이지 이동
 	@RequestMapping("/login.do")
@@ -37,4 +37,6 @@ public class BoardController {
 //	신발전체 페이지 이동
 	@RequestMapping("/footlist.do")
 	public void footlist() {}
+	@RequestMapping("/CLTHN_SLCTN.do")
+	public void CLTHN_SLCTN() {}
 }

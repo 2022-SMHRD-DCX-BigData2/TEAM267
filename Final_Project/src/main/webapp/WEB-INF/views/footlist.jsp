@@ -74,8 +74,6 @@
                 data : {"f_cate" : f_cate},
                 dataType : "json",
                 success : function(shoesbrand){
-                	// console.log("브랜드 불러오기 성공");
-                	// console.log(shoesbrand);
                 	var brand ="";
                 	$.each(shoesbrand,(indxe,obj)=>{
                 		brand += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')" id="footcategory'+obj.f_cate+'">'+obj.f_brand+'</a>';
@@ -100,7 +98,7 @@
             var fcategoryList = "";
             $.each(data,(indxe,obj)=>{
             		var cat = ["전체","구두","부츠","샌들","스포츠","운동화","캐주얼"]
-            		fcategoryList += '<button type="button" class="collapsible" onclick="collapse(this); shoesbrand('+obj.f_cate+')">'+cat[obj.f_cate]+'</button>';
+            		fcategoryList += '<button type="button" class="collapsible" onclick="footcategory('+obj.f_cate+') ;collapse(this) ">'+cat[obj.f_cate]+'</button>';
             		fcategoryList += '<div class="content">';
             		fcategoryList += '<div class="sublist" >';
             		/* fcategoryList += '<a style="cursor: pointer; align-items: center;" onclick="footcategory('+obj.f_cate+')" id="footcategory'+obj.f_cate+'">전체</a>'; */

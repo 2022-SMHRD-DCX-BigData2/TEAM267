@@ -5,6 +5,7 @@ import java.util.List;
 import org.apache.ibatis.annotations.Mapper;
 
 import kr.board.entity.TCategory;
+import kr.board.entity.TCloset;
 import kr.board.entity.TFdata;
 import kr.board.entity.TMember;
 
@@ -25,5 +26,7 @@ public interface BoardMapper {
 	public List<TFdata> shoesbrand(int f_cate); // 브랜드 불러오기
 
 	public List<TFdata> brandcat(TFdata vo);// 신발 종류와 브랜드에 따른 신발리스트 불러오기
+
+	public List<TCloset> myCloset(int f_cate);
 	
 }

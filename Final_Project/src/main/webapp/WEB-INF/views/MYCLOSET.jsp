@@ -1,109 +1,165 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}" />
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>내 옷장</title>
-    <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
-    <link rel="stylesheet" href="${cpath}/resources/css/style.css">
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        <c:set var="cpath" value="${pageContext.request.contextPath}" />
+        <!DOCTYPE html>
+        <html lang="en">
 
-<body>
-    <header>
-        <div id="TOP" class="flex">
-            <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
-            <div class="flex header_main">
-                <div><a href="">
-                        <h1 id="header_font">COORDI FOR SHOES</h1>
-                    </a></div>
-                <div><a href="">서비스소개</a><a href="">공지사항</a></div>
-            </div>
-            <div class="flex header_left">
-                <div><a href="">로그인</a><a href="">회원가입</a></div>
-            </div>
-        </div>
-    </header>
-    <!-- 헤더 끝 -->
-    <div>
-        <main style="display: flex;
+        <head>
+            <meta charset="UTF-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>내 옷장</title>
+            <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
+            <link rel="stylesheet" href="${cpath}/resources/css/style.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+            <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+
+        <body>
+            <header>
+                <div id="TOP" class="flex">
+                    <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+                    <div class="flex header_main">
+                        <div><a href="">
+                                <h1 id="header_font">COORDI FOR SHOES</h1>
+                            </a></div>
+                        <div><a href="">서비스소개</a><a href="">공지사항</a></div>
+                    </div>
+                    <div class="flex header_left">
+                        <div><a href="">로그인</a><a href="">회원가입</a></div>
+                    </div>
+                </div>
+            </header>
+            <!-- 헤더 끝 -->
+            <main style="display: flex;
                 flex-direction: row;
                 align-items: stretch;">
 
-            <div class="tab_wrap tab_area" style="width: 17%;">
-                <div class="btn_area clearfix">
-                    <button class="btn btn_tab act" data-depth="0" data-idx="0" style="width: 100%;">내옷장</button>
-                </div>
+                <div class="tab_wrap tab_area" style="width: 17%;">
+                    <div class="btn_area clearfix">
+                        <button class="btn btn_tab act" data-depth="0" data-idx="0">옷장</button>
+                        <button class="btn btn_tab" data-depth="0" data-idx="1">신발장</button>
+                    </div>
 
-                <!-- 내 옷장 TAB-->
-                <div class="content_area act" data-depth="0" data-idx="0">
-                    <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-                    <div class="content">
-                        <div class="sublist">
-                            <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-                            <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-                            <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                            <a onclick="sublist_top()" style="cursor: pointer;">피케/카라 티셔츠</a>
+                    <!-- 내 옷장 TAB-->
+                    <div class="content_area act" data-depth="0" data-idx="0">
+                        <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            </div>
+                        </div>
+                        <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
+                        <div class="content">
+
+                            <div class="sublist">
+                                <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
+                                <a onclick="sublist_bottom()">청바지</a>
+                                <a onclick="sublist_bottom()">반바지</a>
+                                <a onclick="sublist_bottom()">슬렉스</a>
+                            </div>
+
+                        </div>
+                        <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
+                                <a onclick="sublist_outer()">패딩</a>
+                                <a onclick="sublist_outer()">자켓</a>
+                                <a onclick="sublist_outer()">가디건</a>
+                            </div>
                         </div>
                     </div>
-                    <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
-                    <div class="content">
+                    <!-- 구두,부츠,샌들,스포츠,운동화,캐주얼 -->
+                    <!-- 신발장 -->
+                    <div class="content_area" data-depth="0" data-idx="1">
+                        <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            </div>
+                        </div>
+                        <button type="button" class="collapsible" onclick="collapse(this);">부츠</button>
+                        <div class="content">
 
-                        <div class="sublist">
-                            <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
-                            <a onclick="sublist_bottom()">청바지</a>
-                            <a onclick="sublist_bottom()">반바지</a>
-                            <a onclick="sublist_bottom()">슬렉스</a>
+                            <div class="sublist">
+                                <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
+                                <a onclick="sublist_bottom()">청바지</a>
+                                <a onclick="sublist_bottom()">반바지</a>
+                                <a onclick="sublist_bottom()">슬렉스</a>
+                            </div>
+
                         </div>
 
-                    </div>
-                    <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
-                    <div class="content">
-                        <div class="sublist">
-                            <a onclick="sublist_outer()" style="cursor: pointer;">전체</a>
-                            <a onclick="sublist_outer()">패딩</a>
-                            <a onclick="sublist_outer()">자켓</a>
-                            <a onclick="sublist_outer()">가디건</a>
+                        <button type="button" class="collapsible" onclick="collapse(this);">샌들</button>
+                        <div class="content">
+                            <div class="sublist">
+
+                            </div>
                         </div>
+
+                        <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            </div>
+                        </div>
+                        <button type="button" class="collapsible" onclick="collapse(this);">스포츠</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            </div>
+                        </div>
+                        <button type="button" class="collapsible" onclick="collapse(this);">운동화</button>
+                        <div class="content">
+                            <div class="sublist">
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
+                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
+                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+                <!-- 옷 선택 하는곳 -->
+                <div class="viewCLOSET_area">
+                    <div class="viewCLOSET" id="viewCLOSET">
+                        <h3>전체</h3>
+                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img1.jpg"
+                                width="150px" height="150px"></a>
+                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img2.jpg"
+                                width="150px" height="150px"></a>
+                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img3.jpg"
+                                width="150px" height="150px"></a>
                     </div>
                 </div>
 
-            </div>
-            <!-- 옷 선택 하는곳 -->
-            <div class="viewCLOSET_area">
-                <div class="viewCLOSET" id="viewCLOSET">
-                    <h3>전체</h3>
-                    <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="${cpath}/resources/img/img1.jpg" width="150px" height="150px"></a>
-                    <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="${cpath}/resources/img/img2.jpg" width="150px" height="150px"></a>
-                    <a onclick="select_TOP()" style="cursor: pointer;"><img
-                            src="${cpath}/resources/img/img3.jpg" width="150px" height="150px"></a>
+                <div class="fitting_area">
+                    <span style="cursor: hand;">
+                        <img class="fitting" id="fitting_top" src="/src/main/webapp/resources/img/img1.jpg"
+                            width="100px" height="100px" onmousedown="startDrag(event, this)">
+                    </span>
+                    <input type="submit" class="myCLOST-btn" value="삭제">
+                    <input type="submit" class="myCLOST-btn" value="추가하기">
                 </div>
-            </div>
-
-            <div class="fitting_area">
-                <span style="cursor: hand;">
-                    <img class="fitting" id="fitting_top" src="/src/main/webapp/resources/img/img1.jpg" width="100px" height="100px"
-                        onmousedown="startDrag(event, this)">
-                </span>
-                <input type="submit" class="myCLOST-btn" value="삭제">
-                <input type="submit" class="myCLOST-btn" value="추가하기">
-            </div>
-
-        </main>
-    </div>
-</body>
-<footer>
-    <!-- 푸터 들어갈 자리 -->
-</footer>
-<script src="${cpath}/resources/JS/tabmenu.js"></script>
-<script type="text/javascript">
+            </main>
+        </body>
+        <footer>
+            <!-- 푸터 들어갈 자리 -->
+        </footer>
+        <script src="${cpath}/resources/JS/tabmenu.js"></script>
+        <script type="text/javascript">
     // function sublist_top() {
     //     if ($("#viewCLOSET").css("display") == "none") {
     //         $("#viewCLOSET").css("display", "flex")
@@ -182,8 +238,8 @@
     //     document.onmousemove = null;
     //     document.onmouseup = null;
     // }
-</script>
+        </script>
 
 
 
-</html>
+        </html>

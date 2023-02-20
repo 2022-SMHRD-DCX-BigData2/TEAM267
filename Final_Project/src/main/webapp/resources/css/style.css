@@ -31,6 +31,7 @@ a {
     text-align: center;
     text-decoration: none; /* 링크의 밑줄 제거 */
     color: inherit; /* 링크의 색상 제거 */
+    cursor: pointer;
 }
 body{
     width: 90%;
@@ -248,6 +249,7 @@ main{
 
 .sublist > a{
     padding: 0.5em;
+    cursor: pointer;
 }
 
 .content {

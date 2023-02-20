@@ -26,4 +26,8 @@
    		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
      		select * from t_fdata where f_cate=#{f_cate} and f_brand=#{'f_brand'}
   		</select>
+  		
+   		<select id="myCloset"  parameterType="kr.board.entity.TCloset">
+     		SELECT closet_name, closet_img FROM t_closet WHERE mem_id = #{'memId'}
+  		</select>
 </mapper>

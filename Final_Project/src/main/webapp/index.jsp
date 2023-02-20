@@ -22,7 +22,9 @@
 	function gofootlist(){
 		location.href="${cpath}/footlist.do";
 	}
-	
+	function goCLTHN_SLCTN(){
+		location.href="${cpath}/CLTHN_SLCTN.do";
+	}
 	
 	</script>
 <%
@@ -33,6 +35,7 @@
 <a  href="#" onclick="gocloset()">내옷장</a>
 <a  href="#" onclick="gomain()">메인화면</a>
 <a  href="#" onclick="gofootlist()">신발리스트</a>
+<a  href="#" onclick="goCLTHN_SLCTN()">코디페이지</a>
 
 <%-- <c:redirect url="main.do" /> --%>
 
