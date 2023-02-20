@@ -13,6 +13,8 @@
             <link rel="stylesheet" href="${cpath}/resources/css/style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+            <script src="${cpath}/resources/JS/rcmndClst.js"></script>
+            
 
         <body>
             <header>
@@ -69,61 +71,16 @@
             </div>
           </div>
         </div>
-
+		
+		
+		
         <!-- 추천 옷장 -->
         <div class="content_area" data-depth="0" data-idx="1">
           <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
           <div class="content">
             <div class="sublist">
-              <a onclick="sublist_top()"align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()">후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
-            </div>
-          </div>
-          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-          <div class="content">
-            <div class="sublist">
-              <a onclick="sublist_top()"  align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()">후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
-            </div>
-          </div>
-          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-          <div class="content">
-            <div class="sublist">
-              <a onclick="sublist_top()"align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()">후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
-            </div>
-          </div>
-          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-          <div class="content">
-            <div class="sublist">
-              <a onclick="sublist_top()"align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()">후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
-            </div>
-          </div>
-          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-          <div class="content">
-            <div class="sublist">
-              <a onclick="sublist_top()" align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()" >후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
-            </div>
-          </div>
-          <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-          <div class="content">
-            <div class="sublist">
-              <a onclick="sublist_top()"align-items: center;">전체</a>
-              <a onclick="sublist_top()">니트/스웨터</a>
-              <a onclick="sublist_top()">후드티셔츠</a>
-              <a onclick="sublist_top()">피케/카라 티셔츠</a>
+              <a onclick="rcmndClst()">전체</a>
+
             </div>
           </div>
         </div>
