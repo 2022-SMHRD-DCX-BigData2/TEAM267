@@ -1,9 +1,9 @@
 select * from t_member;
 select * from t_closet;
 select * from t_fdata where f_cate=1 and f_brand= '호킨스';
-
+SELECT distinct c_cate from t_cdata
 SELECT distinct f_brand from t_fdata;
-
+select * from t_cdata where c_cate=1
 
 SELECT f_brand, COUNT(f_brand),f_cate FROM t_fdata
 where f_cate=1

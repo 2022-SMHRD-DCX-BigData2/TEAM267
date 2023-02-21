@@ -39,7 +39,10 @@
     /* padding:10px; */
     background:#fff;
     border-radius:0 0 10px 10px;
-    box-sizing:border-box
+    box-sizing:border-box;
+
+    overflow-y: scroll;
+    max-height: 505px;
 }
 .tab_wrap .content_area.act{
     display:block;
@@ -81,4 +84,19 @@
 .active:after {
     content: "\2212";
 }
+
+  .content_area::-webkit-scrollbar,.viewCLOSET_area::-webkit-scrollbar {
+    width: 10px;
+  }
+  .content_area::-webkit-scrollbar-thumb,.viewCLOSET_area::-webkit-scrollbar-thumb {
+    background-color: #2f3542;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  .content_area::-webkit-scrollbar-track,.viewCLOSET_area::-webkit-scrollbar-track {
+    background-color: rgba(128, 128, 128, 0);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0);
+  }
 /* 아코디던 */

@@ -25,14 +25,14 @@ public class BoardRestController {
 		return footcategorylist;
 	}
 	
-	// 신발 종류와 브랜드에 따른 신발리스트 불러오기
-	@PutMapping("/TFdata/{f_cate}")
-	public List<TFdata> brandcat(@RequestBody TFdata vo) {
-		System.out.println(vo);
-		java.util.List<TFdata> footlistca=mapper.brandcat(vo);
-			
-		return footlistca;
-	}
+//	 신발 종류와 브랜드에 따른 신발리스트 불러오기
+//	@PutMapping("/TFdata/{f_cate}")
+//	public List<TFdata> brandcat(@RequestBody TFdata vo) {
+//		System.out.println(vo);
+//		java.util.List<TFdata> footlistca=mapper.brandcat(vo);
+//			
+//		return footlistca;
+//	}
 	
 	
 	// 신발 종류에 따른 신발리스트 불러오기

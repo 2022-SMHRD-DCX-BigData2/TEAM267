@@ -8,14 +8,16 @@
     	<!-- <select id="footcategory"  resultType="kr.board.entity.TFdata">
     		SELECT * FROM t_fdata where f_cate = 1
   		</select> -->
+  		<!-- 신발 카테고리 데이터 번호 -->
    		<select id="footcategorylist"  resultType="kr.board.entity.TFdata">
    	    	SELECT distinct f_cate from t_fdata
   		</select>
-  		
+  		<!-- 신발 카테고리 분류에 따른 신발 리스트 출력 -->
    		<select id="footcategory" parameterType="int" resultType="kr.board.entity.TFdata">
      		select * from t_fdata where f_cate=#{f_cate} 
   		</select>
   		
+   		<!-- 일정개수 이상의 브랜드 목록 불러오기 -->
    		<select id="shoesbrand" parameterType="int" resultType="kr.board.entity.TFdata">
      		SELECT f_brand, COUNT(f_brand),f_cate FROM t_fdata
 			where f_cate=#{f_cate}
@@ -24,9 +26,9 @@
   		</select>
   		
    		<!--브랜드 확인  -->
-   		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
+<!--    		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
      		select * from t_fdata where f_cate=#{f_cate} and f_brand=#{'f_brand'}
-  		</select>
+  		</select> -->
   		<!-- 내옷장 의류불러오기 -->
    		<select id="myCloset"  parameterType="kr.board.entity.TCloset">
      		SELECT closet_name, closet_img FROM t_closet WHERE mem_id = #{'memId'}
@@ -34,5 +36,15 @@
   		<!--코디공유 추천 목록 불러오기  -->
    		<select id="rcmndClst" parameterType="String" resultType="kr.board.entity.TCloset">
      		SELECT closet_name, closet_img FROM t_closet WHERE mem_id = 'admin'
+  		</select>
+  		
+   		<!-- 옷 카테고리 데이터 번호 -->
+   		<select id="c_cate"  resultType="kr.board.entity.TCdata">
+   	    	SELECT distinct c_cate from t_cdata
+  		</select>
+  		
+   		<!-- 옷 카테고리 분류에 따른 신발 리스트 출력 -->
+   		<select id="c_cate_conliset" parameterType="int" resultType="kr.board.entity.TCdata">
+     		select * from t_cdata where c_cate=#{c_cate} 
   		</select>
 </mapper>
