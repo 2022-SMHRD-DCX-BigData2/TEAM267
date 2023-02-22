@@ -124,7 +124,7 @@
             	        top += '<img id="choose_img" src="'+c_img+'" width="100px" height="100px">'; 
             	        $("#TOP_img").html(top);
             	        
-                      container += '<div class="myElement"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
+                      container += '<div class="myElement"><img id="choose_img_1" src="'+c_img+'" width="100px" height="100px"></div>'
                       $("#container").html(container);
             	    } else if (BOTTOM.indexOf(c_cate) !== -1) {
             	        // c_cate가 BOTTOM에 속하는 경우
@@ -134,7 +134,7 @@
             	    		BOTTOM += '<img id="choose_img" src="'+c_img+'" width="100px" height="100px">';
             	    		$("#BOTTOM_img").html(BOTTOM);
             	    		
-                                container += '<div class="myElement"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
+                                container += '<div class="myElement"><img id="choose_img_1" src="'+c_img+'" width="100px" height="100px"></div>'
                                 $("#container").html(container);
             	    } else {
             	        // c_cate가 TOP 또는 BOTTOM에 속하지 않는 경우
