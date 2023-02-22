@@ -52,15 +52,20 @@
             }
         }
     </style>
-    <script type="text/javascript">
-		function gologin() {
-				location.href="${cpath}/login.do";
-		}
-		
-		function gosign() {
-			location.href="${cpath}/sign.do";
+    
+<script type="text/javascript">
+	function gologin() {
+		location.href = "${cpath}/login.do";
 	}
-	</script>
+
+	function gosign() {
+		location.href = "${cpath}/sign.do";
+	}
+
+	function goinfo() {
+		location.href = "${cpath}/Serviceinfo.do"
+	}
+</script>
 </head>
 
 <body>
@@ -78,7 +83,7 @@
                     </a>
                 </div>
                 <div>
-                    <a href="">서비스소개</a>
+                    <a href="#" onclick="goinfo()">서비스소개</a>
                     <a href="">공지사항</a>
                 </div>
             </div>

@@ -1,7 +1,7 @@
-<!-- <%@ page language="java" contentType="text/html; charset=UTF-8"
+<%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}" /> -->
+<c:set var="cpath" value="${pageContext.request.contextPath}" /> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,43 +14,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <style>
-        @keyframes move {
-            0% {
-                left: 0;
-            }
-
-            5% {
-                left: -780px;
-            }
-
-            33% {
-                left: -780px;
-            }
-
-            38% {
-                left: -1560px;
-            }
-
-            66% {
-                left: -1560px;
-            }
-
-            71% {
-                left: -2340px;
-            }
-
-            99.9% {
-                left: -2340px;
-            }
-
-            99.99% {
-                left: 0px;
-            }
-
-            100% {
-                left: 0px;
-            }
-        }
+        
     </style>
     <script type="text/javascript">
 		function gologin() {

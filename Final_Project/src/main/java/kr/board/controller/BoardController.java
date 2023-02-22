@@ -39,4 +39,7 @@ public class BoardController {
 	public void footlist() {}
 	@RequestMapping("/CLTHN_SLCTN.do")
 	public void CLTHN_SLCTN() {}
+// 서비스 소개 페이지 이동
+	@RequestMapping("/Serviceinfo.do")
+	public void Serviceinfo() {}
 }
