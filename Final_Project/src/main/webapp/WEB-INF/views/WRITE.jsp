@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://kit.fontawesome.com/7208daee16.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body>
@@ -36,7 +37,7 @@
         <div class="WRITE_form">
             <div class="WRITE_img">
                 <input type="hidden" value="${cpath}/resources/img/POST_file.png">
-                <img src="${cpath}/resources/img/POST_file.png">
+                <img id="captured-img">
             </div>
 
             <div class="WRITE_content">
@@ -99,6 +100,17 @@
             </div>
         </div>
     </form>
-</body>
 
+</body>
+	
+    <script>
+    const capturedImg = localStorage.getItem("capturedImg");
+    if (capturedImg) {
+      const imgElement = document.querySelector("#captured-img");
+      imgElement.src = capturedImg;
+      localStorage.removeItem("capturedImg");
+      
+
+    }
+	</script>
 </html>

@@ -15,6 +15,9 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script type="text/javascript">
+	  	function goWRITE(){
+			location.href="${cpath}/WRITE.do";
+		}
         $(document).ready(function () {
 
           c_cate();
@@ -126,7 +129,7 @@
             top += '<img id="choose_img" src="' + c_img + '" width="100px" height="100px">';
             $("#TOP_img").html(top);
 
-            container += '<div class="myElement"><img id="choose_img_1" src="' + c_img + '"></div>'
+            container += '<div class="myElement" style="background image: url("'+c_img+'")"><img id="choose_img_1" src="' + c_img + '"></div>'
             $("#container").html(container);
           } else if (BOTTOM.indexOf(c_cate) !== -1) {
             // c_cate가 BOTTOM에 속하는 경우
@@ -249,7 +252,7 @@
           <div id="container">
 
           </div>
-          <div class="home-btn" style="width: 5em; justify-content: center; " ><a onclick="">코디 공유</a></div>
+          <div class="home-btn" style="width: 5em; justify-content: center; " ><a onclick="capture()">코디 공유</a></div>
         </div>
       </div>
     </body>
@@ -259,11 +262,15 @@
 
     <script src="${cpath}/resources/JS/tabmenu.js"></script>
     <script src="${cpath}/resources/JS/move.js"></script>
-    <script>
-      function clt_move() { }
-
-
-    </script>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
+	<script>
+	  function capture() {
+	    html2canvas(document.querySelector("#container")).then(canvas => {
+	      const imgData = canvas.toDataURL('image/png');
+	      localStorage.setItem("capturedImg", imgData);
+	      window.location.href = 'http://localhost:8084/smhrd/WRITE.do';
+	    });
+	  }
+	</script>
 
     </html>
