@@ -112,8 +112,24 @@ public class TMember {
      this.memJoindate = param.getMemJoindate();
      this.memType = param.getMemType();
  }
- 
- 	@Override
+ // 회원가입
+ 	public TMember(String memId, String memPw, String memNick, String memEmail, String memGender, String memType) {
+	super();
+	this.memId = memId;
+	this.memPw = memPw;
+	this.memNick = memNick;
+	this.memEmail = memEmail;
+	this.memGender = memGender;
+	this.memType = memType;
+}
+// 로그인
+	public TMember(String memId, String memPw) {
+		super();
+		this.memId = memId;
+		this.memPw = memPw;
+	}
+
+	@Override
 	public String toString() {
 		return "TMember [memId=" + memId + ", memPw=" + memPw + "]";
 	}
