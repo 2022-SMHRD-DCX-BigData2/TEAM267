@@ -12,24 +12,13 @@
             <link rel="stylesheet" href="${cpath}/resources/css/style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-            <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
-			<script type="text/javascript" src="https://code.jquery.com/ui/1.8.23/jquery-ui.min.js"></script>
+    		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    		<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
             <script type="text/javascript">
             $(document).ready(function(){
                 
             	c_cate();
-            	  $(".post").draggable({
-          			cursor:"move",
-          			stack:".post",
-          			opacity:0.8
-          		});
 
-          		$(".post").bind("dragstart",function(event, ui){
-          			$(this).addClass("color");	//bgi 체인지
-          		});
-          		$(".post").bind("dragstop", function(event, ui){
-          			$(this).removeClass("color")	//bgi 체인지
-          		});
             })
             /* 옷 카테고리 */
             var c_cate_list = ["0","겨울더블코트","겨울싱글코트","긴소매 티셔츠","나일론코치재킷","니트스웨터","데님팬츠","레깅스","레더 라이더스재킷",
@@ -115,8 +104,8 @@
             		 		c_cate_con += '<div class="" id="viewCLOSET">';
             		 		c_cate_con += '<h3>전체</h3>';
                    	  		$.each(data,(indxe,item)=>{
-                   	  		c_cate_con += '<a onclick="select_clt('+item.c_cate+', \''+item.c_img+'\');clt_move()"><img src="' + item.c_img + '" width="150px" height="150px"></a>';
-
+                   	  		c_cate_con += '<a onclick="select_clt('+item.c_cate+', \''+item.c_img+'\');moveco()"><img src="' + item.c_img + '" width="150px" height="150px"></a>';
+                   	  		if(indxe > 50) return false;
                    	  		});
                    	  		c_cate_con += '</div>';
                      $(".viewCLOSET_area").html(c_cate_con);
@@ -134,8 +123,8 @@
             	        top += '<h3 style="text-align: center;">상의</h3>';
             	        top += '<img id="choose_img" src="'+c_img+'" width="100px" height="100px">'; 
             	        $("#TOP_img").html(top);
-                     
-                      container += '<div class="post"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
+            	        
+                      container += '<div class="myElement"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
                       $("#container").html(container);
             	    } else if (BOTTOM.indexOf(c_cate) !== -1) {
             	        // c_cate가 BOTTOM에 속하는 경우
@@ -145,7 +134,7 @@
             	    		BOTTOM += '<img id="choose_img" src="'+c_img+'" width="100px" height="100px">';
             	    		$("#BOTTOM_img").html(BOTTOM);
             	    		
-                                container += '<div id="item"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
+                                container += '<div class="myElement"><img id="choose_img" src="'+c_img+'" width="100px" height="100px"></div>'
                                 $("#container").html(container);
             	    } else {
             	        // c_cate가 TOP 또는 BOTTOM에 속하지 않는 경우
@@ -251,8 +240,8 @@
 
       <!-- 피팅 AREA -->
       <div class="fitting_area" id="outerContainer">
-   		  <div id="container" class="post">
-          	ddd
+   		  <div id="container" >
+          	   
    		  </div>
         <div class="home-btn" style="width: 5em; justify-content: center;">코디 공유</div>
       </div>
@@ -263,8 +252,9 @@
   </footer>
 
 <script src="${cpath}/resources/JS/tabmenu.js"></script>
+<script src="${cpath}/resources/JS/move.js"></script>
 <script>
-  function clt_move() {
+  function clt_move(){}
 	  
 
 </script>

@@ -850,16 +850,49 @@ main{
 
 
 /* 코디 테스투ㅡ*/
-div.post {
-	float:left;
-	width:150px;
-	height:150px;
-	padding:10px 0px 0px 20px;
-	background-color:#f9d716;
-	border:1px solid black;
-	box-shadow:2px 2px 2px;
+#draggableElement1, #draggableElement2 {
+  width: 100px;
+  height: 100px;
+  background-color: blue;
+  text-align: center;
+  color: white;
+  line-height: 100px;
+  float: left;
 }
-div.color {
-	background-color:salmon;
+
+#draggableElement2 {
+  background-color: green;
 }
+
+#droppableElement {
+  width: 100px;
+  height: 70px;
+  border: 1px dashed red;
+  text-align: center;
+  color: red;
+  padding-top: 30px;
+  float: right;
+}
+
+.hovered {
+  background-color: gray;
+}
+
+
+#container {
+  width: 100%;
+  height: 90%;
+  border: 1px solid black;
+}
+
+.myElement {
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  background-color: blue;
+  text-align: center;
+  color: white;
+}
+
+
 
