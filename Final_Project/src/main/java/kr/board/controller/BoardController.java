@@ -37,9 +37,22 @@ public class BoardController {
 //	신발전체 페이지 이동
 	@RequestMapping("/footlist.do")
 	public void footlist() {}
+//  의류 코디 페이지 이동
 	@RequestMapping("/CLTHN_SLCTN.do")
 	public void CLTHN_SLCTN() {}
 // 서비스 소개 페이지 이동
 	@RequestMapping("/Serviceinfo.do")
 	public void Serviceinfo() {}
+//  신발 커뮤니티 상세 페이지 이동
+	@RequestMapping("/POST.do")
+	public void POST() {}
+//  신발 커뮤니티 페이지 이동
+	@RequestMapping("/StyleCommunity.do")
+	public void StyleCommunity() {}	
+//  신발 상세 페이지 이동
+	@RequestMapping("/Recominfo.do")
+	public void Recominfo() {}	
+//  코디 업로드 페이지 이동
+	@RequestMapping("/WRITE.do")
+	public void WRITE() {}		
 }

@@ -70,7 +70,7 @@
 <a  href="#" onclick="gofootlist()">신발리스트</a>
 <a  href="#" onclick="goStyleCommunity()">신발 코디기준 커뮤니티</a>
 
-<%-- <c:redirect url="main.do" /> --%>
+<c:redirect url="main.do" />
 
 
 
