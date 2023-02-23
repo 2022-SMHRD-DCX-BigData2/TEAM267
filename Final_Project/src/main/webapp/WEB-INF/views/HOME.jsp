@@ -59,7 +59,7 @@
 	}
 
 	function gosign() {
-		location.href = "${cpath}/sign.do";
+		location.href = "${cpath}/signup.do";
 	}
 
 	function goinfo() {
@@ -91,17 +91,17 @@
         	<c:when test="${empty loginMember}">
 	            <div class="flex header_left">
 	                <div>
-		                <a href="#" onclick="gologin()">로그인</a>
-		                <a href="#" onclick="gosign()">회원가입</a>
+		                <a href="${cpath}/LoginForm.do">로그인</a>
+		                <a href="${cpath}/signupForm.do"> 회원가입 </a>
 	                </div>
 	            </div>
             </c:when>
             <c:otherwise>			
 				<div class="flex header_left">
 	                <div>
-	                	<span>${loginMember.memName}</span>
+	                	<span>${loginMember.mem_nick}</span>
 		                <a href="#" onclick="gomypage">내정보</a>
-		                <a href="#" onclick="gologout">로그아웃</a>
+		                <a href="${cpath}/Logout.do"> 로그아웃 </a>
 	                </div>
 	            </div>
 			</c:otherwise>

@@ -16,7 +16,7 @@ public class BoardController {
 	@Autowired
 	private BoardMapper mapper;
 	
-	@GetMapping("/main.do")
+	@GetMapping("/Main.do")
 	public String main() {
 		// 알아서 ViewResolver에 의해 
 		// WEB-INF/views에 있는 basic.jsp로 이동
