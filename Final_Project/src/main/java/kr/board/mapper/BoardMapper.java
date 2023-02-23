@@ -32,5 +32,8 @@ public interface BoardMapper {
 	public List<TCdata> c_cate(); // 옷 카테고리
 
 	public List<TCdata> c_cate_conliset(int c_cate);
+
+	public List<TCdata> WRITE(String c_img);
+
 	
 }
