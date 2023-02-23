@@ -21,17 +21,17 @@
                 <div><a href="">서비스소개</a><a href="">공지사항</a></div>
             </div>
             <div class="flex header_left">       
-                <div><a href="">로그인</a><a href="">회원가입</a></div>
+                <div><a href="#">로그인</a><a href="${cpath}/signupForm.do">회원가입</a></div>
             </div>
         </div>
     </header>
     <main>
         <div class="flex center"id="login">
-            <form action="${cpath}/Loginform.do" method="post">
+            <form action="${cpath}/Login.do" method="post">
                 <div class="flex login">
                     <h1>로그인</h1>
-                    <input type="text" placeholder="아이디" class="login_input" id="memId" name="memId">
-                    <input type="password" placeholder="비밀번호" class="login_input" id="memPw" name="memPw">
+                    <input type="text" placeholder="아이디" class="login_input" id="memId" name="mem_id">
+                    <input type="password" placeholder="비밀번호" class="login_input" id="memPw" name="mem_pw">
                     <input type="submit" value="로그인" class="login_button">
                 </div>
             </form>

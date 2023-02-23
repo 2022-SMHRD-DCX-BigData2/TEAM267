@@ -6,13 +6,13 @@
 <mapper namespace="kr.board.mapper.MemberMapper">
 	<!-- 회원가입 -->
 	<insert id="sign" parameterType="kr.board.entity.TMember">
-		insert into Member(memId, memPw, memNick, memType, memGender,memEmail)
-		values(#{mem_id},#{mem_pw},#{mem_nick},#{mem_type},#(mem_gender),#(mem_email))
+	    insert into t_member(mem_id, mem_pw, mem_nick, mem_email, mem_gender, mem_type)
+	    values(#{mem_id}, #{mem_pw}, #{mem_nick}, #{mem_email}, #{mem_gender}, #{mem_type})
 	</insert>
-
+	
 	<!-- 로그인 -->
-	<select id="Login" parameterType="kr.board.entity.TMember"
+	<select id="MemberLogin" parameterType="kr.board.entity.TMember"
 		resultType="kr.board.entity.TMember">
-		select * from Mem ber where memId=#{mem_id} and memPw=#{mem_pw}
+		select * from t_member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
 	</select>
 </mapper>

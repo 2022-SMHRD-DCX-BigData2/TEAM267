@@ -1,136 +1,66 @@
 package kr.board.entity;
 
-import java.sql.Timestamp;
-
-//회원 정보 
 public class TMember {
-	
-	
- // 회원 아이디 
- private String memId;
- // 회원 비밀번호 
- private String memPw;
- // 회원 닉네임 
- private String memNick;
- // 회원 이메일 
- private String memEmail;
- // 회원 성별 
- private String memGender;
- // 회원 취향 
- private String memTst;
- // 회원 발사이즈 
- private Integer memFootsize;
- // 회원 가입일자 
- private Timestamp memJoindate;
- // 회원 유형 일반회원:'M', 관리자:'A'
- private String memType;
 
- 
- 
- public String getMemId() {
-     return memId;
- }
-
- public void setMemId(String memId) {
-     this.memId = memId;
- }
-
- public String getMemPw() {
-     return memPw;
- }
-
- public void setMemPw(String memPw) {
-     this.memPw = memPw;
- }
-
- public String getMemNick() {
-     return memNick;
- }
-
- public void setMemNick(String memNick) {
-     this.memNick = memNick;
- }
-
- public String getMemEmail() {
-     return memEmail;
- }
-
- public void setMemEmail(String memEmail) {
-     this.memEmail = memEmail;
- }
-
- public String getMemGender() {
-     return memGender;
- }
-
- public void setMemGender(String memGender) {
-     this.memGender = memGender;
- }
-
- public String getMemTst() {
-     return memTst;
- }
-
- public void setMemTst(String memTst) {
-     this.memTst = memTst;
- }
-
- public Integer getMemFootsize() {
-     return memFootsize;
- }
-
- public void setMemFootsize(Integer memFootsize) {
-     this.memFootsize = memFootsize;
- }
-
- public Timestamp getMemJoindate() {
-     return memJoindate;
- }
-
- public void setMemJoindate(Timestamp memJoindate) {
-     this.memJoindate = memJoindate;
- }
-
- public String getMemType() {
-     return memType;
- }
-
- public void setMemType(String memType) {
-     this.memType = memType;
- }
-
- // TMember 모델 복사
- public void CopyData(TMember param)
- {
-     this.memId = param.getMemId();
-     this.memPw = param.getMemPw();
-     this.memNick = param.getMemNick();
-     this.memEmail = param.getMemEmail();
-     this.memGender = param.getMemGender();
-     this.memTst = param.getMemTst();
-     this.memFootsize = param.getMemFootsize();
-     this.memJoindate = param.getMemJoindate();
-     this.memType = param.getMemType();
- }
- // 회원가입
- 	public TMember(String memId, String memPw, String memNick, String memEmail, String memGender, String memType) {
-	super();
-	this.memId = memId;
-	this.memPw = memPw;
-	this.memNick = memNick;
-	this.memEmail = memEmail;
-	this.memGender = memGender;
-	this.memType = memType;
-}
-// 로그인
-	public TMember(String memId, String memPw) {
-		super();
-		this.memId = memId;
-		this.memPw = memPw;
+	private String mem_id;
+	private String mem_pw;
+	private String mem_email;
+	private String mem_gender;
+	private int mem_footsize;
+	private String mem_tst;
+	private String mem_type;
+	private String mem_nick;
+	public String getMem_id() {
+		return mem_id;
 	}
-
+	public void setMem_id(String mem_id) {
+		this.mem_id = mem_id;
+	}
+	public String getMem_pw() {
+		return mem_pw;
+	}
+	public void setMem_pw(String mem_pw) {
+		this.mem_pw = mem_pw;
+	}
+	public String getMem_email() {
+		return mem_email;
+	}
+	public void setMem_email(String mem_email) {
+		this.mem_email = mem_email;
+	}
+	public String getMem_gender() {
+		return mem_gender;
+	}
+	public void setMem_gender(String mem_gender) {
+		this.mem_gender = mem_gender;
+	}
+	public int getMem_footsize() {
+		return mem_footsize;
+	}
+	public void setMem_footsize(int mem_footsize) {
+		this.mem_footsize = mem_footsize;
+	}
+	public String getMem_tst() {
+		return mem_tst;
+	}
+	public void setMem_tst(String mem_tst) {
+		this.mem_tst = mem_tst;
+	}
+	public String getMem_type() {
+		return mem_type;
+	}
+	public void setMem_type(String mem_type) {
+		this.mem_type = mem_type;
+	}
+	public String getMem_nick() {
+		return mem_nick;
+	}
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
+	}
 	@Override
 	public String toString() {
-		return "TMember [memId=" + memId + ", memPw=" + memPw + "]";
+		return "TMember [mem_id=" + mem_id + ", mem_pw=" + mem_pw + ", mem_email=" + mem_email + ", mem_gender="
+				+ mem_gender + ", mem_type=" + mem_type + ", mem_nick=" + mem_nick + "]";
 	}
 }

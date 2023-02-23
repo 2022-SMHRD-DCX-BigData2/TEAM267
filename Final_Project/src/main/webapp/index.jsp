@@ -4,7 +4,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<c:set var="cpath" value="${pageContext.request.contextPath}" />
+<c:set var="cpath" value="${pageContext.request.contextPath}" /> 
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,11 +16,11 @@
 
 <script type="text/javascript">
 	function gologin() {
-		location.href ="${cpath}/login.do";
+		location.href ="${cpath}/Login.do";
 	}
 
 	function gosign() {
-		location.href ="${cpath}/sign.do";
+		location.href ="${cpath}/signup.do";
 	}
 	function gocloset(){
 		location.href="${cpath}/MYCLOSET.do";
@@ -70,7 +70,7 @@
 <a  href="#" onclick="gofootlist()">신발리스트</a>
 <a  href="#" onclick="goStyleCommunity()">신발 코디기준 커뮤니티</a>
 
-<%-- <c:redirect url="main.do" /> --%>
+<c:redirect url="Main.do" />
 
 
 

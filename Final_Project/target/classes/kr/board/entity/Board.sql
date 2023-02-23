@@ -28,3 +28,4 @@ SELECT closet_name, closet_img FROM t_closet WHERE mem_id = 'admin'
 update t_closet set closet_img='https://image.a-rt.com/art/product/2022/11/03290_1668653717413.jpg'
 where  mem_id = 'admin'
 
+select * from t_member;
