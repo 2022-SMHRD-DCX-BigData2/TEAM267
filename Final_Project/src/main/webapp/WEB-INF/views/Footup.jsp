@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <link rel="stylesheet" href="${cpath}/resources/css/style.css">
-  <link rel="stylesheet" href="/src/main/webapp/resources/css/upload.css">
+  <link rel="stylesheet" href="${cpath}/resources/css/upload.css">
 </head>
 
 <body>
@@ -26,7 +26,8 @@
       </div>
     </div>
   </header>
-<!--   <main>
+  
+	<main>
     <div class="grid Upload_name">
       <div class="flex  foot_box">
         <span class="sp_contents"><i class="fa-solid fa-image"></i></span>
@@ -48,8 +49,10 @@
               <img src="" alt="미리보기 이미지" class="preview">
             </div>
             <label class="file-label" for="chooseFile">Choose File</label>
-            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
-              accept="image/png, image/jpeg, image/gif">
+            <form action="">
+            	<input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+              	accept="image/png, image/jpeg, image/gif">
+            </form>
           </div>
         </div>
       </div>
@@ -109,8 +112,7 @@
         </div>
       </div>
     </div>
-  </main> -->
-
+  </main>
 </body>
   <script src="${cpath}/resources/JS/upload.js"></script>
 
