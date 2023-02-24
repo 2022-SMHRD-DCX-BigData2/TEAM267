@@ -933,3 +933,60 @@ input[type="checkbox"]:checked+label{
     border: 3px solid #333;
     opacity: 1;
 }
+
+/* 의류 등록 페이지 */
+.closet_upload_main {
+	display: flex;
+	width: 70%;
+	margin-auto: 0;
+	margin: auto;
+}
+
+.closet_upload_form {
+	margin-top: 15px;
+	display: flex;
+}
+
+.closet_upload_sub1 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.closet_upload_sub1>span {
+	font-size: large;
+}
+
+.closet_upload_ul {
+	list-style-type: none;
+	padding: 0;
+}
+
+.closet_upload_ul>li {
+	margin-bottom: 20px;
+}
+
+.closet_upload_ul>li>select {
+	width: 200px;
+	height: 40px;
+}
+
+.closet_upload_submit {
+	width: 80%;
+	align-self: center;
+	margin-bottom: 20px;
+}
+
+.closet_upload_sub2 {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	padding-left: 300px;
+}
+
+.closet_upload_sub2>div {
+	border: 1px solid;
+	margin-top: 20px;
+	height: 80%;
+	width: 100%;
+}
