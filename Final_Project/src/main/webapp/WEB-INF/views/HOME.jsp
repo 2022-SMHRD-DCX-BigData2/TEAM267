@@ -9,7 +9,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coordi For SHOES 홈 화면</title>
-    <link rel="stylesheet" href="/src/main/webapp/resources/css/style.css">
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
@@ -53,19 +52,7 @@
         }
     </style>
     
-<script type="text/javascript">
-	function gologin() {
-		location.href = "${cpath}/login.do";
-	}
 
-	function gosign() {
-		location.href = "${cpath}/signup.do";
-	}
-
-	function goinfo() {
-		location.href = "${cpath}/Serviceinfo.do"
-	}
-</script>
 </head>
 
 <body>
@@ -119,16 +106,36 @@
     <div class="slidewrap">
         <ul class="slidelist">
             <li>
-                <a style="display: flex;">
+            	<c:choose>
+        	<c:when test="${empty loginMember}">
+				<a style="display: flex;" href="${cpath}/LoginForm.do">
                     <p class="slide-info">
-                        신발에 맞는 맞춤 코디 <br> 추천해드릴게요! <br>
-                        오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
+                       	 신발에 맞는 맞춤 코디 <br> 추천해드릴게요! <br>
+                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
+                                                       
                         <span class="home-btn">추천 서비스</span>
                     </p>
                     <!-- <label for="slide03" class="left"></label> -->
                     <img src="${cpath}/resources/img/home01.jpg" style="width: 40%;">
                     <!-- <label for="slide02" class="right"></label> -->
                 </a>
+            </c:when>
+            
+            <c:otherwise>			
+				<a style="display: flex;" href="${cpath}/footinfoRecom.do">
+                    <p class="slide-info">
+                       	 신발에 맞는 맞춤 코디 <br> 추천해드릴게요! <br>
+                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
+                                                       
+                        <span class="home-btn">추천 서비스</span>
+                    </p>
+                    <!-- <label for="slide03" class="left"></label> -->
+                    <img src="${cpath}/resources/img/home01.jpg" style="width: 40%;">
+                    <!-- <label for="slide02" class="right"></label> -->
+                </a>
+			</c:otherwise>
+		</c:choose>
+                
             </li>
 
             <li>
