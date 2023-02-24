@@ -12,8 +12,49 @@
     <title>Document</title>
     <link rel="stylesheet" href="${cpath}/resources/css/style.css">
     <link rel="stylesheet" href="${cpath}/resources/css/foot_page.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
+<script>
 
+console.log('${loginMember}')
+var loginMember='${loginMember.mem_tst}'
+loginMember.split(",")
+console.log(mem_tstlist[0]+"확인")
+var tst = "";
+$.each(mem_tstlist(f_cate,memtst)=>{
+    function footcategory(f_cate) {	
+        $.ajax({
+            url : "${cpath}/TFdata/"+f_cate,
+            type : "get",
+            data : {"f_cate" : f_cate},
+            dataType : "json",
+            success : dddd,
+            error : function(){
+                alert("신발목록불러오기실패"+f_cate);
+            }
+        })
+        
+    }  
+    function dddd(data) {
+    	console.log(data)
+   /*  	tst += '<div class="pos_r">';
+    	tst += ' <div class="shoes_box t_center pos_a">';
+    	tst += '<a href="">';
+    	tst += '<img src="https://via.placeholder.com/118" alt="" class="shoes_img">';
+    	tst += '<div class="margin_0">';
+    	tst += '<h4>브랜드</h4>';
+    	tst += '<p>제품명</p>';
+    	tst += '<P>제품가격</P>';
+    	tst += '</div>';
+    	tst += '</a>';
+    	tst += '</div>';
+    	tst += '</div>'; */
+	}
+	
+})
+              
+</script>
 <body>
     <header>
         <div id="TOP" class="flex">
@@ -75,7 +116,7 @@
             <!-- 발사이즈 모양 -->
             <div class="t_center">
                 <div class="foot_img">
-                    <img src="https://via.placeholder.com/111x111" alt="">
+                    <img src="${cpath}/resources/img/footmode.png" alt="">
                 </div>
                 <a href="${cpath}/Footup.do" class="bold">발사이즈 측정</a>
             </div>
@@ -112,30 +153,7 @@
             <h3>운동화</h3>
             <div class="shoes_top_box">
                 <div class=" evenly ">
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
-                            </div>
-                            
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
+                    
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
@@ -211,6 +229,8 @@
                     
                 </div>
             </div>
+            
+            
             <h3>구두</h3>
             <div class="shoes_top_box">
                 <div class=" evenly ">
@@ -313,6 +333,8 @@
                     </div>
                 </div>
             </div>
+            
+            
             <h3>스니커즈</h3>
             <div class="shoes_top_box">
                 <div class=" evenly ">
