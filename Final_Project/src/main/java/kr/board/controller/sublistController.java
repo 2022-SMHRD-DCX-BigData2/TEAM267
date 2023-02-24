@@ -16,15 +16,7 @@ public class sublistController {
 	private BoardMapper mapper;
 	
 	
-	@GetMapping("sublist_1")
-	public List<TCloset> myCloset(int f_cate) {
-		
-		
-		java.util.List<TCloset> myCloset=mapper.myCloset(f_cate);
-		
-		return myCloset;
-	}
-	
+
 
 	
 }

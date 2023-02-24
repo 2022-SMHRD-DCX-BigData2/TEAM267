@@ -13,62 +13,26 @@
 
 </head>
 <body>
-
-<script type="text/javascript">
-	function gologin() {
-		location.href ="${cpath}/Login.do";
-	}
-
-	function gosign() {
-		location.href ="${cpath}/signup.do";
-	}
-	function gocloset(){
-		location.href="${cpath}/MYCLOSET.do";
-	}
-	function gomain(){
-		location.href="${cpath}/main.do";
-	}
-	function gofootlist(){
-		location.href="${cpath}/footlist.do";
-	}
-	function goCLTHN_SLCTN(){
-		location.href="${cpath}/CLTHN_SLCTN.do";
-	}
-	function goServiceinfo(){
-		location.href="${cpath}/Serviceinfo.do";
-	}
-	function goPOST(){
-		location.href="${cpath}/POST.do";
-	}
-	function goStyleCommunity(){
-		location.href="${cpath}/StyleCommunity.do";
-	}
-	function goRecominfo(){
-		location.href="${cpath}/Recominfo.do";
-	}
-	function goWRITE(){
-		location.href="${cpath}/WRITE.do";
-	}
-	</script>
 <%
 	// response.sendRedirect("boardList.do");
 	// jstl 몰랐을때 사용했던 방법
 
 %>
-<a  href="#" onclick="gomain()">메인화면</a>
-<a  href="#" onclick="gologin()">로그인</a>
-<a  href="#" onclick="gosign()">회원가입</a>
-<a  href="#" onclick="goServiceinfo()">서비스 설명페이지</a>
-<a  href="#" onclick="gocloset()">내옷장</a>
-<a  href="#" onclick="goRecominfo()">신발상품 상세페이지</a>
+<a href="${cpath}/Login.do">메인화면</a>
+<a href="${cpath}/LoginForm.do">로그인</a>
+
+<a  href="${cpath}/signup.do">회원가입</a>
+<a  href="${cpath}/Serviceinfo.do">서비스 설명페이지</a>
+<a  href="${cpath}/MYCLOSET.do">내옷장</a>
+<a  href="${cpath}/Recominfo.do">신발상품 상세페이지</a>
 
 
-<a  href="#" onclick="goCLTHN_SLCTN()">코디페이지</a>
-<a  href="#" onclick="goWRITE()">코디 업로드</a>
-<a  href="#" onclick="goPOST()">신발 코디 커뮤니티 상세</a>
+<a  href="${cpath}/CLTHN_SLCTN.do">코디페이지</a>
+<a  href="${cpath}/WRITE.do">코디 업로드</a>
+<a  href="${cpath}/POST.do">신발 코디 커뮤니티 상세</a>
 
-<a  href="#" onclick="gofootlist()">신발리스트</a>
-<a  href="#" onclick="goStyleCommunity()">신발 코디기준 커뮤니티</a>
+<a  href="${cpath}/footlist.do">신발리스트</a>
+<a  href="${cpath}/StyleCommunity.do">신발 코디기준 커뮤니티</a>
 
 <c:redirect url="Main.do" />
 
