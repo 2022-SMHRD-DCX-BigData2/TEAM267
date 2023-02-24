@@ -125,8 +125,10 @@
         	<c:when test="${empty loginMember}">
 				<a style="display: flex;" href="${cpath}/LoginForm.do">
                     <p class="slide-info">
-                       	 신발에 맞는 맞춤 코디 <br> 추천해드릴게요! <br>
-                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
+                       	 신발 맞춤 코디 <br> 추천해드릴게요! <br>
+                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 
+                        <p><span>Coordi For SHOES</span> 에서는 </p>
+                                                       당신의 맞춤 코디 되어드릴게요.
                                                        
                         <span class="home-btn">추천 서비스</span>
                     </p>
@@ -139,7 +141,7 @@
             <c:otherwise>			
 				<a style="display: flex;" href="${cpath}/footinfoRecom.do">
                     <p class="slide-info">
-                       	 신발에 맞는 맞춤 코디 <br> 추천해드릴게요! <br>
+                       	  신발 맞춤 코디 <br> 추천해드릴게요! <br>
                                                        오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
                                                        
                         <span class="home-btn">추천 서비스</span>
@@ -154,26 +156,59 @@
             </li>
 
             <li>
-                <a style="display: flex;">
+            <c:choose>
+            	<c:when test="${empty loginMember}">
+            	<a style="display: flex;" href="${cpath}/LoginForm.do">
                     <p class="slide-info">
-                        가죽샌들 <br> 139,000원 <br>           
-                        나이키 <br> <span class="home-btn">M O R E</span>
+                        디지털 옷장기능으로 <br> 의류를 손쉽게 관리하세요! <br><br><span class="home-btn">디지털 옷장</span>
                     </p>
                     <!-- <label for="slide01" class="left"></label> -->
-                    <img src="${cpath}/resources/img/home05.jpg">
+                    <img src="${cpath}/resources/img/main2.png" style="height: 300px;">
                     <!-- <label for="slide03" class="right"></label> -->
                 </a>
-            </li>
-            <li>
-                <a style="display: flex;">
+            	</c:when>
+            	
+            	<c:otherwise>
+            	<a style="display: flex;" href="${cpath}/MYCLOSET.do">
                     <p class="slide-info">
-                        가죽부츠 <br> 239,000원 <br>           
-                        나이키 <br> <span class="home-btn">M O R E</span>
+                        디지털 옷장기능으로 <br> 의류를 손쉽게 관리하세요! <br><br><span class="home-btn">디지털 옷장</span>
+                    </p>
+                    <!-- <label for="slide01" class="left"></label> -->
+                    <img src="${cpath}/resources/img/main2.png" style="height: 300px;">
+                    <!-- <label for="slide03" class="right"></label> -->
+                </a>
+            	</c:otherwise>
+            </c:choose>
+
+            </li>
+            
+            <li>
+            <c:choose>
+            	<c:when test="${empty loginMember}">
+            		<a style="display: flex;" href="${cpath}/LoginForm.do">
+                    <p class="slide-info">
+                        스타일을 PICK하시면 <br> 취향저격 신발을 추천해드립니다! <br>           
+                        <br> <span class="home-btn">P I C K</span>
                     </p>
                     <!-- <label for="slide02" class="left"></label> -->
-                    <img src="${cpath}/resources/img/home03.jpg">
+                    <img src="${cpath}/resources/img/main3.png" style="height: 270px; width: 600px;">
                     <!-- <label for="slide01" class="right"></label> -->
                 </a>
+            	</c:when>
+            	
+            	<c:otherwise>
+            	 <a style="display: flex;" href="${cpath}/StyleSelect.do">
+                    <p class="slide-info">
+                        스타일을 PICK하시면 <br> 취향저격 신발을 추천해드립니다! <br>           
+                        <br> <span class="home-btn">P I C K</span>
+                    </p>
+                    <!-- <label for="slide02" class="left"></label> -->
+                    <img src="${cpath}/resources/img/main3.png" style="height: 270px; width: 600px;">
+                    <!-- <label for="slide01" class="right"></label> -->
+                </a>
+            	</c:otherwise>
+            </c:choose>
+
             </li>
 
             <div class="slide-control">
