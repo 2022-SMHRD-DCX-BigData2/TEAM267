@@ -57,5 +57,8 @@ public class BoardController {
 	public void WRITE() {}		
 // 마이 페이지로 이동
 	@RequestMapping("/MYpage.do")
-	public void MYpage() {}		
+	public void MYpage() {}	
+// 발 업로드 페이지 이동
+	@RequestMapping("/foot_upload.do")
+	public void foot_upload() {}
 }
