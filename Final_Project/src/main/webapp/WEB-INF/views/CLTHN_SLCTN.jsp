@@ -15,13 +15,13 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
       <script type="text/javascript">
-	  	function goWRITE(){
-			location.href="${cpath}/WRITE.do";
-		}
+        function goWRITE() {
+          location.href = "${cpath}/WRITE.do";
+        }
         $(document).ready(function () {
 
           c_cate();
-
+          
         })
         /* 옷 카테고리 */
         var c_cate_list = ["0", "겨울더블코트", "겨울싱글코트", "긴소매 티셔츠", "나일론코치재킷", "니트스웨터", "데님팬츠", "레깅스", "레더 라이더스재킷",
@@ -48,7 +48,7 @@
         }
         /* 내옷장 데이터 이미지 리스트 출력 */
         function rcmndClstlist(data) {
-          console.log(data);
+         
           var rcmndClst_1_1 = "";
 
           rcmndClst_1_1 += '<div class="" id="viewCLOSET">';
@@ -78,7 +78,7 @@
 
         // 추천옷장 대카테고리 불러오기
         function c_data_cate(data) {
-          console.log(data);
+         
           var c_data_TOP = "";
           $.each(data, (indxe, obj) => {
 
@@ -104,13 +104,13 @@
         }
         /* 옷 리스트 데이터 출력 */
         function c_cate_clothing(data) {
-          console.log(data);
+          
           var c_cate_con = "";
           c_cate_con += '<div class="" id="viewCLOSET">';
           c_cate_con += '<h3>전체</h3>';
           $.each(data, (indxe, item) => {
             c_cate_con += '<a onclick="select_clt(' + item.c_cate + ', \'' + item.c_img + '\');moveco()"><img src="' + item.c_img + '" width="150px" height="150px"></a>';
-            if (indxe > 50) return false;
+            if (indxe > 10) return false;
           });
           c_cate_con += '</div>';
           $(".viewCLOSET_area").html(c_cate_con);
@@ -118,7 +118,7 @@
 
         /* 옷클릭시 현재 선택한 옷 및 코디화면 쪽 이미지 출력 */
         function select_clt(c_cate, c_img) {
-          console.log(c_img);
+          
 
 
           if (TOP.indexOf(c_cate) !== -1) {
@@ -126,38 +126,96 @@
             // 처리할 코드를 작성하세요.
             var top = "";
             top += '<h3 style="text-align: center;">상의</h3>';
-            top += '<img id="choose_img" src="' + c_img + '" width="100px" height="100px">';
+            top += '<img id="choose_img" src="' + c_img + '" >';
             $("#TOP_img").html(top);
 
-            container += '<div class="myElement" style="background image: url("'+c_img+'")"><img id="choose_img_1" src="' + c_img + '"></div>'
+            container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
             $("#container").html(container);
           } else if (BOTTOM.indexOf(c_cate) !== -1) {
             // c_cate가 BOTTOM에 속하는 경우
             // 처리할 코드를 작성하세요.
-            var BOTTOM = "";
-            BOTTOM += '<h3 style="text-align: center;">하의</h3>';
-            BOTTOM += '<img id="choose_img" src="' + c_img + '" width="100px" height="100px">';
-            $("#BOTTOM_img").html(BOTTOM);
+            var bottom = "";
+            bottom += '<h3 style="text-align: center;">하의</h3>';
+            bottom += '<img id="choose_img" src="' + c_img + '">';
+            $("#BOTTOM_img").html(bottom);
 
-            container += '<div class="myElement"></div>'
+            container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
             $("#container").html(container);
-            var bootomimg = "";
-            bootomimg = '<img id="choose_img_1" src="' + c_img + '">';
-            $("#container<.myElement").html(container);
           } else {
             // c_cate가 TOP 또는 BOTTOM에 속하지 않는 경우
             // 처리할 코드를 작성하세요.
           }
-
+		
         }
-
+        function capture() {
+        	console.log("capt 시작");
+        	var img_list = document.getElementsByClassName("myElement");
+            var Write_main = "";
+            Write_main += '<form class="WRITE_form_all"action="">';
+            Write_main += '<div class="WRITE_form">';
+            Write_main += '<div class="WRITE_img">';
+            Write_main += '<input type="hidden" value="${cpath}/resources/img/POST_file.png">';
+            Write_main += '<div id="preview"></div>';
+            Write_main += '</div>';
+            Write_main += '<div class="WRITE_content"><div>';
+            Write_main += '<input type="text" maxlength="15" placeholder="글 제목과 태그를 입력해 주세요.">';
+            Write_main += '<select>';
+            Write_main += '<option value="casual">캐주얼</option><option value="dandy">댄디</option><option value="chic">시크</option><option value="sports">스포츠</option>';
+            Write_main += '</select>';
+            Write_main += '</div>';
+            Write_main += '<textarea maxlength="450" placeholder="글 내용을 입력해 주세요."></textarea>';
+            Write_main += '</div></div>';
+            Write_main += '<div class="WRITE_product" id="WRITE_WRITE_product_list">';
+            Write_main += '</div>';
+            Write_main += '</form>';
+            
+            var product_root="";
+            product_root += '<div style="display: flex; justify-content: space-between;">';
+            product_root += '<h1>제품 목록</h1>';
+            product_root += '<div>';
+            product_root += '<input class="WRITE_submit" type="submit" value="등 록"><input class="WRITE_submit" type="reset" value="취 소">';
+            product_root += '</div>';
+            product_root += '</div>';
+            $.each(img_list,(indxe, product)=>{
+            	console.log("each 시작");
+              var c_img = product.lastChild.src
+              var c_cate = product.lastChild.alt
+              console.log(c_img)
+              console.log(c_cate)
+                $.ajax({
+                	
+                  url: "${cpath}/WRITE",
+                  type: "POST",
+                  data: {"c_img": c_img},
+                  dataType: "json",
+                  success : function(data) { 
+                	  console.log("fun 시작");
+                      console.log(data)
+                      $.each(data,(indxe,num)=>{
+                        product_root += '<div class="POST_product_list">';
+                        product_root += '<div>';
+                        product_root += '<img src="'+num.c_img+'" width="100px" height="100px">';
+                        product_root += '<p>62,100원</p>';
+                        product_root += '<p>후드티</p>';
+                        product_root += '</div>';
+                        product_root += '</div>';
+                      })
+                      $("#WRITE_WRITE_product_list").html(product_root);
+                    },
+                  		error: function () {
+                    alert("상품정보불러오기실패");
+                  }
+                })//ajax 끝
+            })//each 끝
+            $("main").html(Write_main);
+          }
       </script>
     </head>
 
     <body>
       <header>
         <div id="TOP" class="flex">
-          <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+          <div><a href=""><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo" );></a></div>
           <div class="flex header_main">
             <div><a href="">
                 <h1 id="header_font">COORDI FOR SHOES</h1>
@@ -170,91 +228,93 @@
         </div>
       </header>
       <!-- 헤더 끝 -->
-      <div class="CLTHN">
-        <div class="tab_wrap tab_area" style="width: 17%;">
-          <div class="btn_area clearfix">
-            <button class="btn btn_tab act" data-depth="0" data-idx="0">내옷장</button>
-            <button class="btn btn_tab" data-depth="0" data-idx="1">추천옷장</button>
-          </div>
+      <main>
+        <div class="CLTHN">
+          <div class="tab_wrap tab_area" style="width: 17%;">
+            <div class="btn_area clearfix">
+              <button class="btn btn_tab act" data-depth="0" data-idx="0">내옷장</button>
+              <button class="btn btn_tab" data-depth="0" data-idx="1">추천옷장</button>
+            </div>
 
-          <!-- 내 옷장 TAB-->
-          <div class="content_area act" data-depth="0" data-idx="0">
-            <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
-            <div class="content">
-              <div class="sublist">
-                <a onclick="rcmndClst()">전체</a>
+            <!-- 내 옷장 TAB-->
+            <div class="content_area act" data-depth="0" data-idx="0">
+              <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
+              <div class="content">
+                <div class="sublist">
+                  <a onclick="rcmndClst()">전체</a>
+
+                </div>
+              </div>
+              <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
+              <div class="content">
+
+                <div class="sublist">
+                  <a onclick="sublist_bottom()">전체</a>
+                  <a onclick="sublist_bottom()">청바지</a>
+                  <a onclick="sublist_bottom()">반바지</a>
+                  <a onclick="sublist_bottom()">슬렉스</a>
+                </div>
 
               </div>
-            </div>
-            <button type="button" class="collapsible" onclick="collapse(this);">하의 BOTTOM</button>
-            <div class="content">
-
-              <div class="sublist">
-                <a onclick="sublist_bottom()">전체</a>
-                <a onclick="sublist_bottom()">청바지</a>
-                <a onclick="sublist_bottom()">반바지</a>
-                <a onclick="sublist_bottom()">슬렉스</a>
-              </div>
-
-            </div>
-            <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
-            <div class="content">
-              <div class="sublist">
-                <a onclick="sublist_outer()">전체</a>
-                <a onclick="sublist_outer()">패딩</a>
-                <a onclick="sublist_outer()">자켓</a>
-                <a onclick="sublist_outer()">가디건</a>
+              <button type="button" class="collapsible" onclick="collapse(this);">아우터 OUTER</button>
+              <div class="content">
+                <div class="sublist">
+                  <a onclick="sublist_outer()">전체</a>
+                  <a onclick="sublist_outer()">패딩</a>
+                  <a onclick="sublist_outer()">자켓</a>
+                  <a onclick="sublist_outer()">가디건</a>
+                </div>
               </div>
             </div>
-          </div>
 
 
 
-          <!-- 추천 옷장 -->
-          <div class="content_area" data-depth="0" data-idx="1" id="c_data_category">
-            <button type="button" class="collapsible" onclick="collapse();">상의 TOP</button>
-            <div class="content">
-              <div class="sublist">
-                <a onclick="rcmndClst()">전체</a>
+            <!-- 추천 옷장 -->
+            <div class="content_area" data-depth="0" data-idx="1" id="c_data_category">
+              <button type="button" class="collapsible" onclick="collapse();">상의 TOP</button>
+              <div class="content">
+                <div class="sublist">
+                  <a onclick="rcmndClst()">전체</a>
 
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <!-- 옷 선택 하는곳 -->
-        <div class="viewCLOSET_area">
-          <div class="viewCLOSET" id="viewCLOSET">
+          <!-- 옷 선택 하는곳 -->
+          <div class="viewCLOSET_area">
+            <div class="viewCLOSET" id="viewCLOSET">
 
+            </div>
+          </div>
+          <!-- 선택된 의류 이미지 -->
+          <div class="viewCLOSET_under">
+            <div id="TOP_img">
+              <h3 style="text-align: center;">상의</h3>
+
+            </div>
+
+            <div id="BOTTOM_img">
+              <h3 style="text-align: center;">하의</h3>
+
+            </div>
+
+            <div id="SHOES_img">
+              <h3 style="text-align: center;">신발</h3>
+
+            </div>
+
+          </div>
+
+          <!-- 피팅 AREA -->
+          <div class="fitting_area" id="outerContainer">
+            <div id="container">
+
+            </div>
+            <div class="home-btn" style="width: 5em; justify-content: center; "><a onclick="capture();">코디 공유</a></div>
           </div>
         </div>
-        <!-- 선택된 의류 이미지 -->
-        <div class="viewCLOSET_under">
-          <div id="TOP_img">
-            <h3 style="text-align: center;">상의</h3>
-
-          </div>
-
-          <div id="BOTTOM_img">
-            <h3 style="text-align: center;">하의</h3>
-
-          </div>
-
-          <div id="SHOES_img">
-            <h3 style="text-align: center;">신발</h3>
-
-          </div>
-
-        </div>
-
-        <!-- 피팅 AREA -->
-        <div class="fitting_area" id="outerContainer">
-          <div id="container">
-
-          </div>
-          <div class="home-btn" style="width: 5em; justify-content: center; " ><a onclick="capture()">코디 공유</a></div>
-        </div>
-      </div>
+      </main>
     </body>
     <footer>
       <!-- 푸터 들어갈 자리 -->
@@ -263,14 +323,10 @@
     <script src="${cpath}/resources/JS/tabmenu.js"></script>
     <script src="${cpath}/resources/JS/move.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.0/html2canvas.min.js"></script>
-	<script>
-	  function capture() {
-	    html2canvas(document.querySelector("#container")).then(canvas => {
-	      const imgData = canvas.toDataURL('image/png');
-	      localStorage.setItem("capturedImg", imgData);
-	      window.location.href = 'http://localhost:8084/smhrd/WRITE.do';
-	    });
-	  }
-	</script>
+    <script>
+      
+      
+
+    </script>
 
     </html>

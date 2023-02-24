@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -44,9 +46,15 @@ public class clthnController {
 	
 	@GetMapping("/c_cate_conliset/{c_cate}")
 	public List<TCdata> c_cate_conliset(int c_cate) {
-	  System.out.println(c_cate);
+		/* System.out.println(c_cate); */
 	  java.util.List<TCdata> c_cate_conliset = mapper.c_cate_conliset(c_cate);
 	  return c_cate_conliset;
 	}
-
+	
+	@PostMapping("/WRITE")
+	public List<TCdata> WRITE(String c_img) {
+	    System.out.println(c_img+"Confirm controller");
+	    List<TCdata> WRITE = mapper.WRITE(c_img);
+	    return WRITE;
+	}
 }

@@ -26,7 +26,7 @@
   		</select>
   		
    		<!--브랜드 확인  -->
-<!--    		<select id="brandcat"  parameterType="kr.board.entity.TFdata">
+<!--    <select id="brandcat"  parameterType="kr.board.entity.TFdata">
      		select * from t_fdata where f_cate=#{f_cate} and f_brand=#{'f_brand'}
   		</select> -->
   		<!-- 내옷장 의류불러오기 -->
@@ -46,5 +46,9 @@
    		<!-- 옷 카테고리 분류에 따른 신발 리스트 출력 -->
    		<select id="c_cate_conliset" parameterType="int" resultType="kr.board.entity.TCdata">
      		select * from t_cdata where c_cate=#{c_cate} 
+  		</select>
+  		
+   		<select id="WRITE" parameterType="String"  resultType="kr.board.entity.TCdata">
+     		select * from t_cdata where c_img=#{c_img} 
   		</select>
 </mapper>
