@@ -17,9 +17,9 @@
 <body>
     <header>
         <div id="TOP" class="flex">
-            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div><a href="${cpath }/Main.do"><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
             <div class="flex header_main">
-                <div><a href="">
+                <div><a href="${cpath }/Main.do">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a></div>
                 <div><a href="">서비스소개</a><a href="">공지사항</a></div>

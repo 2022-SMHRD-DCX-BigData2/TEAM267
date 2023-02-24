@@ -31,13 +31,13 @@
     <header>
         <div id="TOP" class="flex">
             <div>
-                <a href="">
+                <a href="${cpath }/Main.do">
                     <img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo">
                 </a>
             </div>
             <div class="flex header_main">
                 <div>
-                    <a href="">
+                    <a href="${cpath }/Main.do">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a>
                 </div>
@@ -50,17 +50,17 @@
         	<c:when test="${empty loginMember}">
 	            <div class="flex header_left">
 	                <div>
-		                <a href="#" onclick="gologin()">로그인</a>
-		                <a href="#" onclick="gosign()">회원가입</a>
+		                <a href="${cpath}/LoginForm.do">로그인</a>
+		                <a href="${cpath}/signupForm.do"> 회원가입 </a>
 	                </div>
 	            </div>
             </c:when>
             <c:otherwise>			
 				<div class="flex header_left">
 	                <div>
-	                	<span>${loginMember.memName}</span>
+	                	<span>${loginMember.mem_nick}</span>
 		                <a href="#" onclick="gomypage">내정보</a>
-		                <a href="#" onclick="gologout">로그아웃</a>
+		                <a href="${cpath}/Logout.do"> 로그아웃 </a>
 	                </div>
 	            </div>
 			</c:otherwise>
