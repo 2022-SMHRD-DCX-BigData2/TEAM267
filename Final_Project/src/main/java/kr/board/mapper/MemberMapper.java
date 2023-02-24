@@ -8,4 +8,6 @@ public interface MemberMapper {
 
 	public TMember MemberLogin(TMember mvo);
 
+	public void userUpdate(TMember mvo);
+
 }

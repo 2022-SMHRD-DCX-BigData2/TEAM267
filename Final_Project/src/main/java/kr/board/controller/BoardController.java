@@ -56,6 +56,6 @@ public class BoardController {
 	@RequestMapping("/WRITE.do")
 	public void WRITE() {}		
 // 마이 페이지로 이동
-	@RequestMapping("/MYpage.do")
-	public void MYpage() {}		
+//	@RequestMapping("/MYpage.do")
+//	public void MYpage() {}		
 }

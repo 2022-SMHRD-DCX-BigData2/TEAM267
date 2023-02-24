@@ -100,7 +100,7 @@
 				<div class="flex header_left">
 	                <div>
 	                	<span>${loginMember.mem_nick}</span>
-		                <a href="#" onclick="gomypage">내정보</a>
+		                <a href="${cpath}/MYpage.do">내정보</a>
 		                <a href="${cpath}/Logout.do"> 로그아웃 </a>
 	                </div>
 	            </div>
