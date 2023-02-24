@@ -15,4 +15,10 @@
 		resultType="kr.board.entity.TMember">
 		select * from t_member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
 	</select>
+	
+	<!-- 회원정보 수정  -->
+	 <update id = "userUpdate" parameterType="kr.board.entity.TMember">
+        update t_member set mem_nick = #{mem_nick}, mem_email = #{mem_email}
+        where mem_id = #{mem_id} and mem_pw = #{mem_pw}
+    </update>
 </mapper>

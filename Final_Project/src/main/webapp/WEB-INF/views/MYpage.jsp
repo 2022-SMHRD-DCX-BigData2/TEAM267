@@ -35,11 +35,11 @@
             <!-- 내정보 페이지 -->
             <div class="content_area act" data-depth="0" data-idx="0">
               <div id="sign" class="center"> 
-                <form action="" class="my_sign">
-                <input type="text" placeholder="아이디" class="sign_input" id="ID">
-                <input type="password" placeholder="비밀번호" class="sign_input" id="PW">
-                <input type="text" placeholder="닉네임" class="sign_input">
-                <input type="email" placeholder="이메일" class="sign_input" id="email">
+                <form action="${cpath}/userUpdate.do" class="my_sign">
+                <input type="text" placeholder="아이디" class="sign_input" id="ID" name = "mem_id">
+                <input type="password" placeholder="비밀번호" class="sign_input" id="PW" name = "mem_pw">
+                <input type="text" placeholder="변경할 닉네임을 입력하세요" class="sign_input" name = "mem_nick">
+                <input type="email" placeholder="변경할 이메일을 입력하세요" class="sign_input" id="email" name = "mem_email">
                 
                 <input type="submit" value="저장" class="login_button">
                 </form>
@@ -124,6 +124,6 @@
             </div>
           </div>
       </div>
-    <script src="/src/main/webapp/resources/JS/tabmenu.js"></script>
+    <script src="${cpath}/resources/JS/tabmenu.js"></script>
 </body>
 </html>
