@@ -45,15 +45,7 @@ public class BoardRestController {
 		return footlistca;
 	}
 	
-	// 브랜드 불러오기
-	@GetMapping("/TBrand/{f_cate}")
-	public List<TFdata> shoesbrand(int f_cate) {
-		
-		
-		java.util.List<TFdata> shoesbrand=mapper.shoesbrand(f_cate);
-		
-		return shoesbrand;
-	}
+
 	
 	
 	

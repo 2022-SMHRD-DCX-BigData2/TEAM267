@@ -21,11 +21,7 @@ public interface BoardMapper {
 	
 	public List<TFdata> shoesbrand(int f_cate); // 브랜드 불러오기
 
-	//public List<TFdata> brandcat(TFdata vo);// 신발 종류와 브랜드에 따른 신발리스트 불러오기
-
 	public List<TCloset> myCloset(int f_cate);
-
-	/* public List<TCloset> rcmndClst(String memId); */
 	
 	public List<TCloset> rcmndClst(); // 어드민 계정 옷장 이미지
 
@@ -34,6 +30,10 @@ public interface BoardMapper {
 	public List<TCdata> c_cate_conliset(int c_cate);
 
 	public List<TCdata> WRITE(String c_img);
+
+	public List<TMember> Stylechoice();
+
+
 
 	
 }

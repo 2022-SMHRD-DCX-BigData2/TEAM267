@@ -51,4 +51,6 @@
    		<select id="WRITE" parameterType="String"  resultType="kr.board.entity.TCdata">
      		select * from t_cdata where c_img=#{c_img} 
   		</select>
+  		
+
 </mapper>

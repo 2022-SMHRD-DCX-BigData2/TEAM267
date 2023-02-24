@@ -66,5 +66,13 @@ public class MemberController {
 	      session.setAttribute("loginMember", mvo);
 	      return "redirect:/Main.do";
 	   }
+	// 신발 종류 선택 저장
+	   @RequestMapping("/Stylechoice.do")
+	   public String Stylechoice(TMember mvo,HttpSession session) {
+		   
+		  mapper.Stylechoice(mvo);
+		  session.setAttribute("loginMember", mvo);
+	      return "redirect:/Main.do";
+	   }
 	
 }
