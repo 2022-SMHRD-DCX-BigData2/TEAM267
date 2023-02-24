@@ -14,23 +14,23 @@
 </head>
 
 <body>
-     <header>
+    <header>
         <div id="TOP" class="flex">
             <div>
-                <a href="">
+                <a href="${cpath}/Main.do">
                     <img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo">
                 </a>
             </div>
             <div class="flex header_main">
                 <div>
-                    <a href="">
+                    <a href="${cpath}/Main.do">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a>
                 </div>
         <c:choose>
         	<c:when test="${empty loginMember}">
         		<div>
-                    <a href="#" onclick="goinfo()">서비스소개</a>
+                    <a href="${cpath}/Serviceinfo.do">서비스소개</a>
                     <a href="">공지사항</a>
                 </div>
         	</c:when>
