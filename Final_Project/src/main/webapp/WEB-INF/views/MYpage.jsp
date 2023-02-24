@@ -15,14 +15,30 @@
 <body>
     <header>
         <div id="TOP" class="flex">
-            <div><a href=""><img src="/src/main/webapp/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
+            <div><a href="${cpath }/Main.do"><img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo"></a></div>
             <div class="flex header_main">
-                <div><a href=""><h1 id="header_font">COORDI FOR SHOES</h1></a></div>
+                <div><a href="${cpath }/Main.do"><h1 id="header_font">COORDI FOR SHOES</h1></a></div>
                 <div><a href="">서비스소개</a><a href="">공지사항</a></div>
             </div>
-            <div class="flex header_left">       
-                <div><a href="">로그인</a><a href="">회원가입</a></div>
-            </div>
+            <c:choose>
+        	<c:when test="${empty loginMember}">
+	            <div class="flex header_left">
+	                <div>
+		                <a href="${cpath}/LoginForm.do">로그인</a>
+		                <a href="${cpath}/signupForm.do"> 회원가입 </a>
+	                </div>
+	            </div>
+            </c:when>
+            <c:otherwise>			
+				<div class="flex header_left">
+	                <div>
+	                	<span>${loginMember.mem_nick}</span>
+		                <a href="${cpath}/MYpage.do">내정보</a>
+		                <a href="${cpath}/Logout.do"> 로그아웃 </a>
+	                </div>
+	            </div>
+			</c:otherwise>
+		</c:choose>
         </div>
     </header>
       <div class="my_page">
@@ -36,12 +52,14 @@
             <div class="content_area act" data-depth="0" data-idx="0">
               <div id="sign" class="center"> 
                 <form action="${cpath}/userUpdate.do" class="my_sign">
-                <input type="text" placeholder="아이디" class="sign_input" id="ID" name = "mem_id">
-                <input type="password" placeholder="비밀번호" class="sign_input" id="PW" name = "mem_pw">
-                <input type="text" placeholder="변경할 닉네임을 입력하세요" class="sign_input" name = "mem_nick">
-                <input type="email" placeholder="변경할 이메일을 입력하세요" class="sign_input" id="email" name = "mem_email">
                 
-                <input type="submit" value="저장" class="login_button">
+	                <input type="text" placeholder="아이디" class="sign_input" id="ID" name = "mem_id" value="${loginMember.mem_id}">
+	                <input type="password" placeholder="비밀번호" class="sign_input" id="PW" name = "mem_pw" value="${loginMember.mem_pw}">
+	                <input type="text" placeholder="변경할 닉네임을 입력하세요" class="sign_input" name = "mem_nick" value="${loginMember.mem_nick}">
+	                <input type="email" placeholder="변경할 이메일을 입력하세요" class="sign_input" id="email" name = "mem_email" value="${loginMember.mem_email}">
+	                
+	                <input type="submit" value="저장" class="login_button">
+                
                 </form>
               </div>
             </div>
