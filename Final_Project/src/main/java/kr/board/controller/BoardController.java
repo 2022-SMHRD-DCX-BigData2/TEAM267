@@ -54,15 +54,12 @@ public class BoardController {
 	public void Recominfo() {}	
 //  코디 업로드 페이지 이동
 	@RequestMapping("/WRITE.do")
-	public void WRITE() {}		
-
-// 마이 페이지로 이동
-//	@RequestMapping("/MYpage.do")
-//	public void MYpage() {}		
+	public void WRITE() {}			
 
 //  발 업로드 페이지 이동
 	@RequestMapping("/Footup.do")
 	public void Footup() {}
-	
-
+// 내 발 정보 페이지 이동	
+	@RequestMapping("/footinfoRecom.do")
+	public void footinfoRecom() {}
 }
