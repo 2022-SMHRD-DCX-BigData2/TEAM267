@@ -62,4 +62,7 @@ public class BoardController {
 // 내 발 정보 페이지 이동	
 	@RequestMapping("/footinfoRecom.do")
 	public void footinfoRecom() {}
+//  구두 종류 선택 페이지 이동	
+	@RequestMapping("/StyleSelect.do")
+	public void StyleSelect() {}
 }
