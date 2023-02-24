@@ -24,7 +24,7 @@
                     </a></div>
                 <div><a href="">서비스소개</a><a href="">공지사항</a></div>
             </div>
-            <div class="flex header_left">
+            <div class="flex header_left">	
                 <div><a href="">로그인</a><a href="">회원가입</a></div>
             </div>
         </div>

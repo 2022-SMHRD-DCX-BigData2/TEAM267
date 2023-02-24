@@ -61,7 +61,7 @@ public class MemberController {
 	   
 	   @RequestMapping("/userUpdate.do")
 	   public String userUpdate(TMember mvo, HttpSession session) {
-
+		   
 	      mapper.userUpdate(mvo);
 	      session.setAttribute("loginMember", mvo);
 	      return "redirect:/Main.do";
