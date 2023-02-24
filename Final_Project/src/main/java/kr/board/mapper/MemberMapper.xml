@@ -21,4 +21,9 @@
         update t_member set mem_nick = #{mem_nick}, mem_email = #{mem_email}
         where mem_id = #{mem_id} and mem_pw = #{mem_pw}
     </update>
+    
+	 <update id = "Stylechoice" parameterType="kr.board.entity.TMember">
+        update t_member set mem_tst = #{mem_tst}
+        where mem_id = #{mem_id}
+    </update>
 </mapper>

@@ -10,4 +10,6 @@ public interface MemberMapper {
 
 	public void userUpdate(TMember mvo);
 
+	public void Stylechoice(TMember mvo);
+
 }
