@@ -63,6 +63,11 @@ public class BoardController {
 //  발 업로드 페이지 이동
 	@RequestMapping("/Footup.do")
 	public void Footup() {}
+//  의류 업로드 페이지 이동
+	@RequestMapping("/CLOSETUPLOAD.do")
+	public void CLOSETUPLOAD() {}
+	
+
 	
 
 }
