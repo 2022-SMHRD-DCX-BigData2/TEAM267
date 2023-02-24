@@ -96,6 +96,7 @@ body{
 .header_main a:not(:last-child){
     border-right: #000000 1px solid;
     padding-right: 10px;
+    padding-left: 10px;
 }
 .header_main a:last-child{
     padding-left: 10px;

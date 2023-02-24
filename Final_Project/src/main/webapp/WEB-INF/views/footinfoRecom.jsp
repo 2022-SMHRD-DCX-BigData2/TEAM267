@@ -15,7 +15,7 @@
 </head>
 
 <body>
-    <header>
+     <header>
         <div id="TOP" class="flex">
             <div>
                 <a href="">
@@ -28,10 +28,25 @@
                         <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a>
                 </div>
-                <div>
+        <c:choose>
+        	<c:when test="${empty loginMember}">
+        		<div>
                     <a href="#" onclick="goinfo()">서비스소개</a>
                     <a href="">공지사항</a>
                 </div>
+        	</c:when>
+        	
+        	<c:otherwise>
+        		<div>
+        			<a href="${cpath}/Serviceinfo.do">서비스소개</a>
+        			<a href="${cpath}/Footup.do">발 사이즈 측정</a>
+        			<a href="${cpath}/MYCLOSET.do">디지털 옷장</a>
+        			<a href="${cpath}/footlist.do">신발 보러가기</a>
+        			<a href="${cpath}/StyleSelect.do">취향 선택</a>
+        		</div>
+        	</c:otherwise>
+        </c:choose>
+
             </div>
         <c:choose>
         	<c:when test="${empty loginMember}">
@@ -54,6 +69,7 @@
 		</c:choose>
         </div>
     </header>
+    <!-- 헤더 끝 -->
         <h2>내 발사이즈</h2>
         <div class="flex center">
             <!-- 발사이즈 모양 -->
