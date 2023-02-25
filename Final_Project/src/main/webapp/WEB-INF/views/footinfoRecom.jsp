@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
@@ -16,44 +17,21 @@
     <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <script>
-
-console.log('${loginMember}')
-var loginMember='${loginMember.mem_tst}'
-loginMember.split(",")
-console.log(mem_tstlist[0]+"확인")
-var tst = "";
-$.each(mem_tstlist(f_cate,memtst)=>{
-    function footcategory(f_cate) {	
-        $.ajax({
-            url : "${cpath}/TFdata/"+f_cate,
-            type : "get",
-            data : {"f_cate" : f_cate},
-            dataType : "json",
-            success : dddd,
-            error : function(){
-                alert("신발목록불러오기실패"+f_cate);
-            }
-        })
-        
-    }  
-    function dddd(data) {
-    	console.log(data)
-   /*  	tst += '<div class="pos_r">';
-    	tst += ' <div class="shoes_box t_center pos_a">';
-    	tst += '<a href="">';
-    	tst += '<img src="https://via.placeholder.com/118" alt="" class="shoes_img">';
-    	tst += '<div class="margin_0">';
-    	tst += '<h4>브랜드</h4>';
-    	tst += '<p>제품명</p>';
-    	tst += '<P>제품가격</P>';
-    	tst += '</div>';
-    	tst += '</a>';
-    	tst += '</div>';
-    	tst += '</div>'; */
-	}
-	
-})
-              
+//신발 목록 불러오기 데이터
+function footcategory(f_cate) {
+$.each()
+  $.ajax({
+      url : "${cpath}/TFdata/"+f_cate,
+      type : "get",
+      data : {"f_cate" : f_cate},
+      dataType : "json",
+      success : footlist,
+      error : function(){
+          alert("신발목록불러오기실패"+f_cate);
+      }
+  })
+  
+}                
 </script>
 <body>
     <header>
@@ -66,7 +44,7 @@ $.each(mem_tstlist(f_cate,memtst)=>{
             <div class="flex header_main">
                 <div>
                     <a href="${cpath}/Main.do">
-                        <h1 id="header_font">COORDI FOR SHOES</h1>
+                        <h1 id="header_font">COORDI FOR SHOES ${fn:split(loginMember.mem_tst, ',')[2]}</h1>
                     </a>
                 </div>
         <c:choose>
