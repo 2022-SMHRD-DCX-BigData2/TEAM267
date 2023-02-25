@@ -125,10 +125,8 @@
         	<c:when test="${empty loginMember}">
 				<a style="display: flex;" href="${cpath}/LoginForm.do">
                     <p class="slide-info">
-                       	 신발 맞춤 코디 <br> 추천해드릴게요! <br>
-                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 
-                        <p><span>Coordi For SHOES</span> 에서는 </p>
-                                                       당신의 맞춤 코디 되어드릴게요.
+                       	  신발 맞춤 코디 <br> 추천해드릴게요! <br>
+                                                       오늘 뭐 신지? 오늘 뭐 입지? 고민하지마세요! <br> 당신의 맞춤 코디 되어드릴게요.
                                                        
                         <span class="home-btn">추천 서비스</span>
                     </p>

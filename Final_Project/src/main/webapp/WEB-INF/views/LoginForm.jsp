@@ -35,7 +35,7 @@
                     <input type="submit" value="로그인" class="login_button">
                 </div>
             </form>
-            <div><img src="https://via.placeholder.com/556x442" alt=""></div>
+            <div><img src="${cpath}/resources/img/login_logo.jpg" alt="" style="height: 500px; border-radius: 8px;"></div>
         </div>
         
     </main>

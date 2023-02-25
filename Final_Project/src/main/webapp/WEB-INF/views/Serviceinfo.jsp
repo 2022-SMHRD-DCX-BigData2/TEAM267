@@ -88,15 +88,13 @@
         <div>
             <h2>
                 <span>Coordi For SHOES</span> 는 새로운 온라인 쇼핑 경험을 선물해 드릴것입니다.
-                <p>메인로고 넣으면 될 듯 로고자리</p>
-                <p>메인로고 넣으면 될 듯 로고자리</p>
-                <p>메인로고 넣으면 될 듯 로고자리</p>
+                <img alt="" src="${cpath}/resources/img/MainLogo.png" style="margin-top: 20px; height: 500px;">
             </h2>
         </div>
 
         <div class="info_list">
             <div>
-                <p>저희 <span>Coordi For SHOES</span> 에서는 </p>
+                <p><span>Coordi For SHOES</span> 에서는 </p>
                 <p>신발 사이즈 고민하지 마세요.</p>
                 <p>구현 화면 넣을 자리</p>
                 <p>구현 화면 넣을 자리</p>
@@ -106,23 +104,15 @@
             </div>
 
             <div>
-            	<p>저희 <span>Coordi For SHOES</span>가</p>
+            	<p><span>Coordi For SHOES</span>가</p>
                 <p>마음에 쏙! 드는 신발만 골라서 추천해 드릴게요.</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
+                <img alt="" src="${cpath}/resources/img/main3.png" style="display: block; margin: auto;">
             </div>
 
-            <div>
-            	<p>저희 <span>Coordi For SHOES</span> 가 </p>
+            <div style="padding-bottom: 30px; margin-bottom:10px;">
+            	<p><span>Coordi For SHOES</span> 가 </p>
                 <p>디지털 옷장을 제공해드릴게요. 옷을 관리하고 코디해보세요.</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
+				<img alt="" src="${cpath}/resources/img/main2.png" style="display: block; margin: auto; height: 500px; border-radius: 10px;">
             </div>
         </div>
     </div>
