@@ -70,13 +70,13 @@
     <main>
         <!-- 신발 정보 -->
         <div class="shoes flex">
-            <div><img src="${cpath}/resources/img/home05.jpg" alt=""></div>
+            <div><img src="https://image.a-rt.com/art/product/2020/02/68184_1581657478562.jpg" alt=""></div>
             <div class="content_box">
                 <dl>
-                    <dd>브랜드명</dd>
-                    <dd id="name">제품명</dd>
-                    <dd>가격</dd>
-                    
+                    <dd>페이유에</dd>
+                    <dd id="name">펠로 II</dd>
+                    <dd>69,000원</dd>
+                    <dd><a href="${cpath}/CLTHN_SLCTN.do" class="home-btn">COORDI</a></dd>
                 </dl>
             </div>
         </div>

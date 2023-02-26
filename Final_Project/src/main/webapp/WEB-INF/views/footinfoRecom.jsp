@@ -131,56 +131,58 @@ $.each()
             <h3>운동화</h3>
             <div class="shoes_top_box">
                 <div class=" evenly ">
-                
-                                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://image.a-rt.com/art/product/2022/10/47820_1666054804068.jpg" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>나이키</h4>
-                                <p>나이키 마노아 17 레더 보이그레이드</p>
-                                <P>99,000원</P>
-                            </div>
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://image.a-rt.com/art/product/2020/02/73525_1581657601408.jpg" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>페이유에</h4>
-                                <p>펠로 II</p>
-                                <P>69,000원</P>
-                            </div>
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="pos_r">
+				<a href="${cpath}/Recominfo.do">
+					<div class="pos_r">
+						<div class="shoes_box t_center pos_a">
+							<img
+								src="https://image.a-rt.com/art/product/2022/10/47820_1666054804068.jpg"
+								alt="" class="shoes_img">
+							<div class="margin_0">
+								<h4>나이키</h4>
+								<p>나이키 마노아 17 레더 보이그레이드</p>
+								<P>99,000원</P>
+							</div>
+							<div class="shoes_size_box">
+								<hr>
+								<div id="shoes_size" class="grid">
+									<div>250</div>
+									<div>255</div>
+									<div>260</div>
+									<div>265</div>
+									<div>270</div>
+									<div>270</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a> 
+				<a href="${cpath}/Recominfo.do">
+					<div class="pos_r">
+						<div class="shoes_box t_center pos_a">
+							<img
+								src="https://image.a-rt.com/art/product/2020/02/73525_1581657601408.jpg"
+								alt="" class="shoes_img">
+							<div class="margin_0">
+								<h4>페이유에</h4>
+								<p>펠로 II</p>
+								<P>69,000원</P>
+							</div>
+							<div class="shoes_size_box">
+								<hr>
+								<div id="shoes_size" class="grid">
+									<div>250</div>
+									<div>255</div>
+									<div>260</div>
+									<div>265</div>
+									<div>270</div>
+									<div>270</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
                             <img src="https://image.a-rt.com/art/product/2021/10/88489_1634106205248.jpg" alt="" class="shoes_img">
@@ -204,6 +206,7 @@ $.each()
                             </a>
                         </div>
                     </div>
+                    
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
