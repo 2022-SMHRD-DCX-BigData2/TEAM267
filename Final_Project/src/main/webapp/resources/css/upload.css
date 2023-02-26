@@ -50,7 +50,7 @@
   .contents .upload-box .drag-file .message {
     margin-bottom: 0;
   }
-  .contents .upload-box .drag-file .preview {
+  .contents .upload-box .drag-file .preview,.preview2,.preview3,.preview4 {
     display: none;
     position: absolute;
     left: 0;
