@@ -89,47 +89,20 @@
             <div id="shoes_content2" class="grid">
                 <a href="" >
                     <div>
-                        <img src="https://via.placeholder.com/210x310" alt="">
-                        <p>코디 카테고리</p>
-                        <p class="p_name">코디 이름</p>
-                        <span>게시물 작성일자</span>
-                        <span>좋아요 개수</span>
+                        <img src="https://image.msscdn.net/images/codimap/list/l_3_2023022413115100000008235.jpg?202302261502" alt="">
+                        <p>캐주얼</p>
+                        <p class="p_name">데일리 코디</p>
+                        <span>2023.02.26</span>
+                        <span>10</span>
                     </div>
                 </a>
                 <a href="" >
                     <div>
-                        <img src="https://via.placeholder.com/210x310" alt="">
-                        <p>코디 카테고리</p>
-                        <p class="p_name">코디 이름</p>
-                        <span>게시물 작성일자</span>
-                        <span>좋아요 개수</span>
-                    </div>
-                </a>
-                <a href="" >
-                    <div>
-                        <img src="https://via.placeholder.com/210x310" alt="">
-                        <p>코디 카테고리</p>
-                        <p class="p_name">코디 이름</p>
-                        <span>게시물 작성일자</span>
-                        <span>좋아요 개수</span>
-                    </div>
-                </a>
-                <a href="" >
-                    <div>
-                        <img src="https://via.placeholder.com/210x310" alt="">
-                        <p>코디 카테고리</p>
-                        <p class="p_name">코디 이름</p>
-                        <span>게시물 작성일자</span>
-                        <span>좋아요 개수</span>
-                    </div>
-                </a>
-                <a href="" >
-                    <div>
-                        <img src="https://via.placeholder.com/210x310" alt="">
-                        <p>코디 카테고리</p>
-                        <p class="p_name">코디 이름</p>
-                        <span>게시물 작성일자</span>
-                        <span>좋아요 개수</span>
+                        <img src="https://image.msscdn.net/images/codimap/list/l_3_2023022412560300000045698.jpg?202302261502" alt="">
+                        <p>캐주얼</p>
+                        <p class="p_name">꾸안꾸</p>
+                        <span>2023.02.26</span>
+                        <span>13</span>
                     </div>
                 </a>
             </div>
