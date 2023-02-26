@@ -137,34 +137,7 @@
 
                 <div class="content_area" data-depth="1" data-idx="1" id="my_board">
                   <table class="board">
-                    <tr>
-                        <td>작성자</td>
-                        <td>제목</td>
-                        <td>작성일</td>
-                        <td>수정</td>
-                        <td>삭제</td>
-                    </tr>
-                    <tr>
-                        <td>홍길동</td>
-                        <td><a>그리워하면</a></td>
-                        <td>2022-11-25</td>
-                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                    </tr>
-                    <tr>
-                        <td>홍길동</td>
-                        <td><a>그리워하면</a></td>
-                        <td>2022-11-25</td>
-                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                    </tr>
-                    <tr>
-                        <td>홍길동</td>
-                        <td><a>그리워하면</a></td>
-                        <td>2022-11-25</td>
-                        <td><button type="button" class="btn btn-outline-dark">수정</button></td>
-                        <td><button type="button" class="btn btn-outline-dark">삭제</button></td>
-                    </tr>
+                    
                   </table>
                 </div>
               </div>

@@ -163,7 +163,7 @@
 					<div class="foot_size_img_h">
 						<p>A4 용지를 <span>세로</span>로 <span>두</span> 번 접어 <br>발을 사진과 같이 올려 찍어주세요.</p>
 						<img src="${cpath}/resources/img/length_guide.png" alt="">
-						<span class="home-btn" style="margin-top: 15px;">저장하기</span>
+						<a href="${cpath}/footinfoRecom.do"><span class="home-btn" style="margin-top: 15px;">저장하기</span></a>
 					</div>
 					<div id="root">
 						<div class="contents">

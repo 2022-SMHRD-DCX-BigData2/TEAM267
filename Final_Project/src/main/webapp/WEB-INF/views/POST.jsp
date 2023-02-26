@@ -78,29 +78,23 @@
             <!-- 글 내용 -->
             <div class="POST">
                 <div class="POST_img">
-                    <img src="${cpath}/resources/img/POST_file.png">
+                    <img src="${cpath}/resources/img/WRITE.png">
                 </div>
 
                 <div class="POST_content">
                     <div class="POST_content_icon">
-                        <h1>결혼식때 입기 좋은 코디</h1>
-                        <p>#로맨틱</p>
+                        <h3>안녕하세요. 오늘은 캐주얼 코디를 준비해봤습니다.</h3>
+                        <p>캐주얼</p>
                     </div>
                     <span>
-                        화면을 위아래로 스크롤하더라도 브라우저 화면의 특정 부분에 고정되어 움직이지 않는 UI를 본적이 있으신가요? 보통 라이브 채팅 버튼을 구현할 때 많이 쓰이는 기법인데요.
-                        position 속성을 fixed로
-                        지정하면 이렇게 요소를 항상 고정된(fixed) 위치에 배치할 수 있습니다.
-
-                        이게 가능한 이유는 fixed 속성값의 배치 기준이 자신이나 부모 요소가 아닌 뷰포트(viewport), 즉 브라우저 전체화면이기 때문인데요. top, left,
-                        bottom, right 속성은 각각 브라우저
-                        상단, 좌측, 하단, 우측으로 부터 해당 요소가 얼마나 떨어져있는지를 결정합니다.
+                   	 안녕하세요. 오늘은 캐주얼 코디를 준비해봤습니다. 코디 이쁘게 봐주세요
                     </span>
 
                     <div class="POST_content_info">
                         <div style="display: flex;">
                             <p>작성자:</p>
-                            <p>정지명</p>
-                            <p style="font-weight:50; font-size:0.1em; color:gray; align-self: center;">2023.02.07</p>
+                            <p>이준혁</p>
+                            <p style="font-weight:50; font-size:0.1em; color:gray; align-self: center;">2023.02.26</p>
                         </div>
 
                         <div style="display: flex;">
@@ -117,33 +111,15 @@
                 <div class="POST_product_list">
 
                     <div>
-                        <img src="${cpath}/resources/img/img1.jpg" width="100px" height="100px">
-                        <p>62,100원</p>
-                        <p>후드티</p>
+                        <img src="https://image.msscdn.net/images/goods_img/20171110/668822/668822_1_500.jpg" width="100px" height="100px">
+                        <p>334,000원</p>
+                        <p>MTR 오버핏 더블 롱 코트 (블랙)</p>
                     </div>
 
                     <div>
-                        <img src="${cpath}/resources/img/TEST Jean02.jpg" width="100px" height="100px">
-                        <p>52,000원</p>
-                        <p>청바지</p>
-                    </div>
-
-                    <div>
-                        <img src="${cpath}/resources/img/home03.jpg" width="100px" height="100px">
-                        <p>102,000원</p>
-                        <p>워커</p>
-                    </div>
-
-                    <div>
-                        <img src="${cpath}/resources/img/img1.jpg" width="100px" height="100px">
-                        <p>62,100원</p>
-                        <p>후드티</p>
-                    </div>
-
-                    <div>
-                        <img src="${cpath}/resources/img/img1.jpg" width="100px" height="100px">
-                        <p>62,100원</p>
-                        <p>후드티</p>
+                        <img src="https://image.msscdn.net/images/goods_img/20210714/2028329/2028329_2_500.jpg" width="100px" height="100px">
+                        <p>49,900원</p>
+                        <p>스트레이트 데님 팬츠 [워시드 블랙]</p>
                     </div>
                 </div>
             </div>
@@ -163,7 +139,7 @@
                     <div class="POST_commnet_list1">
                         <ul>
                             <li><i class="fa-regular fa-user" style="font-size: x-large;"></i></li>
-                            <li> &nbsp; &nbsp; 쭈녁</li>
+                            <li> &nbsp; &nbsp; 호주호주</li>
                         </ul>
 
                         <ul>
@@ -184,41 +160,7 @@
                         </ul>
 
                         <ul>
-                            <li>페페로니에 미친남자 페미남 정지명</li>
-                        </ul>
-
-                        <ul>
-                            <li style="font-weight: 50; font-size: 0.1em; color: gray;">2023.02.07 10:41</li>
-                        </ul>
-                    </div>
-                    <!-- 댓글 하나 내용 끝 백엔드 작업시 for문 돌릴것 -->
-
-                    <!-- 댓글 하나 내용 시작 백엔드 작업시 for문 돌릴것 -->
-                    <div class="POST_commnet_list1">
-                        <ul>
-                            <li><i class="fa-regular fa-user" style="font-size: x-large;"></i></li>
-                            <li> &nbsp; &nbsp; 호주</li>
-                        </ul>
-
-                        <ul>
-                            <li>호주호주호주호주호주호주는 오스트레일리아</li>
-                        </ul>
-
-                        <ul>
-                            <li style="font-weight: 50; font-size: 0.1em; color: gray;">2023.02.07 10:41</li>
-                        </ul>
-                    </div>
-                    <!-- 댓글 하나 내용 끝 백엔드 작업시 for문 돌릴것 -->
-
-                    <!-- 댓글 하나 내용 시작 백엔드 작업시 for문 돌릴것 -->
-                    <div class="POST_commnet_list1">
-                        <ul>
-                            <li><i class="fa-regular fa-user" style="font-size: x-large;"></i></li>
-                            <li> &nbsp; &nbsp; 상민</li>
-                        </ul>
-
-                        <ul>
-                            <li>북괴 용사 정상민의 룩</li>
+                            <li>오늘은 이 코디와 비슷하게 입고 나가야겠네요. 감사합니다.</li>
                         </ul>
 
                         <ul>
