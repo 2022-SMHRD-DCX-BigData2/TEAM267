@@ -1003,3 +1003,10 @@ input[type="checkbox"]:checked+label{
 	background-size: contain;
 	
 }
+
+.choose_upload {
+	margin-top : 25px;
+}
+
+
+}

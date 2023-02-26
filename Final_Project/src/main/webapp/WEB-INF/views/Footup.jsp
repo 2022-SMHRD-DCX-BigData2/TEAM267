@@ -91,21 +91,25 @@
               <p class="message">파일 업로드 하기</p>
               <img src="" alt="미리보기 이미지" class="preview">
             </div>
-            <label class="file-label" for="chooseFile">Choose File</label>
-            <form action="">
-            	<input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
-              	accept="image/png, image/jpeg, image/gif">
-            </form>
+	            <div class="choose_upload">
+		            <label class="file-label" for="chooseFile">Choose File</label>
+		            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+		              accept="image/png, image/jpeg, image/gif">
+		              
+		            <label class="file-label" for="measure">발 사이즈 측정</label>
+		            <input class="file" id="measure">
+	            </div>
           </div>
         </div>
       </div>
       
-      <div class="foot_size_img_h">
-        <img src="/src/main/webapp/resources/img/foot_size_1.png" alt="" >
+      <div class="foot_size_img_h" style="margin-top: -100px;">
+      	<p>A4 용지를 <span>가로</span>로 <span>한</span> 번 접어 <br>발을 사진과 같이 올려 찍어주세요.</p>
+        <img src="${cpath}/resources/img/width_guide.png" alt="" >
       </div>
       
 
-      <div id="root">
+       <div id="root">
         <div class="contents">
           <div class="upload-box">
             <div id="drop-file" class="drag-file">
@@ -113,9 +117,14 @@
               <p class="message">파일 업로드 하기</p>
               <img src="" alt="미리보기 이미지" class="preview">
             </div>
-            <label class="file-label" for="chooseFile">Choose File</label>
-            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
-              accept="image/png, image/jpeg, image/gif">
+	            <div class="choose_upload">
+		            <label class="file-label" for="chooseFile">Choose File</label>
+		            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+		              accept="image/png, image/jpeg, image/gif">
+		              
+		            <label class="file-label" for="measure">발 사이즈 측정</label>
+		            <input class="file" id="measure">
+	            </div>
           </div>
         </div>
       </div>
@@ -131,14 +140,21 @@
               <p class="message">파일 업로드 하기</p>
               <img src="" alt="미리보기 이미지" class="preview">
             </div>
-            <label class="file-label" for="chooseFile">Choose File</label>
-            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
-              accept="image/png, image/jpeg, image/gif">
+	            <div class="choose_upload">
+		            <label class="file-label" for="chooseFile">Choose File</label>
+		            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+		              accept="image/png, image/jpeg, image/gif">
+		              
+		            <label class="file-label" for="measure">발 사이즈 측정</label>
+		            <input class="file" id="measure">
+	            </div>
           </div>
         </div>
       </div>
-      <div class="foot_size_img_w"> 
-        <img src="/src/main/webapp/resources/img/foot_size_2.png" alt="" >
+      <div class="foot_size_img_h"> 
+      <p>A4 용지를 <span>세로</span>로 <span>두</span> 번 접어 <br>발을 사진과 같이 올려 찍어주세요.</p>
+        <img src="${cpath}/resources/img/length_guide.png" alt="" >
+      	<span class="home-btn" style="margin-top: 15px;">저장하기</span>
       </div>
       <div id="root">
         <div class="contents">
@@ -148,9 +164,14 @@
               <p class="message">파일 업로드 하기</p>
               <img src="" alt="미리보기 이미지" class="preview">
             </div>
-            <label class="file-label" for="chooseFile">Choose File</label>
-            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
-              accept="image/png, image/jpeg, image/gif">
+	            <div class="choose_upload">
+		            <label class="file-label" for="chooseFile">Choose File</label>
+		            <input class="file" id="chooseFile" type="file" onchange="dropFile.handleFiles(this.files)"
+		              accept="image/png, image/jpeg, image/gif">
+		              
+		            <label class="file-label" for="measure">발 사이즈 측정</label>
+		            <input class="file" id="measure">
+	            </div>
           </div>
         </div>
       </div>
@@ -160,8 +181,8 @@
   <script src="${cpath}/resources/JS/upload.js"></script>
   <script type="text/javascript">
   
-	  function drawROI(img, corners) {
-		  let cpy = img.clone();
+	  function drawROI(footimg, corners) {
+		  let cpy = footimg.clone();
 		  let c1 = new cv.Scalar(192, 192, 255, 0);
 		  let c2 = new cv.Scalar(128, 128, 255, 0);
 	
@@ -220,10 +241,11 @@
 		  }
 		}
 		
-		let footimg = cv.imread('newfoot.jpg');
+		
+		let footimg = cv.imread('C:/Users/user/Desktop/newfoot.jpg');
 		let src = new cv.Mat();
 		let dsize = new cv.Size(480, 640);
-		cv.resize(img, src, dsize, 0, 0, cv.INTER_AREA);
+		cv.resize(footimg, src, dsize, 0, 0, cv.INTER_AREA);
 
 		let h = src.rows;
 		let w = src.cols;
@@ -238,6 +260,7 @@
 		
 		cv.imshow('footimg', disp);
 		cv.setMouseCallback('footimg', onMouse);
+		
 
 		while (true) {
 		  let key = cv.waitKey();
