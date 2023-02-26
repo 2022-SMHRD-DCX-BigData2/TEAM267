@@ -12,7 +12,75 @@
             <link rel="stylesheet" href="${cpath}/resources/css/style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
+			<script type="text/javascript">
+	        function rcmndClst() {
+	            var memId = "${loginMember.mem_id}";
+	            $.ajax({
+	              url: "${cpath}/rcmndClst_1",
+	              type: "get",
+	              dataType: "json",
+	              /*     data: {"memId": memId}, */
+	              success: rcmndClstlist,
+	              error: function () {
+	                alert("의류 카테고리 불러오기 실패");
+	              }
+	            })
+	          }
+	          /* 내옷장 데이터 이미지 리스트 출력 */
+	          function rcmndClstlist(data) {
+	           
+	            var rcmndClst_1_1 = "";
 
+	            rcmndClst_1_1 += '<div class="" id="viewCLOSET">';
+	            rcmndClst_1_1 += '<h3>전체</h3>';
+	            $.each(data, (indxe, item) => {
+	              rcmndClst_1_1 += '<a onclick="select_clt(' + item.closet_seq + ', \'' + item.closet_img + '\');moveco()"><img src="' + item.closet_img + '" width="150px" height="150px"></a>';
+	            });
+	            rcmndClst_1_1 += '</div>';
+
+	            $(".viewCLOSET_area").html(rcmndClst_1_1);
+	          }
+	          
+	          
+	          function select_clt(c_cate, c_img) {
+	        	  var img_con = "";
+	        	  img_con +='<img src="' + c_img + '" alt="'+c_cate+'">';
+	        	  
+
+	        	  $("#my_img_con").html(img_con);
+	              if (TOP.indexOf(c_cate) !== -1) {
+	                // c_cate가 TOP에 속하는 경우
+	                // 처리할 코드를 작성하세요.
+	                var top = "";
+	                top += '<h3 style="text-align: center;">상의</h3>';
+	                top += '<img id="choose_img" src="' + c_img + '" >';
+	                
+	                $("#TOP_img").html(top);
+
+	                container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
+	                container += '<div style="width:100px; height:100px;" class="myElement"><img alt="" src="https://image.a-rt.com/art/product/2020/02/68184_1581657478562.jpg"></div>'
+
+	                $("#container").html(container);
+	              } else if (BOTTOM.indexOf(c_cate) !== -1) {
+	                // c_cate가 BOTTOM에 속하는 경우
+	                // 처리할 코드를 작성하세요.
+	                var bottom = "";
+	                bottom += '<h3 style="text-align: center;">하의</h3>';
+	                bottom += '<img id="choose_img" src="' + c_img + '">';
+	                $("#BOTTOM_img").html(bottom);
+
+	                container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
+	                $("#container").html(container);
+	              } else {
+	                // c_cate가 TOP 또는 BOTTOM에 속하지 않는 경우
+	                // 처리할 코드를 작성하세요.
+	              }
+	    		
+	            }
+
+
+			</script>	
+		</head>
         <body>
      <header>
         <div id="TOP" class="flex">
@@ -87,7 +155,7 @@
                         <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="rcmndClst()" style="cursor: pointer; align-items: center;">전체</a>
                                 <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
                                 <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
                                 <a onclick="sublist_top()">피케/카라 티셔츠</a>
@@ -187,14 +255,17 @@
                     </div>
                 </div>
 
-                <div class="fitting_area">
-                    <span style="cursor: hand;">
-                        <img class="fitting" id="fitting_top" src="/src/main/webapp/resources/img/img1.jpg"
+                <div class="fitting_area" id="my_fitting">
+                    <span style="cursor: hand;" id="my_img_con">
+                        <img class="fitting" id="fitting_top" src="${cpath}/resources/img/img1.jpg"
                             width="100px" height="100px" onmousedown="startDrag(event, this)">
                     </span>
-                    <input type="submit" class="myCLOST-btn" value="삭제 ">
+                    <div class="flex flex_dir_col" >
+                    	<input type="submit" class="myCLOST-btn" value="삭제 ">
                     <input type="button" class="myCLOST-btn" value="추가하기" style="cursor: pointer;" onclick="location.href='${cpath}/CLOSETUpload.do'">
                     <%-- <a href="${cpath}/CLOSETUpload.do" class="myCLOST-btn">추가하기</a> --%>
+                    </div>
+                    
                 </div>
             </main>
         </body>
