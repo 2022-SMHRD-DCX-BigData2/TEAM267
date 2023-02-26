@@ -101,7 +101,7 @@
 										onchange="dropFile.handleFiles(this.files)"
 										accept="image/png, image/jpeg, image/gif">
 
-									<label class="file-label" for="measure">발 사이즈 측정</label>
+									<a onclick=measurefoot()><label class="file-label" for="measure">발 사이즈 측정</label></a>
 									<input class="file" id="measure">
 								</div>
 							</div>
@@ -252,8 +252,10 @@
 				}
 			}
 
-
-			let footimg = cv.imread('C:/Users/user/Desktop/newfoot.jpg');
+			
+		
+			  function onOpenCvReady() {
+			let footimg = cv.imread('C:/Users/user/Desktop/footsize/newfoot.jpg');
 			let src = new cv.Mat();
 			let dsize = new cv.Size(480, 640);
 			cv.resize(footimg, src, dsize, 0, 0, cv.INTER_AREA);
@@ -345,10 +347,10 @@
 
 			img.delete();
 			box1.delete();
-
+			
+				  }
 
 		</script>
-		<script async src="https://docs.opencv.org/master/opencv.js" onload="onOpenCvReady();"
-			type="text/javascript"></script>
+		<script src="${cpath}/resources/js/opencv.js" onload="onOpenCvReady();" type="text/javascript"></script>
 
 		</html>

@@ -67,4 +67,7 @@ public class BoardController {
 //  구두 종류 선택 페이지 이동	
 	@RequestMapping("/CLOSETUpload.do")
 	public void CLOSETUpload() {}
+//  테스트용
+	@RequestMapping("/test.do")
+	public void test() {}
 }

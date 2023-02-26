@@ -188,20 +188,14 @@
                         <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+
                             </div>
                         </div>
                         <button type="button" class="collapsible" onclick="collapse(this);">부츠</button>
                         <div class="content">
 
                             <div class="sublist">
-                                <a onclick="sublist_bottom()" style="cursor: pointer;">전체</a>
-                                <a onclick="sublist_bottom()">청바지</a>
-                                <a onclick="sublist_bottom()">반바지</a>
-                                <a onclick="sublist_bottom()">슬렉스</a>
+ 
                             </div>
 
                         </div>
@@ -216,28 +210,19 @@
                         <button type="button" class="collapsible" onclick="collapse(this);">구두</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+
                             </div>
                         </div>
                         <button type="button" class="collapsible" onclick="collapse(this);">스포츠</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+
                             </div>
                         </div>
                         <button type="button" class="collapsible" onclick="collapse(this);">운동화</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
-                                <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
-                                <a onclick="sublist_top()">피케/카라 티셔츠</a>
+
                             </div>
                         </div>
                     </div>  
