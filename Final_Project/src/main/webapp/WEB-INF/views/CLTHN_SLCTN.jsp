@@ -127,9 +127,12 @@
             var top = "";
             top += '<h3 style="text-align: center;">상의</h3>';
             top += '<img id="choose_img" src="' + c_img + '" >';
+            
             $("#TOP_img").html(top);
 
             container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
+            container += '<div style="width:100px; height:100px;" class="myElement"><img alt="" src="https://image.a-rt.com/art/product/2020/02/68184_1581657478562.jpg"></div>'
+
             $("#container").html(container);
           } else if (BOTTOM.indexOf(c_cate) !== -1) {
             // c_cate가 BOTTOM에 속하는 경우
@@ -154,11 +157,11 @@
             Write_main += '<form class="WRITE_form_all"action="">';
             Write_main += '<div class="WRITE_form">';
             Write_main += '<div class="WRITE_img">';
-            Write_main += '<input type="hidden" value="${cpath}/resources/img/POST_file.png">';
+            Write_main += '<img alt="" src="${cpath}/resources/img/WRITE.png">';
             Write_main += '<div id="preview"></div>';
             Write_main += '</div>';
             Write_main += '<div class="WRITE_content"><div>';
-            Write_main += '<input type="text" maxlength="15" placeholder="글 제목과 태그를 입력해 주세요.">';
+            Write_main += '<input type="text" maxlength="200" placeholder="글 제목과 태그를 입력해 주세요.">';
             Write_main += '<select>';
             Write_main += '<option value="casual">캐주얼</option><option value="dandy">댄디</option><option value="chic">시크</option><option value="sports">스포츠</option>';
             Write_main += '</select>';
@@ -170,10 +173,10 @@
             Write_main += '</form>';
             
             var product_root="";
-            Write_main += '<div style="display: flex; justify-content: space-between;">';
+            Write_main += '<div style="display: flex; justify-content: space-between; margin: auto; width: 85%;">';
             Write_main += '<h1>제품 목록</h1>';
             Write_main += '<div>';
-            Write_main += '<input class="WRITE_submit" type="submit" value="등 록"><input class="WRITE_submit" type="reset" value="취 소">';
+            Write_main += '<a href="${cpath}/POST.do"><input class="WRITE_submit" type="submit" value="등 록"><input class="WRITE_submit" type="reset" value="취 소"></a>';
             Write_main += '</div>';
             Write_main += '</div>';
             Write_main += '<div class="POST_product_list" id="WRITE_WRITE_product_list">';
@@ -211,6 +214,48 @@
             })//each 끝
             $("main").html(Write_main);
           }
+     // 처음 이미지가 만들어질 곳을 정합니다. 왼쪽에서 10, 화면상단에서 20 만큼의 위치에 이미지를 놓아보겠습니다.
+        var img_L = 260;
+        var img_T = 352;
+        var targetObj;
+
+        function getLeft(o){
+        return parseInt(o.style.left.replace('px', ''));
+        }
+        function getTop(o){
+        return parseInt(o.style.top.replace('px', ''));
+        }
+
+        // 이미지를 움직이는 함수를 만들어 보겠습니다.
+        // 처음있던 위치애서, 움직인값의 좌표만큼을 더해줍니다.
+        function moveDrag(e){
+        var e_obj = window.event? window.event : e;
+        var dmvx = parseInt(e_obj.clientX + img_L);
+        var dmvy = parseInt(e_obj.clientY + img_T);
+        targetObj.style.left = dmvx +"px";
+        targetObj.style.top = dmvy +"px";
+        return false;
+        }
+
+        // 드래그를 시작하는 함수 입니다.
+        // 마지막으로 움직인 좌표값에서, 이전움직였던 좌표값을 빼줍니다. == 움직인 좌표를 나타냅니다.
+        // 움직였던 좌표에서 처음 드래그를 시작했던 좌표를 빼줍니다. 움직인 좌표를 나타내줍니다
+        function startDrag(e, obj){
+        targetObj = obj;
+        var e_obj = window.event? window.event : e;
+        img_L = getLeft(obj) - e_obj.clientX;
+        img_T = getTop(obj) - e_obj.clientY;
+
+        document.onmousemove = moveDrag;
+        document.onmouseup = stopDrag;
+        if(e_obj.preventDefault)e_obj.preventDefault();
+        }
+
+        // 드래그를 정지하는 함수 입니다.
+        function stopDrag(){
+        document.onmousemove = null;
+        document.onmouseup = null;
+        }
       </script>
     </head>
 
@@ -351,6 +396,12 @@
           <!-- 피팅 AREA -->
           <div class="fitting_area" id="outerContainer">
             <div id="container">
+            
+            <img alt="" src="https://image.a-rt.com/art/product/2020/02/68184_1581657478562.jpg" onmousedown="startDrag(event, this)"
+            																				 	style="width:100px; height:100px; 
+																							           position:absolute; left:16px; 
+																							           top:135px; cursor:pointer; 
+																							           cursor:hand; border:0">
 
             </div>
             <div class="home-btn" style="width: 5em; justify-content: center; "><a onclick="capture();">코디 공유</a></div>

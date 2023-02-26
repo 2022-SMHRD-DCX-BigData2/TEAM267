@@ -16,59 +16,64 @@
 <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
-	<header>
-		<div id="TOP" class="flex">
-			<div>
-				<a href="${cpath}/Main.do"> <img
-					src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo">
-				</a>
-			</div>
-			<div class="flex header_main">
-				<div>
-					<a href="${cpath}/Main.do">
-						<h1 id="header_font">COORDI FOR SHOES</h1>
-					</a>
-				</div>
-				<c:choose>
-					<c:when test="${empty loginMember}">
-						<div>
-							<a href="${cpath}/Serviceinfo.do">서비스소개</a> <a href="">공지사항</a>
-						</div>
-					</c:when>
+    <header>
+        <div id="TOP" class="flex">
+            <div>
+                <a href="${cpath}/Main.do">
+                    <img src="${cpath}/resources/img/MainLogo.png" alt="" class="main_Logo">
+                </a>
+            </div>
+            <div class="flex header_main">
+                <div>
+                    <a href="${cpath}/Main.do">
+                        <h1 id="header_font">COORDI FOR SHOES</h1>
+                    </a>
+                </div>
+        <c:choose>
+        	<c:when test="${empty loginMember}">
+        		<div>
+                    <a href="${cpath}/Serviceinfo.do">서비스소개</a>
+                    <a href="">공지사항</a>
+                    <a href="${cpath}/StyleCommunity.do">커뮤니티</a>
+                </div>
+        	</c:when>
+        	
+        	<c:otherwise>
+        		<div>
+        			<a href="${cpath}/Serviceinfo.do">서비스소개</a>
+        			<a href="${cpath}/Footup.do">발 사이즈 측정</a>
+        			<a href="${cpath}/MYCLOSET.do">디지털 옷장</a>
+        			<a href="${cpath}/StyleSelect.do">취향 선택</a>
+        			<a href="${cpath}/StyleCommunity.do">커뮤니티</a>
+        			<a href="${cpath}/footlist.do">신발 목록</a>
+        		</div>
+        	</c:otherwise>
+        </c:choose>
 
-					<c:otherwise>
-						<div>
-							<a href="${cpath}/Serviceinfo.do">서비스소개</a> <a
-								href="${cpath}/Footup.do">발 사이즈 측정</a> <a
-								href="${cpath}/MYCLOSET.do">디지털 옷장</a> <a
-								href="${cpath}/footlist.do">신발 보러가기</a> <a
-								href="${cpath}/StyleSelect.do">취향 선택</a>
-						</div>
-					</c:otherwise>
-				</c:choose>
-
-			</div>
-			<c:choose>
-				<c:when test="${empty loginMember}">
-					<div class="flex header_left">
-						<div>
-							<a href="${cpath}/LoginForm.do">로그인</a> <a
-								href="${cpath}/signupForm.do"> 회원가입 </a>
-						</div>
-					</div>
-				</c:when>
-				<c:otherwise>
-					<div class="flex header_left">
-						<div>
-							<span>${loginMember.mem_nick}</span> <a href="${cpath}/MYpage.do">내정보</a>
-							<a href="${cpath}/Logout.do"> 로그아웃 </a>
-						</div>
-					</div>
-				</c:otherwise>
-			</c:choose>
-		</div>
-	</header>
-	<!-- 헤더 끝 -->
+            </div>
+        <c:choose>
+        	<c:when test="${empty loginMember}">
+	            <div class="flex header_left">
+	                <div>
+		                <a href="${cpath}/LoginForm.do">로그인</a>
+		                <a href="${cpath}/signupForm.do"> 회원가입 </a>
+		                
+	                </div>
+	            </div>
+            </c:when>
+            <c:otherwise>			
+				<div class="flex header_left">
+	                <div>
+	                	<span>${loginMember.mem_nick}</span>
+		                <a href="${cpath}/MYpage.do">내정보</a>
+		                <a href="${cpath}/Logout.do"> 로그아웃 </a>
+	                </div>
+	            </div>
+			</c:otherwise>
+		</c:choose>
+        </div>
+    </header>
+    <!-- 헤더 끝 -->
 	<main>
 	<div class="closet_upload_main">
 		<form action="${cpath}/MYCLOSET.do" class="closet_upload_form">

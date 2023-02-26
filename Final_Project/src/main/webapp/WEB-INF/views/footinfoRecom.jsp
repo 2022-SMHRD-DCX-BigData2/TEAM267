@@ -34,7 +34,7 @@ $.each()
 }                
 </script>
 <body>
-    <header>
+        <header>
         <div id="TOP" class="flex">
             <div>
                 <a href="${cpath}/Main.do">
@@ -44,7 +44,7 @@ $.each()
             <div class="flex header_main">
                 <div>
                     <a href="${cpath}/Main.do">
-                        <h1 id="header_font">COORDI FOR SHOES ${fn:split(loginMember.mem_tst, ',')[2]}</h1>
+                        <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a>
                 </div>
         <c:choose>
@@ -52,6 +52,7 @@ $.each()
         		<div>
                     <a href="${cpath}/Serviceinfo.do">서비스소개</a>
                     <a href="">공지사항</a>
+                    <a href="${cpath}/StyleCommunity.do">커뮤니티</a>
                 </div>
         	</c:when>
         	
@@ -60,8 +61,9 @@ $.each()
         			<a href="${cpath}/Serviceinfo.do">서비스소개</a>
         			<a href="${cpath}/Footup.do">발 사이즈 측정</a>
         			<a href="${cpath}/MYCLOSET.do">디지털 옷장</a>
-        			<a href="${cpath}/footlist.do">신발 보러가기</a>
         			<a href="${cpath}/StyleSelect.do">취향 선택</a>
+        			<a href="${cpath}/StyleCommunity.do">커뮤니티</a>
+        			<a href="${cpath}/footlist.do">신발 목록</a>
         		</div>
         	</c:otherwise>
         </c:choose>
@@ -73,6 +75,7 @@ $.each()
 	                <div>
 		                <a href="${cpath}/LoginForm.do">로그인</a>
 		                <a href="${cpath}/signupForm.do"> 회원가입 </a>
+		                
 	                </div>
 	            </div>
             </c:when>

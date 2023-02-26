@@ -22,7 +22,11 @@
                 <div><a href="${cpath }/Main.do">
                         <h1 id="header_font">COORDI FOR SHOES</h1>
                     </a></div>
-                <div><a href="">서비스소개</a><a href="">공지사항</a></div>
+        		<div>
+                    <a href="${cpath}/Serviceinfo.do">서비스소개</a>
+                    <a href="">공지사항</a>
+                    <a href="${cpath}/StyleCommunity.do">커뮤니티</a>
+                </div>
             </div>
             <div class="flex header_left">	
                 <div><a href="">로그인</a><a href="">회원가입</a></div>
