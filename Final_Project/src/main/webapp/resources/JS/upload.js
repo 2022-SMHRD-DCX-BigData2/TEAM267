@@ -138,7 +138,7 @@ function DropFile(dropAreaId, fileListId) {
 
 
 
-// 2번쨰 이미지
+// 3번쨰 이미지
 function DropFile3(dropAreaId3, fileListId3) {
   let dropArea = document.getElementById(dropAreaId3);
   let fileList = document.getElementById(fileListId3);
@@ -164,7 +164,7 @@ function DropFile3(dropAreaId3, fileListId3) {
     let dt = e.dataTransfer;
     let files3 = dt.files;
 
-    handleFiles2(files3);
+    handleFiles3(files3);
 
     const fileList = document.getElementById(fileListId3);
     if (fileList) {
@@ -172,7 +172,7 @@ function DropFile3(dropAreaId3, fileListId3) {
     }
   }
 
-  function handleFiles2(files) {
+  function handleFiles3(files) {
     files = [...files];
     // files.forEach(uploadFile);
     files.forEach(previewFile3);
@@ -185,10 +185,10 @@ function DropFile3(dropAreaId3, fileListId3) {
   }
   // 이미지 미리보기
   function renderFile3(file) {
-    let reader2 = new FileReader();
-    reader2.readAsDataURL(file);
+    let reader3 = new FileReader();
+    reader3.readAsDataURL(file);
     
-    reader2.onloadend = function () {
+    reader3.onloadend = function () {
       console.log("미리보기 실행완료");
       console.log(dropArea);
       let img3 = dropArea.getElementsByClassName("preview3")[0];// 여러개 파일 업로드시 첫번째 파일만
@@ -201,7 +201,7 @@ function DropFile3(dropAreaId3, fileListId3) {
   dropArea.addEventListener("dragenter", highlight, false); //드래그 스타일 변경
   dropArea.addEventListener("dragover", highlight, false); //드래그 스타일 변경
   dropArea.addEventListener("dragleave", unhighlight, false); //드래그 스타일 변경
-  dropArea.addEventListener("drop", handleDrop2, false);
+  dropArea.addEventListener("drop", handleDrop3, false);
 
   return {
     handleFiles3
@@ -254,7 +254,7 @@ function DropFile4(dropAreaId4, fileListId4) {
       renderFile4(file);
   }
   // 이미지 미리보기
-  function renderFile3(file) {
+  function renderFile4(file) {
       let reader4 = new FileReader();
       reader4.readAsDataURL(file);
 

@@ -146,7 +146,7 @@
 									<img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘"
 										class="image">
 									<p class="message">파일 업로드 하기</p>
-									<img src="" alt="미리보기 이미지" class="preview" id="output3">
+									<img src="" alt="미리보기 이미지" class="preview3" id="output3">
 								</div>
 								<div class="choose_upload">
 									<label class="file-label" for="chooseFile3">Choose File</label>
@@ -172,7 +172,7 @@
 									<img src="https://img.icons8.com/pastel-glyph/2x/image-file.png" alt="파일 아이콘"
 										class="image">
 									<p class="message">파일 업로드 하기</p>
-									<img src="" alt="미리보기 이미지" class="preview" id="output4">
+									<img src="" alt="미리보기 이미지" class="preview4" id="output4">
 								</div>
 								<div class="choose_upload">
 									<label class="file-label" for="chooseFile4">Choose File</label>
