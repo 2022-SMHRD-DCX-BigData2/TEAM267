@@ -314,13 +314,14 @@ main{
 
 .fitting {
     display: none;
-    position: absolute;
-    left: 10px;
-    top: 10px;
+	position: absolute;
+    left: 200px;
+    top: 100px;
     cursor: pointer;
-    border: 0
+    border: 0;
+    height: 400px;
+    width: 400px;
 }
-
 /* 마이페이지 */
 .my_page{
     width: 90%;

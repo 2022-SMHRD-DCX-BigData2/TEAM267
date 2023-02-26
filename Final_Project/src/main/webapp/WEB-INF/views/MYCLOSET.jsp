@@ -12,7 +12,7 @@
             <link rel="stylesheet" href="${cpath}/resources/css/style.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
             <script src="http://code.jquery.com/jquery-3.5.1.min.js"></script>
-			<script type="text/javascript">
+<!-- 			<script type="text/javascript">
 	        function rcmndClst() {
 	            var memId = "${loginMember.mem_id}";
 	            $.ajax({
@@ -58,7 +58,7 @@
 	                $("#TOP_img").html(top);
 
 	                container += '<div class="myElement"><img src="' + c_img + '" alt="'+c_cate+'"></div>'
-	                container += '<div style="width:100px; height:100px;" class="myElement"><img alt="" src="https://image.a-rt.com/art/product/2020/02/68184_1581657478562.jpg"></div>'
+	                container += '<div style="width:100px; height:100px;" class="myElement"><img alt="" src="${cpath}/resources/img/hood.png"></div>'
 
 	                $("#container").html(container);
 	              } else if (BOTTOM.indexOf(c_cate) !== -1) {
@@ -79,7 +79,7 @@
 	            }
 
 
-			</script>	
+			</script> -->	
 		</head>
         <body>
      <header>
@@ -155,7 +155,7 @@
                         <button type="button" class="collapsible" onclick="collapse(this);">상의 TOP</button>
                         <div class="content">
                             <div class="sublist">
-                                <a onclick="rcmndClst()" style="cursor: pointer; align-items: center;">전체</a>
+                                <a onclick="sublist_top()" style="cursor: pointer; align-items: center;">전체</a>
                                 <a onclick="sublist_top()" style="cursor: pointer;">니트/스웨터</a>
                                 <a onclick="sublist_top()" style="cursor: pointer;">후드티셔츠</a>
                                 <a onclick="sublist_top()">피케/카라 티셔츠</a>
@@ -231,18 +231,14 @@
                 <div class="viewCLOSET_area">
                     <div class="viewCLOSET" id="viewCLOSET">
                         <h3>전체</h3>
-                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img1.jpg"
-                                width="150px" height="150px"></a>
-                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img2.jpg"
-                                width="150px" height="150px"></a>
-                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/img3.jpg"
+                        <a onclick="select_TOP()" style="cursor: pointer;"><img src="${cpath}/resources/img/hood.png"
                                 width="150px" height="150px"></a>
                     </div>
                 </div>
 
                 <div class="fitting_area" id="my_fitting">
                     <span style="cursor: hand;" id="my_img_con">
-                        <img class="fitting" id="fitting_top" src="${cpath}/resources/img/img1.jpg"
+                        <img class="fitting" id="fitting_top" src="${cpath}/resources/img/hood.png"
                             width="100px" height="100px" onmousedown="startDrag(event, this)">
                     </span>
                     <div class="flex flex_dir_col" >
@@ -258,42 +254,42 @@
             <!-- 푸터 들어갈 자리 -->
         </footer>
         <script src="${cpath}/resources/JS/tabmenu.js"></script>
-        <script type="text/javascript">
-    // function sublist_top() {
-    //     if ($("#viewCLOSET").css("display") == "none") {
-    //         $("#viewCLOSET").css("display", "flex")
-    //     } else {
-    //         $("#viewCLOSET").css("display", "none")
-    //     }
-    // }
+        <script>
+     function sublist_top() {
+         if ($("#viewCLOSET").css("display") == "none") {
+             $("#viewCLOSET").css("display", "flex")
+         } else {
+             $("#viewCLOSET").css("display", "none")
+         }
+     }
 
-    // function select_TOP() {
-    //     if ($("#choose_TOP").css("display") == "flex") {
-    //         $("#choose_TOP").css("display", "grid")
-    //     } else {
-    //         $("#choose_TOP").css("display", "grid")
-    //     }
-    // }
+/*      function select_TOP() {
+         if ($("#choose_TOP").css("display") == "none") {
+             $("#choose_TOP").css("display", "grid")
+         } else {
+             $("#choose_TOP").css("display", "grid")
+        }
+     } */
 
-    // if ($("#choose_TOP").css("display") == "flex") {
-    //     $("#id_img").attr("src", " /src/main/webapp/resources/img/img1.jpg");
-    // }
-    // // https://solbel.tistory.com/1070 참고해보기
+     if ($("#choose_TOP").css("display") == "flex") {
+         $("#id_img").attr("src", " /src/main/webapp/resources/img/img1.jpg");
+     }
+   
 
-    //   if ($("#choose_TOP_IMG").css("display") == "none") {
-    // 		$("#choose_TOP_IMG").css("display", "flex")
-    // 	} else {
-    // 		$("#choose_TOP_IMG").css("display", "none")
-    // 	}
-    // }
+       if ($("#choose_TOP_IMG").css("display") == "none") {
+     		$("#choose_TOP_IMG").css("display", "flex")
+    	} else {
+     		$("#choose_TOP_IMG").css("display", "none")
+     	}
+     
 
-    // function fit_top() {
-    // 	if ($("#fitting_top").css("display") == "none") {
-    // 		$("#fitting_top").css("display", "flex")
-    // 	} else {
-    // 		$("#fitting_top").css("display", "none")
-    // 	}
-    // }
+     function select_TOP()  {
+     	if ($("#fitting_top").css("display") == "none") {
+     		$("#fitting_top").css("display", "flex")
+     	} else {
+     		$("#fitting_top").css("display", "none")
+     	}
+     }
 
     // 처음 이미지가 만들어지는 곳 지정
     // var img_L = 50;
