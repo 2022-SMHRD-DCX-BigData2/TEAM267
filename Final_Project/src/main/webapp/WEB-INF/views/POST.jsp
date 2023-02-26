@@ -99,7 +99,7 @@
 
                         <div style="display: flex;">
                             <p><i class="fa-solid fa-share-from-square"></i></p>
-                            <p><i class="fa-regular fa-heart"></i>13</p>
+                            <p><i class="fa-regular fa-heart"></i></p>
                         </div>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
 
                 <div class="POST_comment_list">
                     <!-- 댓글 하나 내용 시작 백엔드 작업시 for문 돌릴것 -->
-                    <div class="POST_commnet_list1">
+<!--                     <div class="POST_commnet_list1">
                         <ul>
                             <li><i class="fa-regular fa-user" style="font-size: x-large;"></i></li>
                             <li> &nbsp; &nbsp; 호주호주</li>
@@ -149,11 +149,11 @@
                         <ul>
                             <li style="font-weight: 50; font-size: 0.1em; color: gray;">2023.02.07 10:41</li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- 댓글 하나 내용 끝 백엔드 작업시 for문 돌릴것 -->
 
                     <!-- 댓글 하나 내용 시작 백엔드 작업시 for문 돌릴것 -->
-                    <div class="POST_commnet_list1">
+<!--                     <div class="POST_commnet_list1">
                         <ul>
                             <li><i class="fa-regular fa-user" style="font-size: x-large;"></i></li>
                             <li> &nbsp; &nbsp; 지명</li>
@@ -166,7 +166,7 @@
                         <ul>
                             <li style="font-weight: 50; font-size: 0.1em; color: gray;">2023.02.07 10:41</li>
                         </ul>
-                    </div>
+                    </div> -->
                     <!-- 댓글 하나 내용 끝 백엔드 작업시 for문 돌릴것 -->
                 </div>
             </div>

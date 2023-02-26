@@ -123,7 +123,7 @@ $.each()
             <div class="t_center">
                 <h3>추천 발사이즈</h3>
                 <div id="choice_size" class="flex center">
-                    <span>${loginMember.mem_footsize}</span>
+                    <span>265</span>
                     <span>mm</span>
                 </div>
             </div>
