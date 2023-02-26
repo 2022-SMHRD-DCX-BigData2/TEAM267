@@ -34,7 +34,7 @@
         var BOTTOM = [6, 7, 9, 15, 17, 25, 27, 30, 32, 35];
         /* 내옷장 데이터 가져오기 */
         function rcmndClst() {
-          var memId = "${loginMember.memId}";
+          var memId = "${loginMember.mem_id}";
           $.ajax({
             url: "${cpath}/rcmndClst_1",
             type: "get",
@@ -165,17 +165,19 @@
             Write_main += '</div>';
             Write_main += '<textarea maxlength="450" placeholder="글 내용을 입력해 주세요."></textarea>';
             Write_main += '</div></div>';
-            Write_main += '<div class="WRITE_product" id="WRITE_WRITE_product_list">';
+            Write_main += '<div class="WRITE_product">';
             Write_main += '</div>';
             Write_main += '</form>';
             
             var product_root="";
-            product_root += '<div style="display: flex; justify-content: space-between;">';
-            product_root += '<h1>제품 목록</h1>';
-            product_root += '<div>';
-            product_root += '<input class="WRITE_submit" type="submit" value="등 록"><input class="WRITE_submit" type="reset" value="취 소">';
-            product_root += '</div>';
-            product_root += '</div>';
+            Write_main += '<div style="display: flex; justify-content: space-between;">';
+            Write_main += '<h1>제품 목록</h1>';
+            Write_main += '<div>';
+            Write_main += '<input class="WRITE_submit" type="submit" value="등 록"><input class="WRITE_submit" type="reset" value="취 소">';
+            Write_main += '</div>';
+            Write_main += '</div>';
+            Write_main += '<div class="POST_product_list" id="WRITE_WRITE_product_list">';
+            Write_main += '</div>';
             $.each(img_list,(indxe, product)=>{
             	console.log("each 시작");
               var c_img = product.lastChild.src
@@ -192,13 +194,13 @@
                 	  console.log("fun 시작");
                       console.log(data)
                       $.each(data,(indxe,num)=>{
-                        product_root += '<div class="POST_product_list">';
+                        
                         product_root += '<div>';
                         product_root += '<img src="'+num.c_img+'" width="100px" height="100px">';
-                        product_root += '<p>62,100원</p>';
-                        product_root += '<p>후드티</p>';
+                        product_root += '<p>'+num.c_price+'</p>';
+                        product_root += '<p>'+num.c_name+'</p>';
                         product_root += '</div>';
-                        product_root += '</div>';
+                        
                       })
                       $("#WRITE_WRITE_product_list").html(product_root);
                     },
