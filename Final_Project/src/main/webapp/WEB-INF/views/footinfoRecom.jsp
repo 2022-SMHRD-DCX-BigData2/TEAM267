@@ -106,14 +106,14 @@ $.each()
                     <td>오른발</td>
                 </tr>
                 <tr>
-                    <td><span>250<span>mm</span></span></td>
+                    <td><span>256<span>mm</span></span></td>
                     <td>길이</td>
-                    <td><span>250<span>mm</span></span></td>
+                    <td><span>255<span>mm</span></span></td>
                 </tr>
                 <tr>
-                    <td><span>96<span>mm</span></span></td>
+                    <td><span>98<span>mm</span></span></td>
                     <td>발볼</td>
-                    <td><span>96<span>mm</span></span></td>
+                    <td><span>100<span>mm</span></span></td>
                 </tr>
             </table>
             <!-- 추천 발사이즈 -->
@@ -131,15 +131,15 @@ $.each()
             <h3>운동화</h3>
             <div class="shoes_top_box">
                 <div class=" evenly ">
-                    
-                    <div class="pos_r">
+                
+                                    <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2022/10/47820_1666054804068.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>나이키</h4>
+                                <p>나이키 마노아 17 레더 보이그레이드</p>
+                                <P>99,000원</P>
                             </div>
                             <div class="shoes_size_box">
                                 <hr>
@@ -159,11 +159,35 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2020/02/73525_1581657601408.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>페이유에</h4>
+                                <p>펠로 II</p>
+                                <P>69,000원</P>
+                            </div>
+                            <div class="shoes_size_box">
+                                <hr>
+                                <div id="shoes_size" class="grid">
+                                    <div>250</div>
+                                    <div>255</div>
+                                    <div>260</div>
+                                    <div>265</div>
+                                    <div>270</div>
+                                    <div>270</div>
+                                </div>
+                            </div>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="pos_r">
+                        <div class="shoes_box t_center pos_a">
+                            <a href="">
+                            <img src="https://image.a-rt.com/art/product/2021/10/88489_1634106205248.jpg" alt="" class="shoes_img">
+                            <div class="margin_0">
+                                <h4>프로스펙스</h4>
+                                <p>스코어러 101</p>
+                                <P>139,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -183,11 +207,11 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2021/01/58354_1611798892280.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>휠라</h4>
+                                <p>코트 플럼피 벨크로</p>
+                                <P>69,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -215,11 +239,11 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2022/10/04799_1666252405610.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>닥터마틴</h4>
+                                <p>1461</p>
+                                <P>210,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -239,11 +263,11 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2021/06/98565_1624943486689.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>닥터마틴</h4>
+                                <p>1461 벡스</p>
+                                <P>210,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -264,11 +288,11 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2021/07/48297_1625735627201.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>호킨스</h4>
+                                <p>알더</p>
+                                <P>129,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -288,11 +312,11 @@ $.each()
                     <div class="pos_r">
                         <div class="shoes_box t_center pos_a">
                             <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
+                            <img src="https://image.a-rt.com/art/product/2022/06/20357_1654138605466.jpg" alt="" class="shoes_img">
                             <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
+                                <h4>스테파노로시</h4>
+                                <p>트리델</p>
+                                <P>119,000원</P>
                             </div>
                             
                             <div class="shoes_size_box">
@@ -311,110 +335,9 @@ $.each()
                     </div>
                 </div>
             </div>
-            
-            
-            <h3>스니커즈</h3>
+
             <div class="shoes_top_box">
-                <div class=" evenly ">
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
-                            </div>
-                            
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
-                            </div>
-                            
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
-                            </div>
-                            
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="pos_r">
-                        <div class="shoes_box t_center pos_a">
-                            <a href="">
-                            <img src="https://via.placeholder.com/118" alt="" class="shoes_img">
-                            <div class="margin_0">
-                                <h4>브랜드</h4>
-                                <p>제품명</p>
-                                <P>제품가격</P>
-                            </div>
-                            
-                            <div class="shoes_size_box">
-                                <hr>
-                                <div id="shoes_size" class="grid">
-                                    <div>250</div>
-                                    <div>255</div>
-                                    <div>260</div>
-                                    <div>265</div>
-                                    <div>270</div>
-                                    <div>270</div>
-                                </div>
-                            </div>
-                            </a>
-                        </div>
-                    </div>
-                    
-                </div>
+
             </div>
         </div>
 </body>
