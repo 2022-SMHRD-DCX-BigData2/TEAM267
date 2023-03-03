@@ -99,11 +99,7 @@
             <div>
                 <p><span>Coordi For SHOES</span> 에서는 </p>
                 <p>신발 사이즈 고민하지 마세요.</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
-                <p>구현 화면 넣을 자리</p>
+			<img alt="" src="${cpath}/resources/img/service.png" style="display: block; margin: auto; height: 500px; border-radius: 10px;">
             </div>
 
             <div>
